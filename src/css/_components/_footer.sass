@@ -1,0 +1,141 @@
+.footer
+  background-color: $accent-color
+  background-image: url(../images/common/svg/footer_bg.svg)
+  background-repeat: repeat-x
+  background-position: calc(50% - 8px) 0%
+  background-size: auto
+  padding: 290px 0 70px
+  @media (max-width: 1335px)
+    background-position: calc(50% - 8px) 205%
+    padding: 190px 0 35px
+  @media (max-width: 959px)
+    padding: 110px 0 35px
+    background-position: calc(50% - 8px) 120%
+  @media (max-width: 767px)
+    padding: 160px 0 35px
+    background-position: calc(50% - 8px) -115px
+  @media (max-width: 575px)
+    padding: 194px 0 50px
+    background-position: 50% -88px
+  &__content
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: 0 20px
+    @media (max-width: 959px)
+      padding: 0
+    &__side
+      flex: 0 0 50%
+      max-width: 50%
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      flex-wrap: wrap
+      @media (max-width: 1335px)
+        flex: 0 0 auto
+        max-width: unset
+        &:nth-of-type(2)
+          margin-left: auto
+      @media (max-width: 767px)
+        flex: 0 0 100%
+        max-width: 100%
+        &:nth-of-type(1)
+          flex-direction: column-reverse
+          align-items: center
+          justify-content: center
+      .doc-link, .copyright-link
+        display: inline-block
+        margin-left: 122px
+        color: $txt-color
+        position: relative
+        @media (max-width: 1023px)
+          margin-left: 50px
+        @media (max-width: 959px)
+          margin-left: 30px
+        @media (max-width: 767px)
+          margin: 0 0 20px
+        @media (max-width: 575px)
+          margin: 0 0 8px
+        &:after
+          content: ''
+          display: block
+          width: 0
+          height: 1px
+          background-color: $txt-color
+          position: absolute
+          bottom: -5px
+          left: 0
+          right: 0
+          margin: auto
+          transition: width .3s
+        &:hover
+          &:after
+            width: 100%
+      .copyright-link
+        margin-left: 0
+        @media (max-width: 767px)
+          order: 0
+      .social-menu
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin: 0 0 0 auto
+        @media (max-width: 767px)
+          margin: 0 auto
+        @media (max-width: 575px)
+          margin: 15px auto 0
+        &__item
+          flex: 0 0 auto
+          width: auto
+          &:last-child
+            margin-right: 0
+        &__link
+          display: block
+          color: $txt-color
+          font-size: 50px
+          line-height: 50px
+          transition: transform .3s
+          @media (max-width: 959px)
+            font-size: 44px
+            line-height: 44px
+          @media (max-width: 575px)
+            font-size: 50px
+            line-height: 50px
+          &:hover
+            transform: translateY(-5px)
+  .scroll-btn
+    display: none
+    position: fixed
+    top: calc(var(--app-height) - 90px)
+    right: 40px
+    border-radius: 30px
+    background-color: #fff
+    box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.15)
+    color: $txt-color
+    z-index: 20
+    &__content
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 50px
+      height: 50px
+      transition: width .3s
+      span
+        display: inline-block
+        width: 0
+        overflow: hidden
+        transition: all .3s
+        white-space: nowrap
+        font-size: 14px
+        line-height: 21px
+      .icon
+        font-size: 30px
+        line-height: 14px
+        margin-top: 2px
+    &:hover
+      .scroll-btn__content
+        width: 160px
+        span
+          width: auto
+          margin: 0 10px

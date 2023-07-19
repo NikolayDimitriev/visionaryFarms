@@ -1,0 +1,145 @@
+@import "../settings"
+/* btns */
+.btns-row
+  display: flex
+  align-items: center
+  justify-content: center
+.link-style
+  display: inline-flex
+  color: $txt-color
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 16px
+  line-height: 18px
+  margin: 0 10px
+  position: relative
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 1px
+    background-color: $txt-color
+    position: absolute
+    bottom: -5px
+    left: 0
+    right: 0
+    margin: 0 auto
+    transition: width .3s
+  .icon
+    font-size: 24px
+    margin-right: -8px
+  &:hover
+    &:after
+      width: 100%
+.btn-style
+  display: inline-block
+  background-color: $txt-color
+  color: #fff
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 16px
+  line-height: 18px
+  padding: 9px 15px
+  border-radius: 10px
+  transition: padding .3s
+  &:hover
+    padding: 13px 15px 5px
+.btn-fill-style
+  display: inline-flex
+  align-items: center
+  justify-content: flex-start
+  background-color: $aqua-color
+  color: #fff
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 16px
+  line-height: 18px
+  padding: 10px 25px
+  border-radius: 20px
+  letter-spacing: -.22px
+  border: none
+  transition: background-color .3s, color .3s
+  &:hover
+    background-color: $txt-color
+    color: #fff
+  .icon
+    margin-left: 3px
+    font-size: 22px
+    line-height: 22px
+    position: relative
+    top: -1px
+.input-style
+  display: block
+  width: 100%
+  background-color: $bg-color
+  border: none
+  border-radius: 10px
+  padding: 16px 20px
+  @include input-placeholder
+    color: $txt-color
+
+/* image */
+.img-wrapper
+  display: block
+  font-size: 0
+  line-height: 0
+  .img-cover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    -o-object-fit: cover
+    object-fit: cover
+    z-index: -1
+/* section */
+.icon.section-icon
+  display: block
+  text-align: center
+  font-size: 50px
+  line-height: 50px
+  margin: 0 auto 10px
+
+.big-title
+  font-weight: 400
+  font-size: 240px
+  line-height: 100%
+  letter-spacing: -17px
+  font-variant-ligatures: contextual
+  font-feature-settings: "ss01" 1, "cswh"
+  @media (max-width: 1199px)
+    font-size: 195px
+  @media (max-width: 959px)
+    font-size: 155px
+  @media (max-width: 639px)
+    font-size: 135px
+  @media (max-width: 575px)
+    font-size: 140px
+    line-height: 160px
+    letter-spacing: -9.8px
+  @media (max-width: 419px)
+    font-size: 115px
+.section-title
+  font-weight: 600
+  font-size: 40px
+  line-height: 40px
+  color: $txt-color
+  letter-spacing: -2px
+  font-variant-ligatures: contextual
+  font-feature-settings: "ss01" 1, "cswh"
+  text-align: center
+  @media (max-width: 1023px)
+    font-size: 35px
+  @media (max-width: 575px)
+    font-size: 36px
+    line-height: 40px
+    letter-spacing: -1.6px
+  @media (max-width: 359px)
+    font-size: 35px
+    line-height: 40px
+    padding: 0 25px
+.section-descr
+  max-width: 350px
+  margin: 20px auto 0
+  text-align: center
+

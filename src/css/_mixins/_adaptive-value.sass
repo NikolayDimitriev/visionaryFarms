@@ -1,0 +1,15 @@
+@mixin adaptive-value($property, $startSize, $minSize, $type)
+  $addSize: $startSize - $minSize
+  @if $type==1
+    // < container
+    #{$property}: $startSize + px
+    @media (max-width: #{$container-width + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} *((100vw - 376px) / #{$container-width - 360}))
+  @else if $type==2
+    // > container
+    #{$property}: $startSize + px
+    @media (min-width: #{$container-width + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 376px) / #{$container-width - 360}))
+  @else
+    // all
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 376px) / #{$container-width - 360}))

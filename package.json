@@ -1,0 +1,79 @@
+{
+  "name": "work_template",
+  "version": "3.0.7",
+  "description": "Workflow for frontend and ModxRevo",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp front_build",
+    "front_build": "gulp front_build",
+    "front_release": "gulp front_build --prod",
+    "front_clean": "gulp front_clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BENJiDevil/workflow.git"
+  },
+  "keywords": [
+    "template",
+    "frontend",
+    "modx revo",
+    "gulp",
+    "pack"
+  ],
+  "author": "BENJi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BENJiDevil/workflow/issues"
+  },
+  "homepage": "https://github.com/BENJiDevil/workflow#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.29.1",
+    "browserify": "^17.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-avif": "^1.1.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-confirm": "^1.0.8",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-decompress": "^3.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-responsive": "^3.0.1",
+    "gulp-rev-easy": "^1.2.3",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-typograf": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "gulp-zip": "^5.1.0",
+    "gulp.spritesmith": "^6.13.0",
+    "lottie-web": "^5.12.2",
+    "mysqldump": "^3.2.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "dm-file-uploader": "^1.0.2",
+    "dropzone": "^6.0.0-beta.2",
+    "fine-uploader": "^5.16.2",
+    "jquery-file-upload": "^4.0.11",
+    "lazysizes": "^5.3.2",
+    "swiper": "^9.2.4"
+  }
+}

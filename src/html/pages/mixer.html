@@ -1,0 +1,576 @@
+@@include('../components/_meta.html')
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <a href="/" class="logo-link">
+                <img src="images/common/svg/logo.gif" alt="Visionary Farms" class="logo-image">
+                <span>Visionary Farms</span>
+            </a>
+            <nav class="add-menu">
+                <ul>
+                    <li><a href="javascript:void(0);" data-section="start" class="js-scroll-link">Overview</a></li>
+                    <li><a href="javascript:void(0);" data-section="control" class="js-scroll-link">Features</a></li>
+                    <li><a href="javascript:void(0);" data-section="spec" class="js-scroll-link">Tech Specs</a></li>
+                </ul>
+            </nav>
+            <nav id="main-menu" class="main-menu">
+                <ul>
+                    <li class="icon-ignis"><a href="#">Ignis</a></li>
+                    <li class="icon-air"><a href="#">Air</a></li>
+                    <li class="icon-aqua"><a href="#">Aqua</a></li>
+                    <li class="icon-refresh"><a href="#">Mixer</a></li>
+                    <li class="icon-profile"><a href="#">Vision</a></li>
+                    <li class="icon-notifications"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger" data-menu="main-menu" class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- main content -->
+<main  class="preview-page mixer-page">
+    <div class="img-wrapper">
+        <picture>
+            <source srcset="images/common/mixer/main_bg_mobile.png" media="(max-width: 575px)">
+            <img src="images/common/mixer/main_bg.png" alt="mixer" class="img-cover">
+        </picture>
+    </div>
+
+    <div class="container">
+        <h1 class="preview-page__title big-title">Mixer</h1>
+        <div class="preview-page__descr">
+            <p>Advanced nutrient solution <br> preparation and delivery system</p>
+        </div>
+    </div>
+</main>
+<section id="start" class="preview-descr mixer-page">
+    <div class="img-wrapper">
+        <picture>
+            <source srcset="images/common/mixer/auto_mobile.png" media="(max-width: 575px)">
+            <img src="images/common/mixer/auto.png" alt="mixer" class="img-cover">
+        </picture>
+    </div>
+    <div class="container">
+        <i class="icon icon-refresh section-icon"></i>
+        <h2 class="preview-descr__title section-title">Automation in motion.</h2>
+        <div class="preview-descr__descr section-descr">
+            <p>Designed for automated preparation and delivery of nutrient solutions for hydroponic cultivation according to the needs of your crops.</p>
+        </div>
+    </div>
+</section>
+<div class="preview-blocks mixer-page">
+    <div class="container">
+        <div class="preview-blocks__list">
+            <div class="preview-blocks__item">
+                <i class="icon icon-timer"></i>
+                <p>Scheduled <br> nutrient delivery</p>
+            </div>
+            <div class="preview-blocks__item">
+                <i class="icon icon-flaskleaf"></i>
+                <p>Optimised cultivation recipes for 60+ varieties</p>
+                <a href="#" class="view-link">View Crop Menu <i class="icon icon-input"></i></a>
+            </div>
+            <div class="preview-blocks__item">
+                <i class="icon icon-shield"></i>
+                <p>Power failure & <br> signal transmission protection</p>
+            </div>
+            <div class="preview-blocks__item">
+                <i class="icon icon-devices"></i>
+                <p>App control <br> for convenient <br> management</p>
+                <a href="javascript:void(0);" data-section="grow" class="js-scroll-link link-style learn-link">LEARN MORE <i class="icon icon-arrow---forward"></i></a>
+            </div>
+            <div class="preview-blocks__item">
+                <a href="#" class="scroll-link"></a>
+                <i class="icon icon-aqua"></i>
+                <p>Aqua nutrient solution controller compatible</p>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="preview-ready mixer-page">
+    <div class="container">
+        <i class="icon icon-config section-icon"></i>
+        <h2 class="preview-ready__title section-title">Set your parameters.</h2>
+        <div class="preview-ready__descr section-descr">
+            <p>Automatically prepares the nutrient solution according to your needs by mixing nutrient concentrates and a pH adjuster with fresh water.</p>
+        </div>
+        <div class="preview-ready__content">
+            <div class="preview-ready__content__left-side">
+                <picture>
+                    <source srcset="images/common/mixer/mixer_mobile.jpg" media="(max-width: 575px)">
+                    <img src="images/common/mixer/mixer.jpg" alt="mixer" class="ready-image">
+                </picture>
+            </div>
+            <div class="preview-ready__content__right-side">
+                <ul class="ready-list">
+                    <li class="ready-list__item">
+                        <span class="item-name">EC level</span>
+                        <i class="icon icon-lightingstraight"></i>
+                        <img src="images/common/svg/air/ready_items/item21.svg" alt="scheme" class="item-scheme">
+                        <span class="item-value">2500-3000µS</span>
+                    </li>
+                    <li class="ready-list__item">
+                        <span class="item-name">pH level</span>
+                        <i class="icon icon-droplettick"></i>
+                        <img src="images/common/svg/air/ready_items/item4.svg" alt="scheme" class="item-scheme">
+                        <span class="item-value">5.0-5.4</span>
+                    </li>
+                    <li class="ready-list__item">
+                        <span class="item-name">Irrigation duration</span>
+                        <i class="icon icon-play"></i>
+                        <img src="images/common/svg/air/ready_items/item22.svg" alt="scheme" class="item-scheme">
+                        <span class="item-value">45m</span>
+                    </li>
+                    <li class="ready-list__item">
+                        <span class="item-name">Pause between irrigation</span>
+                        <i class="icon icon-pause"></i>
+                        <img src="images/common/svg/air/ready_items/item23.svg" alt="scheme" class="item-scheme">
+                        <span class="item-value">4h30m</span>
+                    </li>
+                    <li class="ready-list__item">
+                        <span class="item-name">Solution temperature</span>
+                        <i class="icon icon-thermometer"></i>
+                        <img src="images/common/svg/air/ready_items/item24.svg" alt="scheme" class="item-scheme">
+                        <span class="item-value">23°</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="preview-carousel mixer-page">
+    <div class="container">
+        <h2 class="preview-carousel__title section-title">Mixer can be used in....</h2>
+        <div class="preview-carousel__content">
+            <div id="preview-slider" class="preview-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-item">
+                        <div class="slide-name">Smart greenhouses</div>
+                        <img src="images/common/air/carousel/image1.jpg" alt="slide" class="slide-image">
+                    </div>
+                    <div class="swiper-slide slide-item">
+                        <div class="slide-name">At-home & commercial vertical farms</div>
+                        <img src="images/common/air/carousel/image2.jpg" alt="slide" class="slide-image">
+                    </div>
+                    <div class="swiper-slide slide-item">
+                        <div class="slide-name">Container farms</div>
+                        <img src="images/common/air/carousel/image3.jpg" alt="slide" class="slide-image">
+                    </div>
+                    <div class="swiper-slide slide-item">
+                        <div class="slide-name">Hydroponic cannabis cultivation</div>
+                        <img src="images/common/air/carousel/image4.jpg" alt="slide" class="slide-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="control" class="preview-control aqua-page">
+    <div class="container">
+        <h2 class="preview-control__title section-title">Full control of your farm.</h2>
+        <div class="preview-control__content">
+            <div class="preview-control__content__item">
+                <div class="image-block">
+                    <img src="images/common/mixer/control/control_image1.jpg" alt="control" class="item-image">
+                </div>
+                <div class="descr-block">
+                    <div class="item-name">Nutrients Connected</div>
+                    <p>Direct connections with concentrates removes the need for manual mixing  and dilution</p>
+                </div>
+            </div>
+            <div class="preview-control__content__item">
+                <div class="image-block">
+                    <img src="images/common/mixer/control/control_image2.jpg" alt="control" class="item-image">
+                </div>
+                <div class="descr-block">
+                    <div class="item-name">Most Compact</div>
+                    <p>The smallest mass-produced nutrient solution unit on the market, leaving more space for cultivation</p>
+                </div>
+            </div>
+            <div class="preview-control__content__item">
+                <div class="image-block">
+                    <img src="images/common/mixer/control/control_image3.jpg" alt="control" class="item-image">
+                </div>
+                <div class="descr-block">
+                    <div class="item-name">Scalable</div>
+                    <p>Easily grow your farm with the Visionary Farms app</p>
+                    <a href="#" class="item-link link-style">LEARN MORE <i class="icon icon-arrow---forward"></i></a>
+                </div>
+            </div>
+            <div class="preview-control__content__item">
+                <div class="image-block">
+                    <img src="images/common/mixer/control/control_image4.jpg" alt="control" class="item-image">
+                </div>
+                <div class="descr-block">
+                    <div class="item-name">Large Area</div>
+                    <p>Up to 200m2 of cultivation area served by one Mixer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mixer-control">
+    <div class="container">
+        <i class="icon icon-aqua section-icon"></i>
+        <h2 class="mixer-control__title section-title">Control through Aqua.</h2>
+        <div class="mixer-control__descr section-descr">
+            <p>Operate Mixer using our Aqua controller connected to Visionary Farms software, accessed via our cross-platform mobile app. Or operate it manually using third party controllers.</p>
+        </div>
+        <div class="mixer-control__content">
+            <div class="mixer-control__content__item"><img src="images/common/mixer/control_scheme1.jpg" alt="image" class="mixer-image"></div>
+            <div class="mixer-control__content__item"><img src="images/common/mixer/control_scheme2.jpg" alt="image" class="mixer-image"></div>
+            <div class="mixer-control__content__item"><img src="images/common/mixer/control_scheme3.png" alt="image" class="mixer-image"></div>
+        </div>
+    </div>
+</section>
+<section class="mixer-requirements">
+    <div class="container">
+        <h2 class="mixer-requirements__title section-title">Working Requirements</h2>
+        <div class="mixer-requirements__content">
+            <div class="mixer-requirements__content__item">
+                <i class="icon icon-lightingangled"></i>
+                <p>Power supply <br> 120-277V</p>
+            </div>
+            <div class="mixer-requirements__content__item">
+                <i class="icon icon-sparkle"></i>
+                <p>Clean water supply</p>
+            </div>
+            <div class="mixer-requirements__content__item">
+                <i class="icon icon-filter"></i>
+                <p>Incoming <br> water filters <span>recommended</span></p>
+            </div>
+            <div class="mixer-requirements__content__item">
+                <i class="icon icon-wifi"></i>
+                <p>Wi-Fi <br> connection</p>
+            </div>
+            <div class="mixer-requirements__content__item">
+                <i class="icon icon-aqua"></i>
+                <p>Visionary Farms Aqua controller <span>or third party controller</span></p>
+            </div>
+            <div class="mixer-requirements__content__item">
+                <i class="icon icon-drainage"></i>
+                <p>Drainage for waste water removal</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="auto" class="aqua-descr">
+    <div class="container">
+        <h2 class="aqua-descr__title section-title">How Aqua + Mixer automate <br> hydroponic systems.</h2>
+        <div class="aqua-descr__descr section-descr">
+            <p>The Mixer is the series of pumps, valves and sensors within a farm controlled using the Aqua controller. Below is a demonstration of how different modes control the flow of nutrients.</p>
+        </div>
+        <div class="aqua-descr__content aqmixer-content">
+            <div class="slider-navigation">
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="javascript:void(0);" data-slide="1" class="nav-list__link nav-link active">Mixing</a></li>
+                    <li class="nav-list__item"><a href="javascript:void(0);" data-slide="2" class="nav-list__link nav-link">Feeding</a></li>
+                    <li class="nav-list__item"><a href="javascript:void(0);" data-slide="3" class="nav-list__link nav-link">Draining</a></li>
+                    <li class="nav-list__item"><a href="javascript:void(0);" data-slide="4" class="nav-list__link nav-link">Pumping water</a></li>
+                </ul>
+                <a href="javascript:void(0);" data-slide="5" class="nav-link drip-link">Drip irrigation</a>
+                <div class="scheme-main">
+                    <img src="images/common/svg/aqua/mixer/scheme_main.svg" alt="scheme">
+                </div>
+            </div>
+            <div id="aquamixer-slider" class="aquamixer-slider swapper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-item">
+                        <picture>
+                            <source srcset="images/common/svg/aqua/mixer/scheme_image1_mobile.svg" media="(max-width: 768px)">
+                            <img src="images/common/svg/aqua/mixer/scheme_image1.svg" alt="how" class="slide-image">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide slide-item">
+                        <picture>
+                            <source srcset="images/common/svg/aqua/mixer/scheme_image2_mobile.svg" media="(max-width: 768px)">
+                            <img src="images/common/svg/aqua/mixer/scheme_image2.svg" alt="how" class="slide-image">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide slide-item">
+                        <picture>
+                            <source srcset="images/common/svg/aqua/mixer/scheme_image3_mobile.svg" media="(max-width: 768px)">
+                            <img src="images/common/svg/aqua/mixer/scheme_image3.svg" alt="how" class="slide-image">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide slide-item">
+                        <picture>
+                            <source srcset="images/common/svg/aqua/mixer/scheme_image4_mobile.svg" media="(max-width: 768px)">
+                            <img src="images/common/svg/aqua/mixer/scheme_image4.svg" alt="how" class="slide-image">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide slide-item">
+                        <picture>
+                            <source srcset="images/common/svg/aqua/mixer/scheme_image5_mobile.svg" media="(max-width: 768px)">
+                            <img src="images/common/svg/aqua/mixer/scheme_image5.svg" alt="how" class="slide-image">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="preview-cloud mixer-page">
+    <div class="img-wrapper">
+        <picture>
+            <source srcset="images/common/air/cloud_bg_mobile.jpg" media="(max-width: 575px)">
+            <img src="images/common/air/cloud_bg.jpg" alt="cloud" class="img-cover">
+        </picture>
+    </div>
+    <div class="container">
+        <i class="icon icon-cloud section-icon"></i>
+        <h2 class="preview-cloud__title section-title">Cloud subscription.</h2>
+        <div class="preview-cloud__descr section-descr">
+            <p>Whilst you can set parameters manually without the cloud subscription, using it unlocks Air's full potential and maximises the capabilities of your farm.</p>
+        </div>
+        <div class="preview-cloud__content">
+            <div class="preview-cloud__content__item">
+                <div class="descr-block">
+                    <i class="icon icon-pin"></i>
+                    <div class="item-name">Control anytime, anywhere</div>
+                    <div class="item-descr">
+                        <p>Control and monitor the conditions on your farm remotely using the Visionary Farms app</p>
+                    </div>
+                </div>
+                <div class="image-block">
+                    <picture>
+                        <source srcset="images/common/air/cloud/cloud_image1_mobile.png" media="(max-width: 575px)">
+                        <img src="images/common/air/cloud/cloud_image1.png" alt="cloud" class="img-cover">
+                    </picture>
+                </div>
+            </div>
+            <div class="preview-cloud__content__item">
+                <div class="descr-block">
+                    <i class="icon icon-flaskleaf"></i>
+                    <div class="item-name">Cultivation recipes for 60+ varieties</div>
+                    <div class="item-descr">
+                        <p>Achieve better yields with automatic settings  and maintenance based on 7+ years of research</p>
+                    </div>
+                </div>
+                <div class="image-block">
+                    <picture>
+                        <source srcset="images/common/air/cloud/cloud_image2_mobile.png" media="(max-width: 575px)">
+                        <img src="images/common/air/cloud/cloud_image2.png" alt="cloud" class="img-cover">
+                    </picture>
+                    <a href="#" class="download-link" target="_blank"><i class="icon icon-input"></i></a>
+                </div>
+            </div>
+            <div class="preview-cloud__content__item">
+                <div class="descr-block">
+                    <i class="icon icon-graph"></i>
+                    <div class="item-name">Access to full analytics</div>
+                    <div class="item-descr">
+                        <p>Gain valuable insights into your farm from Air’s sensors</p>
+                    </div>
+                </div>
+                <div class="image-block">
+                    <picture>
+                        <source srcset="images/common/air/cloud/cloud_image3_mobile.png" media="(max-width: 575px)">
+                        <img src="images/common/air/cloud/cloud_image3.png" alt="cloud" class="img-cover">
+                    </picture>
+                </div>
+            </div>
+            <div class="preview-cloud__content__item">
+                <div class="descr-block">
+                    <i class="icon icon-bulb"></i>
+                    <div class="item-name">Smart cultivation tips</div>
+                    <div class="item-descr">
+                        <p>From our plant science experts personalised to the varieties you are growing</p>
+                    </div>
+                </div>
+                <div class="image-block full-image">
+                    <picture>
+                        <source srcset="images/common/air/cloud/cloud_image4_mobile.png" media="(max-width: 575px)">
+                        <img src="images/common/air/cloud/cloud_image4.png" alt="cloud" class="img-cover">
+                    </picture>
+                </div>
+            </div>
+            <div class="preview-cloud__content__item">
+                <div class="descr-block">
+                    <i class="icon icon-tasks"></i>
+                    <div class="item-name">Operations management functionality</div>
+                    <div class="item-descr">
+                        <p>Automatic task scheduling and delegation among farm team members, notifications of any issues</p>
+                    </div>
+                </div>
+                <div class="image-block">
+                    <picture>
+                        <source srcset="images/common/air/cloud/cloud_image5_mobile.png" media="(max-width: 575px)">
+                        <img src="images/common/air/cloud/cloud_image5.png" alt="cloud" class="img-cover">
+                    </picture>
+                </div>
+            </div>
+            <div class="preview-cloud__content__item">
+                <div class="descr-block">
+                    <i class="icon icon-profile"></i>
+                    <div class="item-name">Full technical support</div>
+                    <div class="item-descr">
+                        <p>From our software and hardware engineers and plant science experts</p>
+                    </div>
+                </div>
+                <div class="image-block full-image">
+                    <picture>
+                        <source srcset="images/common/air/cloud/cloud_image6_mobile.png" media="(max-width: 575px)">
+                        <img src="images/common/air/cloud/cloud_image6.png" alt="cloud" class="img-cover">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="grow" class="preview-grow mixer-page">
+    <div class="img-wrapper">
+        <picture>
+            <source srcset="images/common/air/grow_bg_mobile.jpg" media="(max-width: 575px)">
+            <img src="images/common/air/grow_bg.jpg" alt="cloud" class="img-cover">
+        </picture>
+    </div>
+    <div class="container">
+        <i class="icon icon-devices section-icon"></i>
+        <h2 class="preview-grow__title section-title">Grow from your phone</h2>
+        <div class="preview-grow__descr section-descr">
+            <p>Managing Air remotely using the Visionary Farms app is simple yet powerful. Easily control your environment and tweak all your settings to your heart's content.</p>
+        </div>
+        <div class="btns-row">
+            <a href="#" target="_blank" class="phone-app-link google-link"></a>
+            <a href="#" target="_blank" class="phone-app-link apple-link"></a>
+        </div>
+    </div>
+</section>
+<section id="spec" class="preview-specification mixer-page">
+    <div class="img-wrapper">
+        <picture>
+            <source srcset="images/common/mixer/tech_image_mobile.jpg" media="(max-width: 575px)">
+            <img src="images/common/mixer/tech_image.jpg" alt="spec" class="img-ancor left-ancor">
+        </picture>
+        <picture>
+            <source srcset="images/common/mixer/tech_image_mobile.jpg" media="(max-width: 575px)">
+            <img src="images/common/mixer/tech_image.jpg" alt="spec" class="img-ancor right-ancor">
+        </picture>
+    </div>
+    <div class="container">
+        <i class="icon icon-refresh section-icon"></i>
+        <h2 class="preview-specification__title section-title">Technical Specification</h2>
+        <div class="preview-specification__descr section-descr">
+            <p>Here you can check specific details about Mixer. If you’re unclear, feel free to contact our team using the form below.</p>
+        </div>
+        <div class="preview-specification__content">
+            <div class="preview-specification__content__side">
+                <div class="side-item">
+                    <div class="side-item__title"><i class="icon icon-settings"></i> Technical Data</div>
+                    <ul class="side-item__list">
+                        <li>120-277V Input voltage</li>
+                        <li>50/60Hz Frequency</li>
+                        <li>430х450х450mm Size</li>
+                        <li>12kg Weight</li>
+                        <li>0°C to +40°C Optimal ambient temperature</li>
+                        <li>10-90% Relative humidity (non-condensing)</li>
+                        <li>380W Max power</li>
+                        <li>500W Max power per relay channel</li>
+                        <li>80 Litres/minute pump performance</li>
+                        <li>1.4-2bar Water pressure at the ejector inlet</li>
+                        <li>1-120min Interval between feeding cycles</li>
+                        <li>1.2-1.4bar System nominal pressure range</li>
+                        <li>0-2.5bar Line pressure measurement range</li>
+                        <li>∞ Number of possible tasks per day</li>
+                    </ul>
+                </div>
+                <div class="side-item">
+                    <div class="side-item__title"><i class="icon icon-tickbox"></i> Levels</div>
+                    <ul class="side-item__list">
+                        <li>100-2000l Mixing tank volume</li>
+                        <li>1m-12h Dosage pause</li>
+                        <li>0.1-5.0ms EC level</li>
+                        <li>3.0-10.0pH (2 sensors)</li>
+                        <li>6 Solution control valves</li>
+                        <li>4 Stock solution dispensers</li>
+                        <li>3 Feeding circuits of the nutrient solution</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="preview-specification__content__side">
+                <div class="side-item">
+                    <div class="side-item__title"><i class="icon icon-thermometer"></i> Sensors</div>
+                    <ul class="side-item__list">
+                        <li>Barometer</li>
+                        <li>pH control sensor</li>
+                        <li>Solution temperature sensor</li>
+                        <li>Electrical conductivity sensor</li>
+                    </ul>
+                </div>
+                <div class="side-item">
+                    <div class="side-item__title"><i class="icon icon-input"></i> Outputs</div>
+                    <ul class="side-item__list">
+                        <li>50mA, 12V Parameters of the outputs for controlling the valves of the supply system</li>
+                        <li>230V, 50Hz, 1.7A Parameters of the pump start-up equipment control output</li>
+                    </ul>
+                </div>
+                <div class="side-item">
+                    <div class="side-item__title"><i class="icon icon-scope"></i> Accuracy</div>
+                    <ul class="side-item__list">
+                        <li>0mS-20mS Accuracy for maintaining the EC of the working solution</li>
+                        <li>2-12pH Accuracy for maintaining the pH of the working solution</li>
+                    </ul>
+                </div>
+                <div class="side-item">
+                    <div class="side-item__title"><i class="icon icon-timer"></i> Warranty</div>
+                    <ul class="side-item__list">
+                        <li>2 year warranty</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btns-row">
+            <a href="#" class="file-link btn-fill-style">Download Specification <i class="icon icon-input"></i></a>
+        </div>
+    </div>
+</section>
+<section id="contacts" class="message-section">
+    <div class="container">
+        <i class="icon icon-notifications section-icon"></i>
+        <h2 class="message-section__title section-title">Message us.</h2>
+        <div class="message-section__descr section-descr">
+            <p>For any enquiries don’t hesitate to send us a message and we’ll get back to you as soon as possible.</p>
+        </div>
+        <form action="/" class="message-section__form">
+            <div class="form-side">
+                <div class="input-group">
+                    <input type="text" name="name" class="input-style" placeholder="Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="email" class="input-style" placeholder="Email/Phone" required>
+                </div>
+                <div class="input-group check-group">
+                    <label>
+                        <input type="checkbox" name="check" required>
+                        <span class="label">I consent to receive notifications about the status of this message</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-side">
+                <div class="input-group textarea-group">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <div class="file-input-group">
+                        <div class="file-drop-area">
+                            <div class="item-delete"></div>
+                            <span class="file-msg"></span>
+                            <input class="file-input" type="file" multiple>
+                            <span class="label js-file-attach"><i class="icon icon-attachment"></i> <span>Attach</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-row">
+                <button type="submit" class="btn-fill-style">Submit <i class="icon icon-send"></i></button>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- main end content -->
+@@include('../components/_footer.html')
+@@include('../components/_modals.html')
+@@include('../components/_scripts.html')

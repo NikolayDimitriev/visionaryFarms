@@ -1,0 +1,3241 @@
+@import "settings"
+@import "_mixins/_mixins"
+@import "_components/ui"
+/* main page */
+.main-items
+  margin-top: 75px
+  position: relative
+  z-index: 2
+  &:before
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: linear-gradient(0, #F3F5F7 0%, rgba(243, 245, 247, 0.50) 15%, rgba(243, 245, 247, 0.00) 25%)
+  .container
+    max-width: 1718px
+  &__content
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    flex-wrap: wrap
+    &__item
+      flex: 0 0 calc(50% - 10px)
+      max-width: calc(50% - 10px)
+      margin: 0 20px 20px 0
+      background-color: #fff
+      text-align: center
+      border-radius: 20px
+      overflow: hidden
+      position: relative
+      min-height: 700px
+      @media (max-width: 1599px)
+        min-height: 650px
+      @media (max-width: 1335px)
+        min-height: 550px
+      @media (max-width: 1199px)
+        min-height: 460px
+      @media (max-width: 1023px)
+        min-height: 430px
+      @media (max-width: 959px)
+        min-height: 380px
+        border-radius: 10px
+      @media (max-width: 767px)
+        flex: 0 0 100%
+        max-width: 100%
+        margin: 0 0 20px 0
+        min-height: 515px
+      @media (max-width: 575px)
+        max-width: 390px
+        min-height: 500px
+        border-radius: 20px
+        margin: 0 auto 20px
+      @media (max-width: 359px)
+        min-height: 430px
+      &:nth-of-type(2n)
+        margin-right: 0
+        @media (max-width: 575px)
+          margin-right: auto
+      .image-block
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        height: 100%
+        .item-image
+          display: block
+          flex: 0 0 auto
+          width: auto
+          max-width: 100%
+          margin: 0 auto
+      .descr-block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        padding: 53px
+        @media (max-width: 1199px)
+          padding: 32px
+        @media (max-width: 575px)
+          padding: 53px
+        @media (max-width: 359px)
+          padding: 32px
+        .item-title
+          font-weight: 600
+          font-size: 40px
+          line-height: 100%
+          letter-spacing: -1.6px
+          position: relative
+          z-index: 1
+          transition: color .3s
+          font-feature-settings: "ss01" 1, "cswh"
+          @media (max-width: 1199px)
+            font-size: 35px
+          @media (max-width: 575px)
+            font-size: 40px
+        .item-descr
+          font-weight: 300
+          max-width: 260px
+          margin: 20px auto 22px
+          position: relative
+          z-index: 1
+          transition: color .3s
+          @media (max-width: 1199px)
+            margin: 15px auto 15px
+          @media (max-width: 575px)
+            margin: 20px auto 22px
+        .link-style
+          transition: color .3s
+        .down-icon
+          position: absolute
+          bottom: 30px
+          left: 0
+          right: 0
+          margin: 0 auto
+          font-size: 52px
+          line-height: 52px
+          color: $txt-color
+          transition: color .3s
+          @media (max-width: 1199px)
+            font-size: 44px
+            line-height: 44px
+            bottom: 10px
+          @media (max-width: 959px)
+            font-size: 35px
+            line-height: 35px
+            bottom: 5px
+          @media (max-width: 767px)
+            bottom: 25px
+          @media (max-width: 575px)
+            font-size: 50px
+            line-height: 50px
+            bottom: 30px
+        .switch-link
+          display: inline-flex
+          align-items: center
+          justify-content: center
+          position: absolute
+          bottom: 40px
+          right: 40px
+          color: $txt-color
+          transition: color .3s
+          background-color: #fff
+          border-radius: 30px
+          @media (max-width: 1199px)
+            bottom: 18px
+            right: 18px
+          @media (max-width: 959px)
+            bottom: 8px
+            right: 10px
+          @media (max-width: 767px)
+            bottom: 25px
+            right: 25px
+          @media (max-width: 575px)
+            bottom: 40px
+            right: 40px
+          &:after
+            content: ''
+            display: block
+            width: 22px
+            height: 22px
+            background-color: $txt-color
+            border-radius: 50%
+            position: absolute
+            top: 4px
+            right: 2px
+            transition: transform .3s, background-color .3s
+          .icon
+            margin: 0 6px
+          .icon-sun
+            font-size: 30px
+            line-height: 30px
+            margin: 0 0 0 2px
+          .icon-moon
+            font-size: 16px
+            padding-right: 3px
+          &.black
+            color: #fff
+            background-color: $txt-color
+            &:after
+              background-color: #fff
+              transform: translateX(-30px)
+            &:hover
+              &:after
+                transform: translateX(-31px)
+          &:hover
+            &:after
+              transform: translateX(-2px)
+      &.ignis-block
+        .image-block
+          width: 100%
+          height: 100%
+          .item-image
+            width: 100%
+            height: 100%
+            &.black-image
+              display: none
+          .ignis-image
+            position: absolute
+            top: 0
+            left: 0
+            min-width: 100%
+            min-height: 100%
+            object-fit: cover
+            @media (max-width: 1335px)
+              width: 100%
+              height: 100%
+        .descr-block
+          .coming-link
+            transition: color .3s, background-color .3s
+        &.black
+          .descr-block
+            color: #fff
+            .link-style
+              color: #fff
+              &:after
+                background-color: #fff
+            .down-icon
+              color: #fff
+            .coming-link
+              background-color: #fff
+              color: $txt-color
+      &.auto-block
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-end
+        @media (max-width: 575px)
+          min-height: 500px
+        @media (max-width: 359px)
+          min-height: 380px
+        .image-block
+          display: flex
+          align-items: flex-end
+          justify-content: center
+          flex-direction: row
+          @media (max-width: 575px)
+            width: 100%
+.terra-main
+  background-color: $gray-color
+  .container
+    max-width: 1720px
+  &__title
+    margin-bottom: 20px
+  &__content
+    padding: 75px 0
+    text-align: center
+    margin: 0 auto 20px
+    height: 700px
+    background-color: #fff
+    border-radius: 20px
+    width: 100%
+    overflow: hidden
+    position: relative
+    z-index: 1
+    @media (max-width: 1599px)
+      height: 650px
+    @media (max-width: 1335px)
+      height: 580px
+    @media (max-width: 1199px)
+      padding: 32px 0
+      height: 500px
+    @media (max-width: 959px)
+      height: 400px
+    @media (max-width: 575px)
+      max-width: 390px
+    &:after
+      content: ''
+      display: block
+      width: 161px
+      height: 161px
+      border-radius: 161px
+      background: #fff
+      filter: blur(55px)
+      position: absolute
+      bottom: -25px
+      left: 0
+      right: 0
+      margin: 0 auto
+    p
+      max-width: 250px
+      margin: 0 auto
+    .coming-link
+      margin-top: 18px
+    .down-icon
+      position: absolute
+      bottom: 28px
+      left: 0
+      right: 0
+      margin: 0 auto
+      font-size: 50px
+      line-height: 50px
+      z-index: 1
+      @media (max-width: 1199px)
+        bottom: 10px
+        font-size: 44px
+        line-height: 44px
+      @media (max-width: 959px)
+        font-size: 35px
+        line-height: 35px
+        bottom: 5px
+      @media (max-width: 575px)
+        font-size: 50px
+        line-height: 50px
+        bottom: 30px
+
+
+/* pages */
+.preview-page
+  background-color: #fff
+  height: 1100px
+  overflow: hidden
+  position: relative
+  z-index: 1
+  @media (max-width: 1335px)
+    height: 800px
+  @media (max-width: 959px)
+    height: 630px
+  @media (max-width: 575px)
+    height: auto
+  &.air-page
+    .img-cover
+      left: 47.25%
+      width: auto
+      height: calc(100% - 20px)
+      @media (max-width: 959px)
+        left: 35%
+      @media (max-width: 575px)
+        left: 11.25%
+        position: relative
+        display: block
+        width: auto
+        height: auto
+        top: -20px
+        min-width: 100%
+    &:before
+      content: url(../images/common/svg/air/air_logo.svg)
+      display: block
+      position: absolute
+      top: -290px
+      left: -970px
+      width: auto
+      height: auto
+      z-index: -1
+      @media (max-width: 575px)
+        top: -572px
+        right: auto
+        left: -1040px
+    .preview-page__title
+      text-align: right
+      padding-right: calc(60% - 15px)
+      @media (max-width: 1335px)
+        padding: 0
+        text-align: left
+      @media (max-width: 575px)
+        margin: 0
+        text-align: center
+  &.aqua-page
+    .img-cover
+      left: 52.25%
+      width: auto
+      height: auto
+      top: 105px
+      @media (max-width: 1335px)
+        height: 100%
+        top: 50px
+      @media (max-width: 575px)
+        left: 0
+        top: 0
+        position: relative
+        display: block
+        width: auto
+        height: auto
+        min-width: 100%
+        margin: 47px 0 55px
+    &:before
+      content: url('../images/common/svg/aqua/aqua_logo.svg')
+      display: block
+      position: absolute
+      top: 185px
+      left: -205px
+      @media (max-width: 575px)
+        left: -281px
+        z-index: -1
+        top: -245px
+    &:after
+      content: ""
+      display: block
+      width: 41%
+      height: calc(100% - 20px)
+      background-color: $bg-color
+      position: absolute
+      top: 0
+      right: 0
+      z-index: -2
+      border-radius: 0 0 0 20px
+      @media (max-width: 575px)
+        display: none
+    .preview-page__title
+      text-align: left
+      padding-left: calc(12% + 10px)
+      @media (max-width: 1335px)
+        padding: 0
+        text-align: left
+      @media (max-width: 575px)
+        margin: -75px 0 0
+        text-align: center
+      @media (max-width: 419px)
+        margin: -55px 0 0
+        font-size: 120px
+  &.mixer-page
+    .img-cover
+      left: 26.75%
+      width: auto
+      height: auto
+      top: 165px
+      @media (max-width: 1335px)
+        height: 100%
+        top: 100px
+      @media (max-width: 767px)
+        left: 20%
+      @media (max-width: 575px)
+        left: 0
+        position: relative
+        display: block
+        width: auto
+        height: auto
+        min-width: 100%
+        top: 0
+        margin: 26px 0 30px
+    &:before
+      content: url('../images/common/svg/mixer/mixer_logo.svg')
+      display: block
+      position: absolute
+      top: -335px
+      left: -690px
+      @media (max-width: 575px)
+        left: -710px
+        top: -495px
+        z-index: -1
+    &:after
+      content: ""
+      display: block
+      width: 41%
+      height: calc(100% - 20px)
+      background-color: $bg-color
+      position: absolute
+      top: 0
+      right: 0
+      z-index: -2
+      border-radius: 0 0 0 20px
+      @media (max-width: 575px)
+        display: none
+    .preview-page__title
+      text-align: left
+      padding-left: calc(7% + 5px)
+      @media (max-width: 1335px)
+        padding-left: 0
+    .preview-page__descr
+      margin: 200px 0 0 35px
+      @media (max-width: 959px)
+        margin: auto 0 0
+      @media (max-width: 575px)
+        margin: 48px 0 0
+        padding: 10px 15px 10px 25px
+        width: 100%
+  &.vision-page
+    .img-cover
+      width: auto
+      height: auto
+      left: auto
+      right: 0
+      @media (min-width: 1921px)
+        left: 45.5%
+        right: 0
+        margin: 0 auto
+      @media (max-width: 1335px)
+        left: 45%
+        height: 100%
+      @media (max-width: 575px)
+        left: auto
+        position: relative
+        display: block
+        width: auto
+        height: auto
+        top: 0
+        max-width: 100%
+        right: 0
+        margin: -100px 0 222px auto
+    &:before
+      content: url('../images/common/svg/vision/vision_logo.svg')
+      display: block
+      position: absolute
+      top: 275px
+      left: -780px
+      @media (min-width: 1920px)
+        left: -550px
+      @media (max-width: 575px)
+        left: -705px
+        top: 30px
+    &:after
+      content: ""
+      display: block
+      width: 41%
+      height: calc(100% - 20px)
+      background-color: $bg-color
+      position: absolute
+      top: 0
+      right: 0
+      z-index: -2
+      border-radius: 0 0 0 20px
+      @media (max-width: 575px)
+        display: none
+    .preview-page__title
+      text-align: left
+      padding-left: 30px
+      @media (max-width: 1335px)
+        padding-left: 0
+      @media (max-width: 575px)
+        margin: -180px 0 0
+        text-align: center
+  .container
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 10vh 0
+    position: relative
+    z-index: 1
+    @media (max-width: 1335px)
+      padding: 8vh 50px
+      height: 100%
+    @media (max-width: 959px)
+      padding: 6vh 50px
+    @media (max-width: 767px)
+      padding: 6vh 20px
+    @media (max-width: 575px)
+      padding: 18px 20px
+  &__title
+    display: block
+    width: 100%
+    margin-top: 13.5vh
+    @media (max-width: 1335px)
+      margin-top: 0
+    @media (max-width: 1199px)
+      margin-top: 20px
+    @media (max-width: 959px)
+      margin-top: 45px
+    @media (max-width: 575px)
+      margin-top: -100px
+    @media (max-width: 374px)
+      margin-top: -60px
+  &__descr
+    display: inline-block
+    font-size: 22px
+    line-height: 29px
+    font-weight: 500
+    letter-spacing: -.22px
+    background-color: $gray-color
+    border-radius: 30px
+    padding: 10px 25px
+    margin: 230px 0 0 35px
+    @media (max-width: 1335px)
+      margin: 200px 0 0
+    @media (max-width: 1199px)
+      margin: auto 0 20px
+    @media (max-width: 959px)
+      margin: auto 0 0
+    @media (max-width: 767px)
+      padding: 10px 20px
+    @media (max-width: 639px)
+      font-size: 19px
+      line-height: 25px
+    @media (max-width: 575px)
+      font-size: 20px
+      line-height: 29px
+      margin-top: 30px
+      padding: 10px 25px
+    @media (max-width: 375px)
+      font-size: 20px
+      line-height: 25px
+      padding: 10px 15px
+.preview-descr
+  text-align: center
+  padding: 82px 0
+  height: 800px
+  position: relative
+  z-index: 1
+  @media (max-width: 1335px)
+    height: 700px
+    padding: 40px 0
+  @media (max-width: 1199px)
+    height: 650px
+  @media (max-width: 1023px)
+    height: 580px
+  @media (max-width: 575px)
+    padding: 55px 0
+    height: 635px
+    overflow: hidden
+    .img-wrapper
+      .img-cover
+        height: auto
+        top: auto
+        bottom: 0
+  &.air-page
+    .img-wrapper .img-cover
+      @media (min-width: 1920px)
+        width: auto
+        height: auto
+        left: 0
+        right: 0
+        margin: 0 auto
+        max-width: 1920px
+  &.aqua-page
+    overflow: hidden
+    .img-wrapper .img-cover
+      position: absolute
+      top: auto
+      bottom: 0
+      left: -50%
+      right: -50%
+      width: auto
+      height: auto
+      -o-object-fit: contain
+      object-fit: contain
+      z-index: -1
+      margin: 0 auto
+      max-height: 100%
+    .preview-descr__descr
+      max-width: 480px
+  &.mixer-page
+    @media (max-width: 1199px)
+      height: 700px
+    @media (max-width: 1023px)
+      height: 650px
+    @media (max-width: 767px)
+      height: 580px
+    @media (max-width: 575px)
+      padding: 55px 0
+      height: 635px
+    .preview-descr__descr
+      max-width: 500px
+    .img-cover
+      top: auto
+      left: 0
+      right: 0
+      margin: 0 auto
+      height: auto
+      width: auto
+      bottom: 0
+      max-width: 100%
+      @media (max-width: 575px)
+        min-width: 100%
+        max-height: 400px
+        object-fit: contain
+.preview-blocks
+  background-color: $txt-color
+  padding: 80px 0 72px
+  @media (max-width: 1335px)
+    padding: 50px 0 30px
+  @media (max-width: 1199px)
+    padding: 50px 0
+  @media (max-width: 959px)
+    padding-bottom: 0
+  @media (max-width: 575px)
+    padding: 70px 0 30px
+  &__list
+    display: flex
+    align-items: stretch
+    justify-content: space-around
+    flex-wrap: wrap
+    @media (max-width: 1335px)
+      justify-content: center
+  &__item
+    font-weight: 500
+    font-size: 22px
+    line-height: 28px
+    letter-spacing: -.22px
+    position: relative
+    flex: 1 1 auto
+    max-width: 20%
+    padding: 0 15px
+    text-align: center
+    @media (max-width: 1335px)
+      flex: 0 0 25%
+      max-width: 25%
+      margin: 0 15px 40px
+    @media (max-width: 959px)
+      flex: 0 0 35%
+      max-width: 35%
+    @media (max-width: 767px)
+      flex: 0 0 45%
+      max-width: 45%
+    @media (max-width: 639px)
+      flex: 0 0 calc(50% - 30px)
+      max-width: calc(50% - 30px)
+    @media (max-width: 575px)
+      flex: 0 0 100%
+      max-width: 100%
+    & > .icon
+      display: inline-block
+      font-size: 52px
+      line-height: 52px
+      margin-bottom: 12px
+    .learn-link
+      margin-top: 14px
+      &:hover
+        transition: color .3s
+        color: #fff !important
+    .view-link
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      text-transform: uppercase
+      margin-top: 8px
+      font-weight: 600
+      font-size: 16px
+      line-height: 18px
+      transition: color .3s
+      &:hover
+        color: #fff !important
+      .icon
+        display: inline-block
+        font-size: 26px
+        line-height: 26px
+        margin: 0 0 0 2px
+  &.air-page
+    color: $air-color
+    .view-link
+      color: $air-color
+    .learn-link
+      color: $air-color
+      &:after
+        background-color: $air-color
+  &.aqua-page
+    color: $aqua-color
+    .view-link
+      color: $aqua-color
+    .learn-link
+      color: $aqua-color
+      &:after
+        background-color: $aqua-color
+  &.mixer-page
+    color: $aqua-color
+    .view-link
+      color: $aqua-color
+    .learn-link
+      color: $aqua-color
+      &:after
+        background-color: $aqua-color
+.preview-ready
+  padding: 80px 0
+  background-color: #fff
+  overflow: hidden
+  @media (max-width: 575px)
+    padding: 48px 0
+  &__content
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    flex-wrap: wrap
+    margin: 55px 0
+    @media (max-width: 959px)
+      justify-content: center
+      margin-bottom: 0
+    @media (max-width: 575px)
+      margin: 35px 0
+    &__left-side
+      flex: 0 0 50%
+      max-width: 50%
+      @media (max-width: 1335px)
+        flex: 0 0 40%
+        max-width: 40%
+      @media (max-width: 1199px)
+        flex: 0 0 35%
+        max-width: 35%
+      @media (max-width: 959px)
+        flex: 0 0 100%
+        max-width: 100%
+      .ready-image
+        display: block
+        width: auto
+        max-width: 100%
+        margin: 0 10px 0 auto
+        @media (max-width: 959px)
+          max-width: 250px
+          margin: 0 auto 35px
+        @media (max-width: 575px)
+          max-width: 222px
+    &__right-side
+      flex: 0 0 50%
+      max-width: 50%
+      padding-left: 60px
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      padding-bottom: calc(10vh + 2px)
+      @media (max-width: 1335px)
+        flex: 0 0 60%
+        max-width: 60%
+      @media (max-width: 1199px)
+        flex: 0 0 65%
+        max-width: 65%
+      @media (max-width: 1023px)
+        padding-left: 35px
+      @media (max-width: 959px)
+        flex: 0 0 auto
+        max-width: 100%
+        padding: 0
+      .ready-list
+        &__item
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          font-weight: 500
+          font-size: 14px
+          line-height: 18px
+          margin-top: 10px
+          @media (max-width: 575px)
+            flex-wrap: wrap
+            padding: 0 0 0 30px
+            margin-top: 15px
+          @media (max-width: 420px)
+            margin-top: 40px
+          &:nth-of-type(1)
+            margin-top: 0
+            @media (max-width: 575px)
+              margin-top: 10px
+          .item-name
+            flex: 0 0 auto
+            width: auto
+            min-width: 160px
+            @media (max-width: 575px)
+              flex: 0 0 100%
+              max-width: 100%
+              margin-bottom: 5px
+          .icon
+            display: inline-block
+            font-size: 50px
+            line-height: 50px
+            flex: 0 0 auto
+            width: auto
+            margin: 0 20px 0 5px
+          .item-value
+            flex: 0 0 auto
+            width: auto
+            color: $air-color
+            padding-left: 18px
+            @media (max-width: 575px)
+              max-width: 130px
+            @media (max-width: 420px)
+              flex: 0 0 100%
+              width: 100%
+              max-width: 100%
+              margin-top: 5px
+              padding-left: 0
+  &.air-page
+    .preview-ready__descr
+      max-width: 545px
+  &.aqua-page
+    .preview-ready__descr
+      max-width: 460px
+    .ready-image
+      margin-top: 15px
+    .ready-list
+      &__item
+        .item-name
+          width: 125px
+          min-width: unset
+        .item-value
+          color: $aqua-color
+
+  &.mixer-page
+    padding-bottom: 0
+    margin-bottom: -100px
+    @media (max-width: 959px)
+      margin-bottom: 0
+      padding-bottom: 70px
+    .preview-ready__descr
+      max-width: 480px
+    .preview-ready__content
+      flex-direction: row-reverse
+      &__right-side
+        position: relative
+        z-index: 1
+        @media (max-width: 959px)
+          margin-top: -65px
+    .ready-image
+      display: block
+      max-width: 160%
+      margin: 15px 0 0 calc(-55% - 10px)
+      @media (max-width: 959px)
+        margin: 15px 20% 0 -12%
+        max-width: 100%
+      @media (max-width: 575px)
+        margin: 10px auto 20px auto
+        width: auto
+        max-width: 100%
+        min-width: 100%
+    .ready-list
+      margin: 70px 50px 0 auto
+      @media (max-width: 1335px)
+        margin: 40px 50px 0 40px
+      @media (max-width: 1023px)
+        margin: 20px 50px 0 0px
+      @media (max-width: 959px)
+        margin: 20px auto 0
+      &__item
+        .item-name
+          width: 125px
+          min-width: unset
+        .item-value
+          color: $aqua-color
+
+
+.preview-carousel
+  padding: 15px 0
+  background-color: #fff
+  overflow: hidden
+  &__content
+    width: 100vw
+    margin: 65px calc((100vw - 1444px) / -2) 0
+    @media (max-width: 1599px)
+      margin: 65px 0 0
+      width: 100%
+    .preview-slider
+      padding: 0 20px
+      @media (max-width: 575px)
+        padding: 0
+      .slide-item
+        position: relative
+        border-radius: 10px
+        overflow: hidden
+        @media (max-width: 575px)
+          max-width: calc(100% - 68px)
+          margin-right: 20px
+          height: 277px
+        .slide-image
+          display: block
+          width: auto
+          min-width: 100%
+          min-height: 100%
+          object-fit: contain
+          margin: 0
+          @media (max-width: 1599px)
+            margin: 0 50%
+            transform: translate(-50%, 0)
+        .slide-name
+          position: absolute
+          top: 25px
+          left: 0
+          width: 100%
+          text-align: center
+          font-weight: 500
+          font-size: 22px
+          line-height: 29px
+          letter-spacing: -.22px
+          padding: 0 15px
+          z-index: 1
+
+.preview-control
+  background-color: #fff
+  padding: 80px 0
+  @media (max-width: 1199px)
+    padding: 80px 0 20px
+  @media (max-width: 1023px)
+    padding: 80px 0 0
+  @media (max-width: 575px)
+    padding: 40px 0 0
+  &__content
+    display: flex
+    align-items: stretch
+    justify-content: center
+    flex-wrap: wrap
+    margin-top: 68px
+    @media (max-width: 1023px)
+      max-width: 600px
+      margin: 65px auto 0
+    @media (max-width: 575px)
+      margin-top: 48px
+    &__item
+      flex: 0 0 calc(25% - 25px)
+      max-width: calc(25% - 25px)
+      margin: 0 10px
+      @media (max-width: 1023px)
+        flex: 0 0 265px
+        max-width: 265px
+        margin: 0 10px 60px
+      .image-block
+        border-radius: 10px
+        overflow: hidden
+        .item-image
+          display: block
+          width: auto
+          min-width: 100%
+          min-height: 100%
+          object-fit: contain
+          margin: 0
+      .descr-block
+        margin-top: 25px
+        text-align: center
+        .item-name
+          display: block
+          font-size: 22px
+          line-height: 29px
+          font-weight: 500
+          letter-spacing: -.22px
+          margin-bottom: 8px
+        .item-link
+          margin-top: 10px
+  &.aqua-descr
+    @media (max-width: 1023px)
+      padding: 40px 0 80px
+
+.preview-cloud
+  padding: 80px 0
+  position: relative
+  z-index: 1
+  @media (max-width: 1023px)
+    padding: 50px 0
+  @media (max-width: 575px)
+    padding: 50px 0 0
+  &__descr
+    max-width: 410px
+  &__title
+    @media (max-width: 575px)
+      padding: 0 20px
+  &__content
+    padding: 0 20px
+    margin-top: 85px
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    flex-wrap: wrap
+    @media (max-width: 1023px)
+      margin-top: 45px
+    @media (max-width: 767px)
+      padding: 0
+    &__item
+      display: flex
+      align-items: stretch
+      justify-content: flex-start
+      flex: 0 0 calc(50% - 10px)
+      max-width: calc(50% - 10px)
+      margin: 0 20px 20px 0
+      background-color: #fff
+      border-radius: 20px
+      overflow: hidden
+      padding: 10px 10px 0
+      position: relative
+      @media (max-width: 1199px)
+        flex: 0 0 100%
+        max-width: 900px
+        margin: 0 auto 20px auto
+      @media (max-width: 575px)
+        padding: 0
+      .descr-block
+        flex: 0 0 60%
+        max-width: 60%
+        padding: 15px 0 15px 24px
+        position: relative
+        z-index: 2
+        @media (max-width: 575px)
+          padding: 20px 10px 20px 25px
+        & > .icon
+          display: inline-block
+          font-size: 50px
+          line-height: 50px
+          color: $accent-color
+          position: relative
+          left: -9px
+        .item-name
+          display: block
+          margin-top: 10px
+          font-weight: 500
+          font-size: 22px
+          line-height: 29px
+          letter-spacing: -.22px
+        .item-descr
+          margin-top: 10px
+
+      .image-block
+        flex: 0 0 40%
+        max-width: 40%
+        position: relative
+        z-index: 1
+        @media (max-width: 575px)
+          display: flex
+          flex-direction: column
+          align-items: flex-end
+          justify-content: flex-end
+        .img-cover
+          display: block
+          width: auto
+          max-width: 100%
+          min-height: 100%
+          margin: 0 0 0 auto
+          @media (max-width: 575px)
+            min-height: unset
+        .download-link
+          display: flex
+          align-items: center
+          justify-content: center
+          position: absolute
+          right: 63%
+          bottom: 10px
+          width: 31px
+          height: 31px
+          border-radius: 10px
+          background-color: $accent-color
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+          color: $txt-color
+          font-size: 25px
+          line-height: 25px
+          padding-right: 1px
+          transition: color .3s, background-color .3s
+          z-index: 1
+          @media (max-width: 1440px)
+            right: 70%
+          @media (max-width: 1200px)
+            right: 90%
+          @media (max-width: 1199px)
+            right: 185px
+          @media (max-width: 767px)
+            right: 20px
+          &:hover
+            background-color: $txt-color
+            color: #fff
+        &.full-image
+          border-radius: 10px
+          overflow: hidden
+          margin: 0 0 10px auto
+          @media (max-width: 575px)
+            margin: 0 0 0 auto
+            border-radius: 0
+            overflow: visible
+            .img-cover
+              min-height: 100%
+              width: auto
+              max-width: unset
+
+
+
+
+      &:nth-of-type(2n)
+        margin-right: 0
+        @media (max-width: 1199px)
+          margin-right: auto
+      &:nth-of-type(3)
+        &:before
+          content: ''
+          display: block
+          width: 55%
+          height: 100%
+          background-image: url(../images/common/svg/air/cloud_lines.svg)
+          background-repeat: no-repeat
+          background-position: bottom center
+          background-size: contain
+          position: absolute
+          bottom: 5px
+          right: -5px
+.preview-grow
+  padding: 80px 0
+  height: 700px
+  background-color: #fff
+  position: relative
+  z-index: 1
+  overflow: hidden
+  @media (max-width: 1335px)
+    height: 580px
+  @media (max-width: 575px)
+    height: 700px
+    padding: 50px 0
+  .img-wrapper
+    .img-cover
+      height: auto
+      width: 100%
+      top: auto
+      bottom: 0
+      @media (max-width: 959px)
+        width: 150%
+        margin: 0 -25%
+      @media (max-width: 575px)
+        width: auto
+        margin: 0
+        min-width: 100%
+  &__descr
+    max-width: 580px
+  .btns-row
+    position: absolute
+    bottom: 67px
+    left: 0
+    right: 0
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    @media (max-width: 575px)
+      bottom: 20px
+    .phone-app-link
+      display: flex
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      border-radius: 10px
+      margin: 0 10px
+      transition: background-color .3s
+      width: 130px
+      height: 40px
+      padding: 5px
+      @media (max-width: 575px)
+        width: 55px
+        height: 55px
+      &.google-link
+        background-image: url(../images/common/svg/google_link.svg)
+        &:hover
+          background-image: url(../images/common/svg/google_link_hover.svg)
+        @media (max-width: 575px)
+          background-image: url(../images/common/svg/google_link_mobile.svg)
+          &:hover
+            background-image: url(../images/common/svg/google_link_mobile_hover.svg)
+      &.apple-link
+        background-image: url(../images/common/svg/apple_link.svg)
+        &:hover
+          background-image: url(../images/common/svg/apple_link_hover.svg)
+        @media (max-width: 575px)
+          background-image: url(../images/common/svg/apple_link_mobile.svg)
+          &:hover
+            background-image: url(../images/common/svg/apple_link_mobile_hover.svg)
+
+      &:hover
+        background-color: $accent-color
+        svg
+          .txt-path
+            fill: $txt-color
+      svg
+        .txt-path
+          transition: fill .3s
+.preview-how
+  background-color: #fff
+  padding: 75px 0 90px
+  @media (max-width: 575px)
+    padding: 55px 0
+  &__descr
+    max-width: 540px
+  &__content
+    max-width: 1117px
+    margin: 65px auto 0
+    overflow: hidden
+    background-color: $bg-color
+    border-radius: 20px
+    @media (max-width: 959px)
+      background-color: transparent
+      border-radius: 0
+    @media (max-width: 575px)
+      margin: 35px auto 0
+    .preview-how-slider
+      position: relative
+      @media (max-width: 959px)
+        background-color: $bg-color
+        padding-bottom: 10px
+        border-radius: 20px
+      .slide-item
+        border-radius: 20px
+        padding: 28px 20px 5px
+        opacity: 0 !important
+        &.swiper-slide-active
+          opacity: 1 !important
+        @media (max-width: 767px)
+          padding: 25px 20px 5px
+        @media (max-width: 575px)
+          padding: 25px 20px 45px
+        @media (max-width: 359px)
+          padding: 25px 15px 5px
+        .slide-name
+          font-weight: 600
+          font-size: 33px
+          line-height: 40px
+          letter-spacing: -.99px
+          position: relative
+          z-index: 1
+          @media (max-width: 1023px)
+            font-size: 30px
+          @media (max-width: 767px)
+            font-size: 28px
+            line-height: 35px
+          @media (max-width: 575px)
+            font-size: 24px
+            line-height: 28px
+        .slide-imgblock
+          min-height: 272px
+          display: flex
+          align-items: center
+          justify-content: center
+          @media (max-width: 768px)
+            padding: 18px 0
+        .slide-image
+          display: block
+          width: auto
+          max-width: 100%
+          margin: 0 auto
+          @media (max-width: 1199px)
+            margin: 30px auto
+          @media (max-width: 959px)
+            margin: 0 auto
+          @media (max-width: 575px)
+            width: auto
+            max-width: 100%
+            margin: 30px auto
+      .slider-navigation
+        position: absolute
+        top: calc(50% - 17px)
+        left: 23px
+        height: 0
+        width: calc(100% - 46px)
+        z-index: 1
+        font-size: 25px
+        line-height: 25px
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        @media (max-width: 575px)
+          left: 10px
+          width: calc(100% - 20px)
+        .nav-btn
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 45px
+          height: 45px
+          border-radius: 50%
+          background-color: #FFF
+          color: $txt-color
+          margin: 0 auto 0 0
+          transition: background-color .3s, color .3s
+          &.next-btn
+            margin: 0 0 0 auto
+          &:hover
+            color: #fff
+            background-color: $txt-color
+      .slider-pagination
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: 20px
+        left: 0
+        right: 0
+        margin: 0 auto
+        z-index: 1
+        width: 100%
+        height: 20px
+        @media (max-width: 959px)
+          top: auto
+          bottom: 15px
+        .swiper-pagination-bullet
+          width: 10px
+          height: 10px
+          margin: 0 5px
+          background-color: #fff
+          opacity: 1
+          transition: background-color .3s
+          &.swiper-pagination-bullet-active
+            background-color: $txt-color
+    .slider-descr
+      display: flex
+      align-items: stretch
+      justify-content: flex-start
+      flex-wrap: wrap
+      @media (max-width: 959px)
+        margin-top: 20px
+      @media (max-width: 575px)
+        margin: 0 -10px 0
+        max-width: calc(100% + 20px)
+        width: calc(100% + 20px)
+
+      &__item
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex: 0 0 calc(50% - 10px)
+        max-width: calc(50% - 10px)
+        background-color: #fff
+        border-radius: 10px
+        margin: 0 20px 20px 0
+        padding: 18px 0
+        @media (max-width: 959px)
+          flex: 0 0 100%
+          max-width: 100%
+          margin: 0 0 20px 0
+          &:last-child
+            margin-bottom: 0
+        @media (max-width: 575px)
+          margin: 0 0 10px 0
+          padding: 10px 0
+        .icon-block
+          flex: 0 0 16%
+          max-width: 16%
+          .icon
+            display: block
+            font-size: 40px
+            line-height: 40px
+            margin: 10px auto
+            &.icon-air
+              color: $air-color
+            &.icon-aqua
+              color: $aqua-color
+        .text-block
+          flex: 0 0 84%
+          max-width: 84%
+          padding: 0 30px 0 10px
+          @media (max-width: 359px)
+            padding: 0 10px
+        &:nth-of-type(2n)
+          margin-right: 0
+
+.preview-protection
+  background-color: #fff
+  padding: 75px 0
+  height: 700px
+  @media (max-width: 1199px)
+    height: auto
+  @media (max-width: 575px)
+    padding: 50px 0
+  &__content
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    &__left-side
+      flex: 0 0 50%
+      max-width: 50%
+      text-align: left
+      padding: 10px 11% 0
+      @media (max-width: 1199px)
+        padding: 0 4%
+      @media (max-width: 767px)
+        padding: 0 15px
+        flex: 0 0 60%
+        max-width: 60%
+      @media (max-width: 575px)
+        flex: 0 0 100%
+        max-width: 100%
+        text-align: center
+      .section-icon
+        display: inline-block
+      .section-title
+        text-align: left
+        @media (max-width: 575px)
+          text-align: center
+      .section-descr
+        max-width: 100%
+        text-align: left
+        @media (max-width: 575px)
+          text-align: center
+    &__right-side
+      flex: 0 0 50%
+      max-width: 50%
+      @media (max-width: 767px)
+        flex: 0 0 40%
+        max-width: 40%
+      @media (max-width: 575px)
+        flex: 0 0 100%
+        max-width: 100%
+        margin: 55px auto 0
+      .protection-image
+        display: block
+        width: auto
+        max-width: 100%
+        margin: 0 0 0 10px
+        @media (max-width: 1335px)
+          margin: 0
+        @media (max-width: 1199px)
+          max-width: 85%
+        @media (max-width: 575px)
+          max-width: 100%
+
+.preview-specification
+  padding: 80px 0 100px
+  position: relative
+  overflow: hidden
+  @media (max-width: 959px)
+    padding: 60px 0
+  @media (max-width: 575px)
+    padding: 50px 0
+  .section-icon
+    position: relative
+    z-index: 1
+  &__title
+    position: relative
+    z-index: 1
+  &__descr
+    max-width: 450px
+    position: relative
+    z-index: 1
+  &__content
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    flex-wrap: wrap
+    max-width: 834px
+    margin: 72px auto 0
+    position: relative
+    z-index: 1
+    @media (max-width: 575px)
+      margin: 335px auto 0
+      padding: 0 20px
+    &__side
+      flex: 0 0 calc(50% - 10px)
+      max-width: calc(50% - 10px)
+      margin: 0 20px 20px 0
+      @media (max-width: 767px)
+        flex: 0 0 100%
+        max-width: 420px
+        margin: 0 auto 40px
+      &:nth-of-type(2n)
+        margin-right: 0
+        @media (max-width: 767px)
+          margin-right: auto
+        @media (max-width: 575px)
+          margin-top: -10px
+    .side-item
+      margin-top: 30px
+      &:nth-of-type(1)
+        margin-top: 0
+      &__title
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        color: $txt-color
+        font-weight: 500
+        font-size: 22px
+        line-height: 28px
+        letter-spacing: -.22px
+        padding-bottom: 17px
+        border-bottom: 1px solid rgba($txt-color, .7)
+        .icon
+          font-size: 42px
+          line-height: 42px
+          margin: 0 10px 0 -7px
+      &__list
+        margin-top: 18px
+        li
+          margin-top: 14px
+          @media (max-width: 959px)
+            margin-top: 5px
+          @media (max-width: 575px)
+            margin-top: 14px
+          &:nth-of-type(1)
+            margin-top: 0
+  .btns-row
+    margin-top: 85px
+    @media (max-width: 959px)
+      margin-top: 35px
+    @media (max-width: 575px)
+      margin-top: 0
+  &.air-page
+    .img-wrapper
+      @media (max-width: 959px)
+        display: none
+      @media (max-width: 575px)
+        display: block
+      .img-ancor
+        position: absolute
+        width: 834px
+        height: 607px
+        &.left-ancor
+          top: -75px
+          right: 83.5%
+          @media (max-width: 575px)
+            margin: 0 auto
+            left: 0
+            right: 0
+            width: 390px
+            height: auto
+            top: 235px
+            max-width: calc(100% - 40px)
+          @media (max-width: 380px)
+            top: 295px
+        &.right-ancor
+          top: 55px
+          left: 80%
+          @media (max-width: 575px)
+            display: none
+  &.aqua-page
+    .img-wrapper
+      @media (max-width: 959px)
+        display: none
+      @media (max-width: 575px)
+        display: block
+      .img-ancor
+        position: absolute
+        width: 768px
+        height: 635px
+        &.left-ancor
+          top: -20px
+          right: 83.5%
+          @media (max-width: 575px)
+            margin: 0 auto
+            left: 0
+            right: 0
+            width: 390px
+            height: auto
+            top: 235px
+            max-width: calc(100% - 40px)
+          @media (max-width: 380px)
+            top: 295px
+        &.right-ancor
+          top: 25px
+          left: 83.5%
+          @media (max-width: 575px)
+            display: none
+  &.mixer-page
+    .img-wrapper
+      .img-ancor
+        position: absolute
+        width: 1420px
+        height: 1331px
+        &.left-ancor
+          top: -8%
+          right: 57.5%
+          @media (max-width: 1439px)
+            right: 52.5%
+          @media (max-width: 575px)
+            margin: 0 auto
+            left: 0
+            right: 0
+            width: 390px
+            height: auto
+            top: 185px
+            max-width: calc(100% - 40px)
+          @media (max-width: 380px)
+            top: 235px
+        &.right-ancor
+          top: -23.5%
+          left: 80.5%
+          @media (max-width: 1439px)
+            left: 75%
+          @media (max-width: 575px)
+            display: none
+/* unic pages */
+.air-descr
+  background-color: #fff
+  padding: 18px 0 82px
+  &__content
+    max-width: calc(100% - 260px)
+    margin: 0 auto
+    position: relative
+    @media (max-width: 1199px)
+      max-width: calc(100% - 200px)
+      margin: 0 50px 0 auto
+    @media (max-width: 959px)
+      max-width: 320px
+      margin: 0 auto
+    @media (max-width: 575px)
+      max-width: 340px
+      margin: 10px auto
+    &:before
+      content: ''
+      display: block
+      width: 140px
+      height: 100%
+      position: absolute
+      top: calc(25% - 5px)
+      left: -118px
+      background-image: url(../images/common/svg/air/air_scheme.svg)
+      background-repeat: no-repeat
+      background-position: top left
+      background-size: contain
+      @media (max-width: 1439px)
+        top: calc(22% - 5px)
+        left: -135px
+      @media (max-width: 1335px)
+        top: 25%
+        left: -115px
+        width: 115px
+      @media (max-width: 959px)
+        background-image: url(../images/common/svg/air/air_descr_line2.svg)
+        top: 15%
+        left: -45px
+        width: 78px
+        height: 65%
+      @media (max-width: 575px)
+        top: 16%
+        left: -26px
+        height: 63%
+      @media (max-width: 420px)
+        display: none
+    &__item
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-top: 48px
+      @media (max-width: 959px)
+        flex-direction: column
+        position: relative
+        margin: 40px auto 0
+      @media (max-width: 575px)
+        margin: 80px auto 0
+        &:nth-of-type(3)
+          margin-top: 55px
+      .image-block
+        flex: 0 0 calc(25% + 40px)
+        max-width: calc(25% + 40px)
+        position: relative
+        @media (max-width: 1199px)
+          flex: 0 0 calc(30% + 40px)
+          max-width: calc(30% + 40px)
+        @media (max-width: 959px)
+          flex: 0 0 auto
+          width: auto
+          max-width: 100%
+        .adjust-animation
+          position: absolute
+          top: 50px
+          left: 0
+          right: 0
+          z-index: 2
+          width: 70%
+          margin: 0 auto
+          max-width: 200px
+        .item-image
+          display: block
+          width: auto
+          object-fit: contain
+          margin: 0 auto
+          position: relative
+          z-index: 1
+          max-width: 100%
+        &:before
+          content: ''
+          display: block
+          width: 58px
+          height: 100px
+          background-image: url(../images/common/svg/air/air_arrows.svg)
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+          position: absolute
+          top: -85px
+          left: 0
+          right: 0
+          margin: 0 auto
+          @media (max-width: 959px)
+            display: none
+      .descr-block
+        text-align: left
+        flex: 0 0 calc(75% - 40px)
+        max-width: calc(75% - 40px)
+        padding-left: calc(10% + 10px)
+        padding-bottom: calc(5% - 5px)
+        @media (max-width: 1199px)
+          padding-left: calc(5% - 10px)
+          flex: 0 0 calc(70% - 40px)
+          max-width: calc(70% - 40px)
+        @media (max-width: 959px)
+          flex: 0 0 auto
+          width: auto
+          max-width: 100%
+          text-align: center
+          padding: 0
+          position: relative
+          &:after
+            content: ""
+            display: block
+            background-image: url(../images/common/svg/air/air_descr_line1.svg)
+            background-repeat: no-repeat
+            background-position: top right
+            background-size: contain
+            width: 110px
+            height: 250%
+            position: absolute
+            top: -45px
+            left: 75%
+        @media (max-width: 575px)
+          &:after
+            width: 115px
+            top: -60px
+        @media (max-width: 420px)
+          &:after
+            display: none
+        .section-title
+          text-align: left
+          @media (max-width: 959px)
+            text-align: center
+            max-width: 300px
+            margin: 0 auto
+        .txt-block
+          max-width: 540px
+          margin-top: 20px
+          @media (max-width: 575px)
+            max-width: 320px
+            margin: 20px auto 0
+      &:nth-of-type(1)
+        margin-top: 0
+        .image-block
+          &:before
+            display: none
+        .descr-block
+          padding-top: 10%
+          padding-bottom: 0
+          @media (max-width: 959px)
+            padding: 0
+      &:nth-of-type(2)
+        .image-block
+          &:after
+            content: '\e80f'
+            font-family: Fontello
+            font-style: normal
+            font-weight: normal
+            speak: never
+            display: block
+            margin: 0
+            text-decoration: inherit
+            text-align: center
+            font-variant: normal
+            text-transform: none
+            font-size: 50px
+            line-height: 50px
+            position: absolute
+            top: 32.5%
+            left: -35px
+            @media (max-width: 959px)
+              display: none
+      &:last-child
+        @media (max-width: 959px)
+          .descr-block
+            &:after
+              display: none
+.air-installation
+  padding: 80px 0
+  height: 800px
+  overflow: hidden
+  position: relative
+  z-index: 1
+  @media (max-width: 1199px)
+    height: 700px
+  @media (max-width: 959px)
+    height: 575px
+    padding: 40px 0 0
+  @media (max-width: 575px)
+    height: 590px
+  .img-wrapper
+    .img-cover
+      @media (max-width: 575px)
+        top: auto
+        left: 0
+        width: 100%
+        height: 85%
+        bottom: 0
+  .image-wrapper
+    position: absolute
+    top: 38%
+    left: 40%
+    width: 290px
+    height: 100%
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    // animation: imageScale 8s infinite linear
+    transition: all 1.5s
+    &.animated
+      width: 53%
+      top: 36%
+    @media (max-width: 1199px)
+      left: 35%
+    @media (max-width: 575px)
+      animation: none
+      max-width: 185px
+      left: 51%
+      top: 47%
+    .air-image
+      display: block
+      width: 100%
+      margin: 0
+      position: absolute
+      top: 0
+      left: 0
+.aqua-descr
+  padding: 90px 0 80px
+  background-color: #fff
+  @media (max-width: 767px)
+    padding: 50px 0 20px
+  &__descr
+    max-width: 500px
+  &__content
+    max-width: 1117px
+    margin: 55px auto 0
+    .slider-navigation
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      flex-wrap: wrap
+      @media (max-width: 1023px)
+        justify-content: center
+      .nav-list
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        border: 2px solid #000
+        border-radius: 40px
+        background-color: $bg-color
+        overflow: hidden
+        position: relative
+        z-index: 1
+        @media (max-width: 575px)
+          flex: 0 0 100%
+          width: 100%
+          justify-content: space-between
+        @media (max-width: 359px)
+          flex-wrap: wrap
+          border-radius: 20px
+        &__item
+          flex: 0 0 auto
+          width: auto
+          @media (max-width: 359px)
+            flex: 0 0 50%
+            width: 50%
+        &__link
+          display: inline-block
+          color: $txt-color
+          padding: 8px 22px
+          transition: background-color .3s
+          @media (max-width: 1199px)
+            padding: 8px 15px
+          @media (max-width: 419px)
+            padding: 8px 10px
+          @media (max-width: 359px)
+            display: block
+            width: 100%
+            text-align: center
+          &.active
+            background-color: #fff
+            border-radius: 20px
+      .drip-link
+        display: inline-block
+        border: 2px solid #000
+        border-radius: 20px
+        padding: 8px 22px
+        margin-left: 68px
+        position: relative
+        background-color: $bg-color
+        transition: background-color .3s
+        color: $txt-color
+        @media (max-width: 1199px)
+          padding: 8px 15px
+          margin-left: 35px
+        @media (max-width: 575px)
+          margin: 30px auto 0
+        &:before
+          content: ''
+          display: block
+          width: 70px
+          height: 2px
+          background-color: #000
+          position: absolute
+          right: 100%
+          top: calc(50% - 1px)
+          @media (max-width: 575px)
+            height: 32px
+            width: 2px
+            left: 0
+            right: 0
+            margin: 0 auto
+            top: auto
+            bottom: 100%
+        &:after
+          content: ''
+          display: block
+          width: 70px
+          height: 2px
+          background-color: #000
+          position: absolute
+          left: 100%
+          top: calc(50% - 1px)
+          @media (max-width: 1023px)
+            display: none
+        &.active
+          background-color: #fff
+      .scheme-main
+        display: block
+        width: auto
+        max-width: 100%
+        margin: 0 0 0 auto
+        position: relative
+        @media (max-width: 1023px)
+          order: -1
+          flex: 0 0 100%
+          max-width: 100%
+          margin: 0 auto 30px
+          &:after
+            content: ''
+            display: block
+            width: 2px
+            height: 30px
+            background-color: #000
+            position: absolute
+            left: 0
+            right: 0
+            margin: 0 auto
+            top: 100%
+        img
+          display: block
+          width: auto
+          max-width: 100%
+          margin: 0 auto
+    .aquamixer-slider
+      margin-top: 25px
+      .slide-item
+        background-color: $bg-color
+        border-radius: 20px
+        overflow: hidden
+        .slide-image
+          display: block
+          width: auto
+          max-width: 100%
+          margin: 0 auto
+
+
+.mixer-control
+  padding: 100px 0 0
+  background-color: #fff
+  overflow: hidden
+  @media (max-width: 1335px)
+    padding: 50px 0 0
+  &__descr
+    max-width: 480px
+  &__content
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: nowrap
+    margin-top: 10px
+    @media (max-width: 959px)
+      flex-direction: column
+      margin-top: 50px
+    .mixer-image
+      flex: 0 0 auto
+      width: auto
+      display: block
+      margin: 0
+      position: relative
+      top: 5px
+      @media (max-width: 1335px)
+        display: block
+        margin: 0 auto
+    &__item
+      &:nth-of-type(1)
+        margin: 0 9.5% 0 20px
+        @media (max-width: 1335px)
+          flex: 0 0 28%
+          max-width: 28%
+          margin: 0 auto
+          .mixer-image
+            max-width: 100%
+        @media (max-width: 959px)
+          flex: 0 0 100%
+          max-width: 100%
+      &:nth-of-type(2)
+        margin: 40px 0 0
+        position: relative
+        @media (max-width: 1335px)
+          flex: 0 0 30%
+          max-width: 30%
+          margin: 0 6%
+        @media (max-width: 959px)
+          flex: 0 0 100%
+          max-width: 100%
+          margin: 80px auto 0
+          .mixer-image
+            display: block
+            width: auto
+            max-width: 100%
+        &:before
+          content: ''
+          display: block
+          width: 215px
+          height: 145px
+          background-image: url(../images/common/svg/mixer/control_arrows1.svg)
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+          position: absolute
+          top: calc(50% - 24px)
+          right: calc(100% - 58px)
+          @media (max-width: 1335px)
+            width: 165px
+          @media (max-width: 1199px)
+            width: 51%
+          @media (max-width: 959px)
+            width: 60%
+            transform: rotate(90deg)
+            left: 10%
+            right: 0
+            bottom: 60%
+            top: auto
+        &:after
+          content: ''
+          display: block
+          width: 188px
+          height: 125px
+          background-image: url(../images/common/svg/mixer/control_arrows2.svg)
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+          position: absolute
+          top: calc(50% - 33px)
+          left: calc(100% + 5px)
+          @media (max-width: 1335px)
+            width: 165px
+          @media (max-width: 959px)
+            width: 60%
+            transform: rotate(90deg)
+            left: 0
+            right: 10%
+            margin: 0 auto
+            top: 125%
+      &:nth-of-type(3)
+        margin: 35px 0 0 7%
+        @media (max-width: 1335px)
+          margin: 35px 0 0 0
+          flex: 0 0 auto
+          width: auto
+        @media (max-width: 959px)
+          flex: 0 0 100%
+          max-width: 100%
+          margin: 80px 0 0 25%
+        @media (max-width: 575px)
+          margin: 80px 0 0 -5%
+.mixer-requirements
+  padding: 95px 0
+  @media (max-width: 1335px)
+    padding: 50px 0 30px
+  &__content
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    flex-wrap: wrap
+    margin-top: 40px
+    @media (max-width: 1335px)
+      justify-content: center
+      margin-top: 60px
+    &__item
+      flex: 0 0 calc(100% / 6)
+      max-width: calc(100% / 6)
+      padding: 0 20px
+      text-align: center
+      font-weight: 500
+      font-size: 22px
+      line-height: 28px
+      letter-spacing: -.22px
+      @media (max-width: 1335px)
+        padding: 0 10px
+        flex: 0 0 calc(100% / 4)
+        max-width: calc(100% / 4)
+        margin: 0 20px 40px
+      @media (max-width: 767px)
+        flex: 0 0 calc(50% - 40px)
+        max-width: calc(50% - 40px)
+      @media (max-width: 419px)
+        flex: 0 0 100%
+        max-width: 100%
+        margin: 0 0 40px 0
+      &:nth-of-type(1)
+        padding-left: 0
+      &:nth-of-type(6n)
+        padding-right: 0
+      span
+        display: block
+        font-size: 14px
+        line-height: 20px
+        margin-top: 10px
+      .icon
+        display: inline-block
+        font-size: 40px
+        line-height: 40px
+        margin-bottom: 8px
+
+.vision-decsr
+  overflow: hidden
+  text-align: center
+  position: relative
+  font-weight: 300
+  font-size: 33px
+  line-height: 40px
+  letter-spacing: -.99px
+  @media (max-width: 959px)
+    font-size: 28px
+    line-height: 38px
+  @media (max-width: 639px)
+    font-size: 25px
+    line-height: 35px
+  @media (max-width: 575px)
+    font-size: 26px
+    line-height: 34px
+    br
+      display: none
+  @media (max-width: 374px)
+    font-size: 23px
+    line-height: 32px
+  .img-wrapper
+    .img-ancor
+      position: absolute
+      &.left-ancor
+        width: 1232px
+        height: 1230px
+        top: 3.5%
+        right: 60%
+        left: auto
+        @media (max-width: 959px)
+          top: -8.5%
+          right: 58%
+        @media (max-width: 767px)
+          display: none
+        @media (max-width: 575px)
+          display: block
+          width: auto
+          height: auto
+          top: calc(28.5% - 10px)
+          left: -335px
+      &.right-ancor
+        width: 864px
+        height: 1129px
+        top: 28.5%
+        left: 66%
+        @media (max-width: 1599px)
+          left: 72%
+        @media (max-width: 1199px)
+          left: 80%
+        @media (max-width: 959px)
+          left: 90%
+        @media (max-width: 767px)
+          display: none
+        @media (max-width: 575px)
+          display: block
+          width: auto
+          height: auto
+          top: calc(35% - 10px)
+          right: -230px
+          left: auto
+  .descr-block
+    @media (max-width: 575px)
+      max-width: 365px
+      margin: 0 auto
+    p
+      margin-top: 42px
+    b
+      font-weight: 500
+      &.simple-line
+        display: inline-block
+        position: relative
+        &:after
+          content: ''
+          display: block
+          width: 100%
+          height: 8px
+          background-image: url(../images/common/svg/simple_line.svg)
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+          position: absolute
+          bottom: -2px
+          left: 0
+      &.hard-line
+        display: inline-block
+        position: relative
+        &:after
+          content: ''
+          display: block
+          width: 100%
+          height: 30px
+          background-image: url(../images/common/svg/hard_line.svg)
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+          position: absolute
+          bottom: -24px
+          left: 0
+  &__top
+    padding: 121px 0
+    @media (max-width: 959px)
+      padding: 80px 0
+    @media (max-width: 575px)
+      padding: 70px 0
+  &__bottom
+    background-color: #fff
+    padding: 121px 0
+    @media (max-width: 1023px)
+      padding: 100px 30px 50px
+    @media (max-width: 639px)
+      padding: 50px 15px
+    @media (max-width: 575px)
+      padding: 180px 15px 50px
+
+  .container
+    max-width: 840px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+    p:nth-of-type(1)
+      margin-top: 0
+
+.vision-software
+  padding: 80px 0
+  height: 800px
+  position: relative
+  z-index: 1
+  @media (max-width: 575px)
+    padding: 80px 0 84vw
+    height: auto
+  .img-wrapper
+    .img-cover
+      @media (max-width: 575px)
+        top: auto
+        bottom: 0
+        height: auto
+        max-width: 100%
+        min-width: 100%
+  &__descr
+    max-width: 500px
+.vision-philosophy
+  padding: 80px 0
+  background-color: #fff
+  @media (max-width: 959px)
+    padding: 50px 0
+  &__descr
+    max-width: 450px
+  &__content
+    margin: 70px 0
+    @media (max-width: 1199px)
+      width: calc(100% + 30px)
+      margin: 70px -15px 0
+    @media (max-width: 575px)
+      width: calc(100% + 40px)
+      margin: 70px -20px 0
+    &__item
+      background-repeat: no-repeat
+      background-position: top center
+      background-size: auto 100%
+      text-align: center
+      margin-bottom: -1px
+      &:nth-of-type(1)
+        background-image: url(../images/common/svg/vision/triangles/triangle1.svg)
+        background-position: calc(50% + 10px) 0
+        min-height: 215px
+        .item-wrapper
+          max-width: 200px
+          margin: 0 auto
+          padding: 100px 0 28px
+      &:nth-of-type(2)
+        background-image: url(../images/common/svg/vision/triangles/triangle2.svg)
+        background-position: calc(50% - 10px) 0
+        min-height: 155px
+        .item-wrapper
+          max-width: 380px
+          margin: 0 auto
+          padding: 20px 0
+          @media (max-width: 419px)
+            padding: 20px 15px
+      &:nth-of-type(3)
+        background-image: url(../images/common/svg/vision/triangles/triangle3.svg)
+        min-height: 155px
+        background-position: calc(50% + 10px) 0
+        .item-wrapper
+          max-width: 500px
+          margin: 0 auto
+          padding: 35px 0 20px
+          @media (max-width: 419px)
+            padding: 35px 15px 20px
+      &:nth-of-type(4)
+        background-image: url(../images/common/svg/vision/triangles/triangle4.svg)
+        min-height: 125px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-position: calc(50% - 10px) 0
+        .item-wrapper
+          display: flex
+          align-items: center
+          justify-content: center
+          max-width: 750px
+          margin: 0 auto
+          @media (max-width: 959px)
+            max-width: 100%
+            padding: 0 30px
+          @media (max-width: 639px)
+            flex-wrap: wrap
+            padding: 10px 20px
+        .item-name
+          margin: 0 auto
+          @media (max-width: 959px)
+            max-width: 25%
+          @media (max-width: 639px)
+            flex: 0 0 50%
+            max-width: 50%
+            margin: 15px auto
+      .item-name
+        display: block
+        font-weight: 500
+        font-size: 22px
+        line-height: 29px
+        margin-bottom: 20px
+        @media (max-width: 374px)
+          font-size: 18px
+          line-height: 22px
+
+
+
+.vision-design
+  padding: 80px 0
+  overflow: hidden
+  &__content
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    flex-wrap: wrap
+    max-width: 1120px
+    margin: 95px auto 0
+    @media (max-width: 959px)
+      margin: 55px auto 0
+    @media (max-width: 575px)
+      overflow-x: scroll
+      justify-content: stretch
+      align-items: stretch
+      flex-direction: column
+      max-height: 520px
+      width: calc(100% + 40px)
+      max-width: calc(100% + 40px)
+      margin: 55px -20px 0
+      padding: 0 20px 20px
+    &__item
+      flex: 0 0 calc(25% - 15px)
+      max-width: calc(25% - 15px)
+      background-color: #fff
+      border-radius: 10px
+      padding: 38px 30px 35px
+      text-align: center
+      margin: 0 20px 20px 0
+      min-height: 265px
+      position: relative
+      @media (max-width: 1023px)
+        padding: 20px 15px 20px
+      @media (max-width: 959px)
+        flex: 0 0 calc(50% - 15px)
+        max-width: calc(50% - 15px)
+        padding: 30px
+        min-height: auto
+      @media (max-width: 575px)
+        max-width: 310px
+        margin: 0 20px 20px 0
+        height: 100%
+        min-height: 230px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+      .item-name
+        display: block
+        font-weight: 500
+        font-size: 22px
+        line-height: 28px
+        letter-spacing: -.22px
+        margin-bottom: 20px
+      &:nth-of-type(4n)
+        margin-right: 0
+      &:nth-of-type(2n)
+        position: relative
+        top: -40px
+        @media (max-width: 959px)
+          margin-right: 0
+          top: 0
+        @media (max-width: 575px)
+          margin-left: 40px
+          margin-right: -20px
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3),
+      &:nth-last-child(4)
+        &:after
+          content: ''
+          display: block
+          width: 100%
+          height: 70%
+          position: absolute
+          top: calc(100% + 20px)
+          left: 0
+          border-radius: 10px
+          background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%)
+          background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%)
+          background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%)
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 )
+          @media (max-width: 575px)
+            display: none
+      &:nth-last-child(3),
+      &:nth-last-child(4)
+        @media (max-width: 959px)
+          &:after
+            display: none
+
+.vision-key
+  padding: 80px 0 160px
+  background-color: #fff
+  @media (max-width: 1199px)
+    padding: 50px 0 80px
+  &__descr
+    max-width: 400px
+  &__content
+    margin-top: 75px
+    &__row
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      flex-wrap: wrap
+      background-color: $bg-color
+      border-radius: 20px
+      overflow: hidden
+      max-width: 1404px
+      min-height: 400px
+      margin: 20px auto 0
+      position: relative
+      @media (max-width: 1199px)
+        align-items: stretch
+      @media (max-width: 575px)
+        max-width: 390px
+        min-height: auto
+      &:nth-of-type(1)
+        margin-top: 0
+      .descr-block
+        padding: 0 30px 0 calc(10% + 3px)
+        flex: 0 0 54%
+        max-width: 54%
+        position: relative
+        z-index: 1
+        @media (max-width: 1335px)
+          padding: 0 10% 0 30px
+        @media (max-width: 1199px)
+          padding: 30px 15px 30px 30px
+        @media (max-width: 767px)
+          flex: 0 0 100%
+          max-width: 100%
+          padding: 30px
+        @media (max-width: 575px)
+          padding: 20px 40px 30px
+        .row-title
+          display: block
+          font-size: 33px
+          line-height: 40px
+          font-weight: 600
+          letter-spacing: -.99px
+        p
+          margin-top: 15px
+      .image-block
+        flex: 0 0 46%
+        max-width: 46%
+        @media (max-width: 1199px)
+          position: relative
+        @media (max-width: 767px)
+          flex: 0 0 100%
+          max-width: 100%
+          min-height: 350px
+          order: -1
+        @media (max-width: 575px)
+          min-height: auto
+        .row-image
+          display: block
+          width: auto
+          object-fit: cover
+          position: absolute
+          bottom: 0
+          right: 0
+          @media (max-width: 1199px)
+            right: auto
+            left: 0
+          @media (max-width: 575px)
+            position: relative
+      &:nth-of-type(2n)
+        flex-direction: row-reverse
+        .descr-block
+          padding: 0 calc(10% - 20px) 0 65px
+          @media (max-width: 1335px)
+            padding: 0 30px 0 65px
+          @media (max-width: 1199px)
+            padding: 30px
+          @media (max-width: 575px)
+            padding: 20px 40px
+        .image-block
+          .row-image
+            left: 0
+            top: 70px
+            right: auto
+            height: auto
+            @media (max-width: 1199px)
+              left: auto
+              right: 0
+            @media (max-width: 767px)
+              left: 0
+              right: auto
+            @media (max-width: 639px)
+              left: auto
+              right: 15%
+            @media (max-width: 575px)
+              left: auto
+              right: 0
+              display: block
+              top: 0
+              margin: 20px auto 0 0
+      &:nth-of-type(3)
+        .descr-block
+          padding-right: 12%
+          @media (max-width: 1199px)
+            padding: 30px
+          @media (max-width: 575px)
+            padding: 20px 40px
+        .image-block
+          .row-image
+            @media (max-width: 1335px)
+              max-width: 70%
+            @media (max-width: 1199px)
+              max-width: 200%
+              right: auto
+              left: -45%
+            @media (max-width: 575px)
+              max-width: 100%
+              right: 0
+              left: 0
+              margin: 30px 0 10px
+.vision-products
+  padding: 80px 0 120px
+  @media (max-width: 1023px)
+    padding: 80px 0 50px
+  &__descr
+    max-width: 400px
+  &__control
+    background-color: #fff
+    margin-top: 78px
+    border-radius: 20px
+    text-align: center
+    padding: 20px 20px 0
+    .control-name
+      display: block
+      font-size: 33px
+      line-height: 40px
+      font-weight: 600
+      letter-spacing: -.99px
+      margin-top: 10px
+    .control-list
+      display: flex
+      align-items: stretch
+      justify-content: center
+      flex-wrap: wrap
+      margin-top: 30px
+      &__item
+        flex: 0 0 calc(33.3% - 15px)
+        max-width: calc(33.3% - 15px)
+        margin: 0 20px 20px 0
+        border-radius: 10px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 180px
+        position: relative
+        background-color: $bg-color
+        @media (max-width: 959px)
+          flex: 0 0 100%
+          max-width: 100%
+          margin: 0 auto 20px
+        @media (max-width: 575px)
+          max-width: 350px
+          margin: 0 auto 20px
+        &:nth-of-type(3n)
+          margin-right: 0
+          @media (max-width: 575px)
+            margin-right: auto
+        &:nth-of-type(4),
+        &:nth-of-type(5)
+          flex: 0 0 40%
+          max-width: 40%
+          @media (max-width: 959px)
+            flex: 0 0 calc(50% - 10px)
+            max-width: calc(50% - 10px)
+          @media (max-width: 767px)
+            flex: 0 0 100%
+            max-width: 100%
+            margin: 0 auto 20px
+          @media (max-width: 575px)
+            max-width: 350px
+            margin: 0 auto 20px
+        &:nth-of-type(5)
+          @media (max-width: 959px)
+            margin-left: auto
+            margin-right: 0
+          @media (max-width: 767px)
+            margin: 0 auto 20px
+        .item-name
+          display: inline-block
+          font-weight: 500
+          font-size: 22px
+          line-height: 29px
+          letter-spacing: -.22px
+          position: relative
+          z-index: 1
+        .item-image
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+  &__grow
+    background-color: #fff
+    max-width: 874px
+    margin: 20px auto 0
+    border-radius: 20px
+    padding: 20px 20px 0
+    text-align: center
+    .grow-name
+      display: block
+      font-size: 33px
+      line-height: 40px
+      font-weight: 600
+      letter-spacing: -.99px
+      margin-top: 10px
+    .grow-list
+      display: flex
+      align-items: stretch
+      justify-content: flex-start
+      flex-wrap: wrap
+      margin-top: 30px
+      &__item
+        background-color: $bg-color
+        border-radius: 10px
+        flex: 0 0 calc(50% - 10px)
+        max-width: calc(50% - 10px)
+        margin: 0 20px 20px 0
+        padding: 45px 20px 30px
+        @media (max-width: 575px)
+          flex: 0 0 100%
+          max-width: 100%
+          margin: 0 0 20px 0
+          padding: 30px 20px
+        &:nth-of-type(2n)
+          margin-right: 0
+        .side-title
+          display: block
+          font-weight: 500
+          font-size: 22px
+          line-height: 29px
+          letter-spacing: -.22px
+          margin-bottom: 25px
+        .side-item
+          font-weight: 500
+          font-size: 14px
+          line-height: 18px
+          margin-bottom: 15px
+          .icon
+            display: inline-block
+            font-size: 42px
+            line-height: 42px
+            margin-bottom: 5px
+  .btns-row
+    margin-top: 40px
+    .contact-link
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      max-width: 264px
+
+.vision-cases
+  background-color: #fff
+  padding: 80px 0 0
+  &__descr
+    max-width: 450px
+  &__content
+    max-width: 1158px
+    margin: 80px auto 0
+    .case-item
+      display: flex
+      align-items: stretch
+      justify-content: flex-start
+      flex-wrap: wrap
+      margin-top: 20px
+      background-color: $bg-color
+      border-radius: 20px
+      padding: 20px
+      @media (max-width: 1023px)
+        flex-direction: column
+        max-width: 600px
+        margin: 20px auto 0
+      @media (max-width: 575px)
+        max-width: 390px
+      &__image-side
+        display: flex
+        align-items: stretch
+        justify-content: flex-start
+        flex: 0 0 calc(50% - 10px)
+        max-width: calc(50% - 10px)
+        margin-right: 20px
+        @media (max-width: 1023px)
+          flex: 0 0 100%
+          max-width: 100%
+          margin-right: 0
+          order: -1
+        .image-column
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+          justify-content: flex-start
+          flex: 0 0 calc(50% - 10px)
+          max-width: calc(50% - 10px)
+          &:nth-of-type(2)
+            margin-left: 20px
+          .item-image
+            border-radius: 10px
+            display: block
+            width: 100%
+            margin: 0
+            & + .item-image
+              margin-top: 20px
+          picture + picture
+            display: block
+            margin-top: 20px
+          .item-info
+            width: 100%
+            margin-top: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: #fff
+            border-radius: 10px
+            min-height: 100px
+            @media (max-width: 575px)
+              margin-top: 20px
+            span
+              display: block
+              font-size: 33px
+              line-height: 40px
+              font-weight: 600
+              letter-spacing: -.99px
+              margin-bottom: 2px
+        .image-row
+          display: flex
+          align-items: stretch
+          justify-content: flex-start
+          margin-top: auto
+          picture
+            flex: 0 0 calc(50% - 10px)
+            max-width: calc(50% - 10px)
+            &:nth-of-type(2)
+              margin: 0 0 0 20px
+      &__descr-side
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        flex: 0 0 calc(50% - 10px)
+        max-width: calc(50% - 10px)
+        text-align: center
+        @media (max-width: 1023px)
+          flex: 0 0 100%
+          max-width: 100%
+        .item-image
+          margin-top: auto
+          width: 100%
+          border-radius: 10px
+        .side-name
+          display: block
+          font-size: 33px
+          line-height: 40px
+          font-weight: 600
+          letter-spacing: -.99px
+          margin-top: 50px
+          width: 100%
+          & + p
+            display: block
+            width: 100%
+            font-weight: 500
+            line-height: 18px
+            margin-top: 5px
+        .side-descr
+          margin: 12px 0
+          width: 100%
+          @media (max-width: 1023px)
+            margin: 20px 0
+          p
+            margin-top: 12px
+            &:nth-of-type(1)
+              margin-top: 0
+          & + picture
+            display: block
+            margin-top: auto
+        .info-block
+          width: 100%
+          background-color: #fff
+          border-radius: 10px
+          padding: 12px 15px
+          font-weight: 500
+          margin-top: auto
+          & + .info-block
+            margin-top: 20px
+        .info-row
+          display: flex
+          align-items: stretch
+          justify-content: flex-start
+          flex-wrap: wrap
+          width: 100%
+          margin-top: 20px
+          &__item
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            flex: 0 0 calc(50% - 10px)
+            max-width: calc(50% - 10px)
+            background-color: #fff
+            border-radius: 10px
+            min-height: 100px
+            span
+              display: block
+              font-size: 33px
+              line-height: 40px
+              font-weight: 600
+              letter-spacing: -.99px
+              margin-bottom: 2px
+              @media (max-width: 419px)
+                font-size: 25px
+            &:nth-of-type(2)
+              margin-left: 20px
+      &:nth-of-type(1)
+        margin-top: 0
+      &:nth-of-type(2n)
+        flex-direction: row-reverse
+        .case-item__image-side
+          margin-right: 0
+          margin-left: 20px
+      &:nth-of-type(2)
+        .case-item__descr-side
+          .side-name
+            margin-top: 25px
+      &:nth-of-type(3)
+        .case-item__descr-side
+          .side-name
+            margin-top: 30px
+      &:nth-of-type(4)
+        .case-item__descr-side
+          .side-name
+            margin-top: 20px
+
+
+/* contact section */
+.message-section
+  background-color: #fff
+  padding: 80px 0 115px
+  @media (max-width: 1023px)
+    padding: 60px 0
+  &__descr
+    max-width: 380px
+  &__form
+    max-width: 834px
+    margin: 55px auto 0
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    flex-wrap: wrap
+    position: relative
+    .form-side
+      flex: 0 0 calc(50% - 10px)
+      max-width: calc(50% - 10px)
+      margin: 0 20px 20px 0
+      order: 1
+      @media (max-width: 767px)
+        flex: 0 0 100%
+        max-width: 100%
+        margin: 0 0 20px 0
+      &:nth-of-type(2n)
+        margin-right: 0
+      .input-group
+        margin-top: 19px
+        &:nth-of-type(1)
+          margin-top: 0
+        &.check-group
+          @media (max-width: 767px)
+            position: absolute
+            bottom: 70px
+            left: 0
+            width: 100%
+          label
+            display: block
+            position: relative
+            background-color: $bg-color
+            border-radius: 10px
+          input
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            height: 0
+            opacity: 0
+            visibility: hidden
+            &:checked
+              & + .label
+                &:before
+                  content: '\e814'
+                  color: $aqua-color
+          .label
+            display: block
+            padding: 18px 60px 20px 95px
+            position: relative
+            @media (max-width: 959px)
+              padding: 18px 15px 20px 65px
+            @media (max-width: 767px)
+              display: flex
+              align-items: center
+              justify-content: flex-start
+              min-height: 75px
+            &:before
+              content: '\e813'
+              font-family: Fontello
+              font-style: normal
+              font-weight: normal
+              speak: never
+              display: block
+              margin: 0
+              text-decoration: inherit
+              text-align: center
+              font-variant: normal
+              text-transform: none
+              position: absolute
+              top: 30px
+              left: 25px
+              font-size: 20px
+              line-height: 20px
+              @media (max-width: 767px)
+                top: 26px
+        &.textarea-group
+          display: flex
+          flex-direction: column
+          background-color: $bg-color
+          border-radius: 10px
+          padding-bottom: 60px
+          position: relative
+          textarea
+            display: block
+            min-width: 100%
+            min-height: 164px
+            max-height: 164px
+            max-width: 100%
+            height: 164px
+            border: none
+            padding: 16px 20px
+            background-color: transparent
+            @include input-placeholder
+              color: $txt-color
+          .file-input-group
+            position: absolute
+            bottom: 10px
+            right: 10px
+            width: 100%
+            max-width: calc(100% - 20px)
+            .label
+              display: inline-flex
+              align-items: center
+              justify-content: flex-start
+              background-color: #fff
+              border-radius: 20px
+              padding: 5px 20px 5px 10px
+              transition: background-color .3s, color .3s
+              cursor: pointer
+              margin: 0 0 0 auto
+              position: relative
+              z-index: 1
+              .icon
+                display: inline-block
+                font-size: 30px
+                line-height: 30px
+                margin-right: 7px
+                transform: rotate(45deg)
+              &:hover
+                background-color: $txt-color
+                color: #fff
+
+          .file-drop-area
+            position: relative
+            display: flex
+            align-items: center
+            width: 100%
+            max-width: 100%
+            padding: 10px
+            background-color: transparent
+            border-radius: 12px
+            box-shadow: none
+            transition: .3s
+            &.is-active
+              background-color: #fff
+          .file-msg
+            color: $txt-color
+            font-size: 14px
+            font-weight: 300
+            line-height: 1.4
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            padding-right: 15px
+          .item-delete
+            display: none
+            position: relative
+            width: 18px
+            height: 18px
+            cursor: pointer
+            margin-right: 10px
+            color: $txt-color
+            &:before
+              content: ""
+              position: absolute
+              left: 0
+              transition: .3s
+              top: 0
+              z-index: 1
+              width: 100%
+              height: 100%
+              background-size: cover
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%23bac1cb' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 438.5 438.5'%3e%3cpath d='M417.7 75.7A8.9 8.9 0 00411 73H323l-20-47.7c-2.8-7-8-13-15.4-18S272.5 0 264.9 0h-91.3C166 0 158.5 2.5 151 7.4c-7.4 5-12.5 11-15.4 18l-20 47.7H27.4a9 9 0 00-6.6 2.6 9 9 0 00-2.5 6.5v18.3c0 2.7.8 4.8 2.5 6.6a8.9 8.9 0 006.6 2.5h27.4v271.8c0 15.8 4.5 29.3 13.4 40.4a40.2 40.2 0 0032.3 16.7H338c12.6 0 23.4-5.7 32.3-17.2a64.8 64.8 0 0013.4-41V109.6h27.4c2.7 0 4.9-.8 6.6-2.5a8.9 8.9 0 002.6-6.6V82.2a9 9 0 00-2.6-6.5zm-248.4-36a8 8 0 014.9-3.2h90.5a8 8 0 014.8 3.2L283.2 73H155.3l14-33.4zm177.9 340.6a32.4 32.4 0 01-6.2 19.3c-1.4 1.6-2.4 2.4-3 2.4H100.5c-.6 0-1.6-.8-3-2.4a32.5 32.5 0 01-6.1-19.3V109.6h255.8v270.7z'/%3e%3cpath d='M137 347.2h18.3c2.7 0 4.9-.9 6.6-2.6a9 9 0 002.5-6.6V173.6a9 9 0 00-2.5-6.6 8.9 8.9 0 00-6.6-2.6H137c-2.6 0-4.8.9-6.5 2.6a8.9 8.9 0 00-2.6 6.6V338c0 2.7.9 4.9 2.6 6.6a8.9 8.9 0 006.5 2.6zM210.1 347.2h18.3a8.9 8.9 0 009.1-9.1V173.5c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a8.9 8.9 0 00-9.1 9.1V338a8.9 8.9 0 009.1 9.1zM283.2 347.2h18.3c2.7 0 4.8-.9 6.6-2.6a8.9 8.9 0 002.5-6.6V173.6c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a9 9 0 00-6.6 2.6 8.9 8.9 0 00-2.5 6.6V338a9 9 0 002.5 6.6 9 9 0 006.6 2.6z'/%3e%3c/svg%3e")
+            &:hover
+              &:before
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%234f555f' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 438.5 438.5'%3e%3cpath d='M417.7 75.7A8.9 8.9 0 00411 73H323l-20-47.7c-2.8-7-8-13-15.4-18S272.5 0 264.9 0h-91.3C166 0 158.5 2.5 151 7.4c-7.4 5-12.5 11-15.4 18l-20 47.7H27.4a9 9 0 00-6.6 2.6 9 9 0 00-2.5 6.5v18.3c0 2.7.8 4.8 2.5 6.6a8.9 8.9 0 006.6 2.5h27.4v271.8c0 15.8 4.5 29.3 13.4 40.4a40.2 40.2 0 0032.3 16.7H338c12.6 0 23.4-5.7 32.3-17.2a64.8 64.8 0 0013.4-41V109.6h27.4c2.7 0 4.9-.8 6.6-2.5a8.9 8.9 0 002.6-6.6V82.2a9 9 0 00-2.6-6.5zm-248.4-36a8 8 0 014.9-3.2h90.5a8 8 0 014.8 3.2L283.2 73H155.3l14-33.4zm177.9 340.6a32.4 32.4 0 01-6.2 19.3c-1.4 1.6-2.4 2.4-3 2.4H100.5c-.6 0-1.6-.8-3-2.4a32.5 32.5 0 01-6.1-19.3V109.6h255.8v270.7z'/%3e%3cpath d='M137 347.2h18.3c2.7 0 4.9-.9 6.6-2.6a9 9 0 002.5-6.6V173.6a9 9 0 00-2.5-6.6 8.9 8.9 0 00-6.6-2.6H137c-2.6 0-4.8.9-6.5 2.6a8.9 8.9 0 00-2.6 6.6V338c0 2.7.9 4.9 2.6 6.6a8.9 8.9 0 006.5 2.6zM210.1 347.2h18.3a8.9 8.9 0 009.1-9.1V173.5c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a8.9 8.9 0 00-9.1 9.1V338a8.9 8.9 0 009.1 9.1zM283.2 347.2h18.3c2.7 0 4.8-.9 6.6-2.6a8.9 8.9 0 002.5-6.6V173.6c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a9 9 0 00-6.6 2.6 8.9 8.9 0 00-2.5 6.6V338a9 9 0 002.5 6.6 9 9 0 006.6 2.6z'/%3e%3c/svg%3e")
+          .file-input
+            position: absolute
+            left: 0
+            top: 0
+            height: 100%
+            width: 100%
+            cursor: pointer
+            opacity: 0
+            &:focus
+              outline: none
+    .input-row
+      flex: 0 0 100%
+      max-width: 100%
+      text-align: center
+      order: 3
+      @media (max-width: 767px)
+        margin-top: 100px
+
+
+
+/* contacts page */
+.contacts-page
+  .container
+    margin-top: 25px
+  &__info
+    margin-top: 120px
+    display: flex
+    align-items: stretch
+    justify-content: center
+    flex-wrap: wrap
+    &__item
+      flex: 0 0 calc(50% - 10px)
+      max-width: 550px
+      margin: 0 20px 20px 0
+      background-color: $bg-color
+      border-radius: 20px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      padding: 110px 15px
+      min-height: 400px
+      text-align: center
+      .icon
+        font-size: 50px
+        line-height: 60px
+      .item-name
+        display: block
+        margin-bottom: 20px
+      .phone-link, .mail-link
+        display: inline-block
+        color: $txt-color
+        transition: color .3s
+        &:hover
+          color: $accent-color
+      &:nth-of-type(2n)
+        margin-right: 0
+
+
+
+/* test styles */
+@media (max-height: 700px) and (min-width: 1025px)
+  .header
+    top: 5px
+  .aqua-descr__title,
+  .preview-how__title
+    br
+      display: none
+  .aqua-descr__descr
+    max-width: 750px
+  .aqua-descr__content
+    margin: 25px auto 0
+  .aqua-descr__content .slider-navigation
+    justify-content: center
+  .aqua-descr__content .slider-navigation .scheme-main
+    max-width: 340px
+    margin: 0 0 0 30px
+  .aqua-descr__content .aquamixer-slider
+    max-width: 720px
+    margin: 25px auto 0
+  .preview-how__descr
+    max-width: 1000px
+  .preview-how__content
+    margin: 25px auto 0
+  .preview-how__content .preview-how-slider .slide-item .slide-imgblock
+    min-height: 235px
+  .preview-how__content .preview-how-slider .slide-item .slide-name
+    font-size: 25px
+    line-height: 28px
+  .preview-how__content .preview-how-slider .slide-item .slide-image
+    max-height: 185px
+  .preview-how__content .slider-descr__item
+    padding: 10px 0
+  .preview-how__content .preview-how-slider .slider-navigation
+    top: 50%
+
+
+
+
+
+
+@import "node_modules/swiper/swiper-bundle"
+@import "_components/footer"
+// @import "_custom/modalMagnific"
+@import "_components/modals"
+@import "_animates/_animates"
