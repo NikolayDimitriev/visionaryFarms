@@ -43,7 +43,7 @@
   border-radius: 10px
   transition: padding .3s
   &:hover
-    padding: 13px 15px 5px
+    padding: 11px 15px
 .btn-fill-style
   display: inline-flex
   align-items: center
@@ -54,20 +54,22 @@
   font-weight: 600
   font-size: 16px
   line-height: 18px
-  padding: 10px 25px
+  padding: 7px 25px
   border-radius: 20px
   letter-spacing: -.22px
   border: none
-  transition: background-color .3s, color .3s
+  transition: background-color .3s, color .3s, transform .3s
   &:hover
     background-color: $txt-color
     color: #fff
+  &:active
+    transform: scale(0.9)
   .icon
     margin-left: 3px
     font-size: 22px
     line-height: 22px
     position: relative
-    top: -1px
+    top: 1px
 .input-style
   display: block
   width: 100%

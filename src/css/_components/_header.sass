@@ -89,8 +89,10 @@
           &:hover
             color: #fff
             background-color: $txt-color
+
     .main-menu
       margin: 0 0 0 auto
+      
       @media (max-width: 1199px)
         position: absolute
         top: calc(100% + 10px)
@@ -99,13 +101,18 @@
         background-color: #fff
         border-radius: 30px
         z-index: -1
+        opacity: 0
         transform: translateX(100vw)
         transition: transform .3s
+
         &.show
+          opacity: 1
           box-shadow: 0px 30px 40px -20px rgba(0, 0, 0, 0.25), 0px 0px 250px 0px rgba(0, 0, 0, 0.25)
           transform: translateX(0)
+
       @media (max-width: 420px)
         width: 100%
+
       ul
         display: flex
         align-items: center
@@ -113,10 +120,13 @@
         margin: 0
         padding: 0
         list-style-type: none
+
+
         @media (max-width: 1199px)
           flex-direction: column
           align-items: flex-start
           padding: 10px 40px
+
         li
           display: inline-flex
           align-items: center
@@ -124,23 +134,7 @@
           flex: 0 0 auto
           width: auto
           margin: 0 0 0 75px
-          &:before
-            display: inline-block
-            flex: 0 0 auto
-            opacity: 0
-            transform: scale(.5)
-            transition: opacity .3s, transform .3s, color .5s
-            font-size: 30px
-            line-height: 30px
-            margin-right: 5px
-            @media (max-width: 1199px)
-              transform: scale(1)
-              opacity: 1
-              margin-right: 20px
-          &:hover
-            &:before
-              opacity: 1
-              transform: scale(1)
+
           @media (max-width: 1335px)
             margin: 0 0 0 55px
           @media (max-width: 1199px)
@@ -150,6 +144,8 @@
             @media (max-width: 1199px)
               margin-right: 0
           a
+            display: flex
+            align-items: center
             color: $txt-color
             font-size: 14px
             line-height: 18px
@@ -161,8 +157,53 @@
               letter-spacing: -1px
               font-weight: 400
               font-feature-settings: "ss01" 1, "cswh"
+
+            &:before
+              display: inline-block
+              flex: 0 0 auto
+              opacity: 0
+              transform: scale(.5)
+              transition: opacity .3s, transform .3s, color .5s
+              font-size: 30px
+              line-height: 30px
+              margin-right: 5px
+              @media (max-width: 1199px)
+                transform: scale(1)
+                opacity: 1
+                margin-right: 20px
+            &:hover
+              &:before
+                opacity: 1
+                transform: scale(1)
+
     @import "hamburger"
   & + main
     padding-top: 150px
     @media (max-width: 959px)
       padding-top: 100px
+
+.icon
+  &-ignis
+    &:active
+      &:before
+        color: #00D791
+  &-air
+    &:active
+      &:before
+        color: #B4DBFF
+  &-aqua
+    &:active
+      &:before
+        color: #1FA4F1
+  &-refresh
+    &:active
+      &:before
+        color: #1FA4F1
+  &-profile
+    &:active
+      &:before
+        color: #FF4D80
+  &-notifications
+    &:active
+      &:before
+        color: #FF4D80

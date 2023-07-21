@@ -3,20 +3,27 @@
     <div class="container">
         <div class="header__content">
             <a href="/" class="logo-link">
-                <img src="images/common/svg/logo.gif" alt="Visionary Farms" class="logo-image">
+                <img
+                    src="images/common/svg/logo.gif"
+                    alt="Visionary Farms"
+                    class="logo-image" />
                 <span>Visionary Farms</span>
             </a>
             <nav id="main-menu" class="main-menu">
                 <ul>
-                    <li class="icon-ignis"><a href="#">Ignis</a></li>
-                    <li class="icon-air"><a href="#">Air</a></li>
-                    <li class="icon-aqua"><a href="#">Aqua</a></li>
-                    <li class="icon-refresh"><a href="#">Mixer</a></li>
-                    <li class="icon-profile"><a href="#">Vision</a></li>
-                    <li class="icon-notifications"><a href="#">Contact</a></li>
+                    <li><a href="#" class="icon-ignis">Ignis</a></li>
+                    <li><a href="#" class="icon-air">Air</a></li>
+                    <li><a href="#" class="icon-aqua">Aqua</a></li>
+                    <li><a href="#" class="icon-refresh">Mixer</a></li>
+                    <li><a href="#" class="icon-profile">Vision</a></li>
+                    <li><a href="#" class="icon-notifications">Contact</a></li>
                 </ul>
             </nav>
-            <button id="hamburger" data-menu="main-menu" class="hamburger hamburger--slider" type="button">
+            <button
+                id="hamburger"
+                data-menu="main-menu"
+                class="hamburger hamburger--slider"
+                type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -26,14 +33,14 @@
 </header>
 <!-- main content -->
 <style>
-    .icon-kit{
+    .icon-kit {
         padding: 150px 0;
     }
-    .icon-kit .container{
+    .icon-kit .container {
         display: flex;
         flex-wrap: wrap;
     }
-    .icon-kit .icon-block{
+    .icon-kit .icon-block {
         flex: 0 0 calc((100% / 8) - 10px);
         max-width: calc((100% / 8) - 10px);
         margin: 0 5px 5px;
@@ -41,7 +48,7 @@
         background-color: #fff;
         padding: 20px 10px;
     }
-    .icon-kit .icon-block .icon{
+    .icon-kit .icon-block .icon {
         font-size: 30px;
         line-height: 30px;
     }
@@ -391,6 +398,5 @@
     </div>
 </div>
 <!-- main end content -->
-@@include('../components/_footer.html')
-@@include('../components/_modals.html')
+@@include('../components/_footer.html') @@include('../components/_modals.html')
 @@include('../components/_scripts.html')
