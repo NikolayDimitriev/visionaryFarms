@@ -151,6 +151,8 @@
             margin-right: 20px
             @media (max-width: 1199px)
               margin-right: 0
+          &::before
+            display: none
           a
             display: flex
             align-items: center
@@ -192,26 +194,32 @@
 
 .icon
   &-ignis
-    &:active
-      &:before
-        color: #00D791
+    &__link
+      &:active
+        &:before
+          color: #00D791
   &-air
-    &:active
-      &:before
-        color: #B4DBFF
+    &__link
+      &:active
+        &:before
+          color: #B4DBFF
   &-aqua
-    &:active
-      &:before
-        color: #1FA4F1
+    &__link
+      &:active
+        &:before
+          color: #1FA4F1
   &-refresh
-    &:active
-      &:before
-        color: #1FA4F1
+    &__link
+      &:active
+        &:before
+          color: #1FA4F1
   &-profile
-    &:active
-      &:before
-        color: #FF4D80
+    &__link
+      &:active
+        &:before
+          color: #FF4D80
   &-notifications
-    &:active
-      &:before
-        color: #FF4D80
+    &__link
+      &:active
+        &:before
+          color: #FF4D80
