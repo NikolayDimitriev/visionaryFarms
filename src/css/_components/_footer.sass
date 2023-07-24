@@ -44,7 +44,7 @@
           flex-direction: column-reverse
           align-items: center
           justify-content: center
-      .doc-link
+      .doc-link, .copyright-link
         display: inline-block
         margin-left: 122px
         color: $txt-color
@@ -74,6 +74,8 @@
             width: 100%
       .copyright-link
         margin-left: 0
+        &::after
+          display: none
         @media (max-width: 767px)
           order: 0
       .social-menu
