@@ -1164,7 +1164,10 @@
           &:hover
             background-color: $txt-color
             color: #fff
-        &.full-image
+
+      &:nth-child(4), 
+      &:nth-child(6)
+        .image-block
           border-radius: 10px
           overflow: hidden
           margin: 0 0 10px auto
@@ -1172,13 +1175,12 @@
             margin: 0 0 0 auto
             border-radius: 0
             overflow: visible
+            .img-block
+              height: 100% !important
             .img-cover
               min-height: 100%
               width: auto
               max-width: unset
-
-
-
   
       &:nth-of-type(2n)
         margin-right: 0
@@ -2467,47 +2469,36 @@
           font-size: 18px
           line-height: 22px
 
-@keyframes scroll-x 
-  0% 
-    transform: translateX(0)
-  100% 
-    transform: translateX(calc(-100% - 20px))
-
 .vision-design
   padding: 80px 0
   overflow: hidden
-  &__wrapper 
+  &__slider
     width: 100%
-    max-width: 1120px
-    margin: 95px auto 0
-    @media (max-width: 959px)
-      margin: 55px auto 0
+    height: 500px
+    margin: 0
+    margin-top: 55px
+    display: none
     @media (max-width: 575px)
       display: flex
+
+    &__item 
+      display: flex !important
+      flex-direction: column !important
       gap: 20px
-      overflow: hidden
-      max-width: none
-      max-height: 550px
-      height: 100%
+  &__wrapper 
+    transition-timing-function: linear !important
+
   &__content
     display: flex
     align-items: stretch
     justify-content: flex-start
     flex-wrap: wrap
+    max-width: 1120px
+    margin: 95px auto 0
+    @media (max-width: 959px)
+      margin: 55px auto 0
     @media (max-width: 575px)
-      height: 100%
-      flex-shrink: 0
-      display: grid
-      grid-template-columns: repeat(4, 1fr)
-      gap: 20px
-      min-width: 100%
-      max-width: none
-      animation: scroll-x 15s linear infinite
-
-    &_mobile 
       display: none
-      @media (max-width: 575px)
-        display: grid
     &__item
       flex: 0 0 calc(25% - 15px)
       max-width: calc(25% - 15px)
@@ -2526,10 +2517,11 @@
         padding: 30px
         min-height: auto
       @media (max-width: 575px)
-        margin: 0
+        flex: none
         max-width: none
-        width: 290px
-        height: 230px
+        max-height: 230px
+        margin: 0
+        height: 100%
         display: flex
         flex-direction: column
         align-items: center
@@ -2551,6 +2543,7 @@
           top: 0
         @media (max-width: 575px)
           margin: 0
+          left: 30%
       &:nth-last-child(1),
       &:nth-last-child(2),
       &:nth-last-child(3),
@@ -2575,10 +2568,6 @@
         @media (max-width: 959px)
           &:after
             display: none
-      &:nth-last-child(-n+4)
-        @media (max-width: 575px)
-          left: -50%
-
 
 .vision-key
   padding: 80px 0 160px

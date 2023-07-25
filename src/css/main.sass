@@ -104,13 +104,19 @@
           height: auto !important
       @media (max-width: 1335px)
         width: calc(24% + 5px)
-        top: 82px
+        top: 9.5%
         svg
           width: 150% !important
           height: 150% !important
+      @media (max-width: 1300px)
+        top: 10.5%
       @media (max-width: 1199px)
-        top: 85px
+        top: 9.5%
         width: calc(20% - 5px)
+      @media (max-width: 1150px)
+        top: 11%
+      @media (max-width: 1030px)
+        top: 12%
       @media (max-width: 959px)
         display: none
       &.left-animation
@@ -121,9 +127,22 @@
           svg
             position: relative
             left: -15%
+        @media (max-width: 1335px)
+          left: -2%
+        @media (max-width: 1300px)
+          left: -3%
+        @media (max-width: 1240px)
+          left: -3%
         @media (max-width: 1199px)
+          left: 0
           svg
             left: -22%
+        @media (max-width: 1150px)
+          left: -1.5%
+        @media (max-width: 1080px)
+          left: -4%
+        @media (max-width: 1023px)
+          left: -3%
       &.right-animation
         right: calc(-15% - 10px)
         @media (max-width: 1727px)
@@ -131,9 +150,22 @@
           svg
             position: relative
             left: -15%
+        @media (max-width: 1335px)
+          right: -2%
+        @media (max-width: 1300px)
+          right: -2.7%
+        @media (max-width: 1240px)
+          right: -3%
         @media (max-width: 1199px)
+          right: 0
           svg
             left: -22%
+        @media (max-width: 1150px)
+          right: -1.5%
+        @media (max-width: 1080px)
+          right: -4%
+        @media (max-width: 1023px)
+          right: -3%
   &__content
     height: 1000px
     padding: 170px 0 0
