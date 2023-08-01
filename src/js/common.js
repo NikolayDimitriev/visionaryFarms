@@ -94,6 +94,22 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
     })
+    var ignisreadySlider = new Swiper('#ignis-ready-slider', {
+        modules: [EffectFade],
+        lazy: true,
+        effect: 'fade',
+        allowTouchMove: false,
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 20,
+    })
+    $('.ignis-ready__content .nav-link').click(function () {
+        var curSlide = $(this).attr('data-slide')
+        $('.ignis-ready__content .nav-link').removeClass('active')
+        $(this).addClass('active')
+        ignisreadySlider.slideTo(curSlide - 1)
+    })
+
     var aquamixerSlider = new Swiper('#aquamixer-slider', {
         modules: [EffectFade],
         lazy: true,
@@ -136,13 +152,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var visionSlider = new Swiper('#vision-design-slider', {
         modules: [Autoplay],
         loop: true,
-        loopedSlides: 2,
         speed: 5000,
         slidesPerView: 1.35,
         spaceBetween: 20,
         autoplay: {
             delay: 0,
-            disableOnInteraction: false,
         },
     })
 
