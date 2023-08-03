@@ -1451,6 +1451,9 @@
 .preview-mounting
   background-color: #fff
   padding-top: 80px
+  @media (max-width: 575px)
+    padding-top: 50px
+
   .section-descr
     max-width: 476px
     @media (max-width: 575px)
@@ -1491,6 +1494,52 @@
       height: 100%
       object-fit: cover
     
+.preview-future
+  background-color: $bg-color
+  padding-top: 80px
+  padding-bottom: 53px
+  @media (max-width: 768px)
+    padding-bottom: 0
+    margin-bottom: -40px
+  @media (max-width: 575px)
+    padding-top: 50px
+  .section-descr
+    max-width: 555px
+    @media (max-width: 575px)
+      padding: 0 20px
+  &__content
+    width: 100%
+    margin-top: 60px
+    display: flex
+    justify-content: center
+    gap: 20px
+    @media (max-width: 768px)
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: 0
+      margin-top: 50px
+    .img-wrapper
+      display: flex
+      &_first 
+        @media (max-width: 768px)
+          transform: translateX(-40%)
+      &_second
+        @media (max-width: 768px)
+          transform: rotate(180deg) translateY(50%) translateX(-40%)
+  &__img
+    height: 350px
+    @media (max-width: 1024px)
+      height: 250px
+    @media (max-width: 768px)
+      height: 180px
+      max-width: 210px
+    @media (max-width: 400px)
+      height: 160px
+    @media (max-width: 350px)
+      height: 130px
+
+
 
 .preview-cloud
   padding: 80px 0
