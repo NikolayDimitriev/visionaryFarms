@@ -95,6 +95,34 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     })
     var ignisreadySlider = new Swiper('#ignis-ready-slider', {
+        modules: [EffectFade, Autoplay],
+        lazy: true,
+        effect: 'fade',
+        allowTouchMove: false,
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+    })
+
+    ignisreadySlider.on('slideChange', function () {
+        $('.ignis-ready__content .nav-link').removeClass('active')
+        const index = ignisreadySlider.activeIndex
+        const arr = [...$('.ignis-ready__content .nav-link')]
+        arr[index].classList.add('active')
+    })
+
+    $('.ignis-ready__content .nav-link').click(function () {
+        var curSlide = $(this).attr('data-slide')
+        $('.ignis-ready__content .nav-link').removeClass('active')
+        $(this).addClass('active')
+        ignisreadySlider.slideTo(curSlide - 1)
+    })
+
+    var ignisspectraSlider = new Swiper('#ignis-spectra-slider', {
         modules: [EffectFade],
         lazy: true,
         effect: 'fade',
@@ -103,11 +131,40 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
         spaceBetween: 20,
     })
-    $('.ignis-ready__content .nav-link').click(function () {
+
+    $('.preview-spectra__content .nav-link').click(function () {
         var curSlide = $(this).attr('data-slide')
-        $('.ignis-ready__content .nav-link').removeClass('active')
+        $('.preview-spectra__content .nav-link').removeClass('active')
         $(this).addClass('active')
-        ignisreadySlider.slideTo(curSlide - 1)
+        ignisspectraSlider.slideTo(curSlide - 1)
+    })
+
+    var ignismountingSlider = new Swiper('#ignis-mounting-slider', {
+        modules: [EffectFade, Autoplay],
+        lazy: true,
+        effect: 'fade',
+        allowTouchMove: false,
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    })
+
+    ignismountingSlider.on('slideChange', function () {
+        $('.preview-mounting__content .nav-link').removeClass('active')
+        const index = ignismountingSlider.activeIndex
+        const arr = [...$('.preview-mounting__content .nav-link')]
+        arr[index].classList.add('active')
+    })
+
+    $('.preview-mounting__content .nav-link').click(function () {
+        var curSlide = $(this).attr('data-slide')
+        $('.preview-mounting__content .nav-link').removeClass('active')
+        $(this).addClass('active')
+        ignismountingSlider.slideTo(curSlide - 1)
     })
 
     var aquamixerSlider = new Swiper('#aquamixer-slider', {
@@ -195,6 +252,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }),
             function () {}
+    }
+
+    /* ignis install animation */
+    if ($('.preview-module').length > 0) {
+        $(window).scroll(function () {
+            var wt = $(window).scrollTop()
+            var wh = $(window).height()
+            var et = $('.preview-module').offset().top
+            var eh = $('.preview-module').outerHeight()
+            var dh = $(document).height()
+
+            if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+                // Код анимации
+                $('.preview-module').addClass('animated')
+            }
+        })
     }
 
     if ($('.message-section__form').length > 0) {

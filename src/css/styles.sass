@@ -1173,6 +1173,325 @@
     @media (max-width: 1023px)
       padding: 40px 0 80px
 
+@keyframes slidein
+  0%
+    top: -200px
+    right: 1000px
+  50%
+    top: 0
+    right: 700px
+  100%
+    top: 96px
+    right: 557px
+
+@keyframes slideintwo
+  0%
+    top: -200px
+    right: 800px
+  50%
+    top: 0
+    right: 500px
+  100%
+    top: 287px
+    right: 150px
+  
+
+.preview-module 
+  background-color: $bg-color
+  padding: 200px 0 350px 0
+  position: relative
+  overflow: hidden
+
+  &.animated
+    .module-part_2
+      opacity: 1
+      animation: slidein 3s ease
+      @media (max-width: 1300px)
+        animation-name: slideintwo
+
+  @media (max-width: 575px)
+    padding: 50px 0 310px
+  .img-cover
+    top: auto
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0
+    width: auto
+    height: 350px
+    z-index: 1
+    @media (max-width: 575px)
+      height: 250px
+
+  .module-part
+    &_1
+      top: 200px
+      right: 0
+      left: auto
+      bottom: auto
+      height: auto
+      z-index: 2
+      transform: none
+      @media (max-width: 1300px)
+        top: 350px
+    &_2
+      opacity: 0
+      top: 96px
+      right: 557px
+      left: auto
+      bottom: auto
+      height: auto
+      z-index: 1
+      transform: none
+      width: 324px
+      @media (max-width: 1300px)
+        top: 287px
+        right: 150px
+        width: 200px
+
+  .container
+    max-width: 1245px
+    margin: 0 auto
+  .section-icon
+    display: inline-block
+    font-size: 40px
+    line-height: 40px
+    margin: 0
+    margin-bottom: 20px
+    text-align: left
+    @media (max-width: 575px)
+      text-align: center
+      display: block
+
+  &__title 
+    text-align: left
+    letter-spacing: -1.6px
+    margin-bottom: 20px
+    @media (max-width: 575px)
+      text-align: center
+  
+  &__descr 
+    margin: 0
+    max-width: 445px
+    text-align: left
+    @media (max-width: 575px)
+      text-align: center
+      padding: 0 20px
+
+  &__content 
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 62px 30px 82px
+    border-radius: 20px
+    background: #FFF
+    box-shadow: 0px 30px 40px -20px rgba(0, 0, 0, 0.25)
+    margin-top: 280px
+    z-index: 10
+    position: relative
+    @media (max-width: 1300px)
+      margin-top: 370px
+    @media (max-width: 575px)
+      background-color: transparent
+      box-shadow: none
+      padding: 0
+
+
+  &__list
+    max-width: 940px
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 20px
+
+    @media (max-width: 575px)
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      flex-wrap: nowrap
+      gap: 40px
+  
+  &__item 
+    max-width: 296px
+    text-align: center
+    display: flex
+    flex-direction: column
+    gap: 14px
+
+    .icon
+      display: inline-block
+      font-size: 50px
+      line-height: 50px
+
+    p
+      font-size: 14px
+      font-style: normal
+      font-weight: 400
+      line-height: 21px
+
+  &__subtitle 
+    font-size: 22px
+    font-style: normal
+    font-weight: 500
+    line-height: 29px
+    letter-spacing: -0.22px
+
+
+.preview-spectra
+  background-color: $bg-color
+  padding: 80px 0 20px
+
+  .container
+    max-width: 1688px
+  .section-descr
+    max-width: 430px
+    @media (max-width: 575px)
+      padding: 0 20px
+
+  &__content
+    width: 100%
+    margin-top: 60px
+    position: relative
+
+    .slider-navigation
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 1000
+      .nav-list
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        border: 2px solid #000
+        border-radius: 40px
+        background-color: $bg-color
+        overflow: hidden
+        position: relative
+        z-index: 1
+        &__item
+          flex: 0 0 auto
+          width: auto
+          border-radius: 20px
+        &__link
+          display: inline-block
+          color: $txt-color
+          padding: 8px 22px
+          transition: background-color .3s
+          border-radius: 20px
+          &.active
+            background-color: #fff
+            border-radius: 20px
+    .slide-item
+      display: flex
+      justify-content: space-between
+      gap: 20px
+  &__left,
+  &__right
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 30px
+    background-color: #fff
+    border-radius: 10px
+    max-width: 410px
+    position: relative
+    .icon
+      position: absolute
+      font-size: 40px
+      line-height: 40px
+      right: 30px
+      top: 30px
+  &__text 
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: 21px
+    padding-right: 12px
+
+  &__heading
+    font-size: 33px
+    font-style: normal
+    font-weight: 600
+    line-height: 40px
+    letter-spacing: -0.99px
+
+  &__subtitle
+    font-size: 22px
+    font-style: normal
+    font-weight: 500
+    line-height: 29px
+    letter-spacing: -0.22px
+
+  &__link
+    display: inline-block
+    align-self: flex-start
+    font-size: 15.6px
+    font-style: normal
+    font-weight: 600
+    line-height: 18px
+    text-transform: uppercase
+    color: inherit
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 17px
+      height: 23px
+      background-image: url(../images/common/svg/ignis/arrow_link.svg)
+      background-repeat: no-repeat
+      background-position: bottom center
+      background-size: contain
+      top: 50%
+      transform: translateY(-50%)  
+      right: -20px
+
+.preview-mounting
+  background-color: #fff
+  padding-top: 80px
+  .section-descr
+    max-width: 476px
+    @media (max-width: 575px)
+      padding: 0 20px
+  &__content
+    width: 100%
+    margin-top: 70px
+    display: flex
+    flex-direction: column
+
+    .slider-navigation
+      align-self: center
+      .nav-list
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        border: 2px solid #000
+        border-radius: 40px
+        background-color: $bg-color
+        overflow: hidden
+        position: relative
+        z-index: 1
+        &__item
+          flex: 0 0 auto
+          width: auto
+          border-radius: 20px
+        &__link
+          display: inline-block
+          color: $txt-color
+          padding: 8px 22px
+          transition: background-color .3s
+          border-radius: 20px
+          &.active
+            background-color: #fff
+            border-radius: 20px
+    .slide-image
+      width: 100%
+      height: 100%
+      object-fit: cover
+    
+
 .preview-cloud
   padding: 80px 0
   position: relative
@@ -2097,6 +2416,11 @@
         flex-grow: 1
         @media (max-width: 1024px)
           order: -1
+      .img-wrapper
+        width: 100%
+        height: 100%
+        @media (max-width: 1024px)
+          height: auto
       .slide-image
         display: block
         border-radius: 10px
