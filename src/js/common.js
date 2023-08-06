@@ -94,6 +94,52 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
     })
+
+    function throttle(func, ms) {
+        let isThrottled = false,
+            savedArgs,
+            savedThis
+
+        function wrapper() {
+            if (isThrottled) {
+                // (2)
+                savedArgs = arguments
+                savedThis = this
+                return
+            }
+
+            func.apply(this, arguments) // (1)
+
+            isThrottled = true
+
+            setTimeout(function () {
+                isThrottled = false // (3)
+                if (savedArgs) {
+                    wrapper.apply(savedThis, savedArgs)
+                    savedArgs = savedThis = null
+                }
+            }, ms)
+        }
+
+        return wrapper
+    }
+
+    // spectra shadow animation
+    $('.preview-spectra__spline').on(
+        'mousemove',
+        throttle(function (event) {
+            const width = $(this).width()
+            const center = Math.floor(width / 2)
+            const xCoordMouse = event.offsetX
+            const percentOfCenter = 100 - Math.abs(xCoordMouse / center) * 100
+
+            $(this).css(
+                'filter',
+                `drop-shadow(${percentOfCenter * 0.15}px 15px 15px #a0a0a0)`
+            )
+        }, 50)
+    )
+
     var ignisreadySlider = new Swiper('#ignis-ready-slider', {
         modules: [EffectFade, Autoplay],
         lazy: true,
@@ -126,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modules: [EffectFade],
         lazy: true,
         effect: 'fade',
+        crossFade: true,
         allowTouchMove: false,
         speed: 800,
         slidesPerView: 1,
