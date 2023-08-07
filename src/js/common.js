@@ -1,11 +1,5 @@
 // slider
-import Swiper, {
-    Navigation,
-    Pagination,
-    EffectFade,
-    Autoplay,
-    Grid,
-} from 'swiper'
+import Swiper, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper'
 // functions
 import { headerScrollChange } from './_func/_jq/headerScrollChange'
 import { getAppHeight } from './_func/_jq/getAppHeight'
@@ -124,95 +118,139 @@ document.addEventListener('DOMContentLoaded', () => {
         return wrapper
     }
 
-    // spectra shadow animation
-    $('.preview-spectra__spline').on(
-        'mousemove',
-        throttle(function (event) {
-            const width = $(this).width()
-            const center = Math.floor(width / 2)
-            const xCoordMouse = event.offsetX
-            const percentOfCenter = 100 - Math.abs(xCoordMouse / center) * 100
+    if ($('.ignis-page').length > 0) {
+        // spectra shadow animation
+        $('.preview-spectra__spline').on(
+            'mousemove',
+            throttle(function (event) {
+                const width = $(this).width()
+                const center = Math.floor(width / 2)
+                const xCoordMouse = event.offsetX
+                const percentOfCenter =
+                    100 - Math.abs(xCoordMouse / center) * 100
 
-            $(this).css(
-                'filter',
-                `drop-shadow(${percentOfCenter * 0.15}px 15px 15px #a0a0a0)`
+                $(this).css(
+                    'filter',
+                    `drop-shadow(${percentOfCenter * 0.15}px 15px 15px #a0a0a0)`
+                )
+            }, 50)
+        )
+
+        var ignisreadySlider = new Swiper('#ignis-ready-slider', {
+            modules: [EffectFade, Autoplay],
+            lazy: true,
+            effect: 'fade',
+            allowTouchMove: false,
+            speed: 800,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+        })
+
+        ignisreadySlider.on('slideChange', function () {
+            $('.ignis-ready__content .nav-link').removeClass('active')
+            const index = ignisreadySlider.activeIndex
+            const arr = [...$('.ignis-ready__content .nav-link')]
+            arr[index].classList.add('active')
+        })
+
+        $('.ignis-ready__content .nav-link').click(function () {
+            var curSlide = $(this).attr('data-slide')
+            $('.ignis-ready__content .nav-link').removeClass('active')
+            $(this).addClass('active')
+            ignisreadySlider.slideTo(curSlide - 1)
+        })
+
+        var ignisspectraSlider = new Swiper('#ignis-spectra-slider', {
+            modules: [EffectFade],
+            lazy: true,
+            effect: 'fade',
+            crossFade: true,
+            allowTouchMove: false,
+            speed: 800,
+            slidesPerView: 1,
+            spaceBetween: 20,
+        })
+
+        $('.preview-spectra__content .nav-link').click(function () {
+            var curSlide = $(this).attr('data-slide')
+            $('.preview-spectra__content .nav-link').removeClass('active')
+            $(this).addClass('active')
+            ignisspectraSlider.slideTo(curSlide - 1)
+        })
+
+        var ignismountingSlider = new Swiper('#ignis-mounting-slider', {
+            modules: [EffectFade, Autoplay],
+            lazy: true,
+            effect: 'fade',
+            allowTouchMove: false,
+            speed: 800,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        })
+
+        ignismountingSlider.on('slideChange', function () {
+            $('.preview-mounting__content .nav-link').removeClass('active')
+            const index = ignismountingSlider.activeIndex
+            const arr = [...$('.preview-mounting__content .nav-link')]
+            arr[index].classList.add('active')
+        })
+
+        $('.preview-mounting__content .nav-link').click(function () {
+            var curSlide = $(this).attr('data-slide')
+            $('.preview-mounting__content .nav-link').removeClass('active')
+            $(this).addClass('active')
+            ignismountingSlider.slideTo(curSlide - 1)
+        })
+
+        /* ignis install animation */
+        if ($('.preview-module').length > 0) {
+            $(window).scroll(function () {
+                var wt = $(window).scrollTop()
+                var wh = $(window).height()
+                var et = $('.preview-module').offset().top
+                var eh = $('.preview-module').outerHeight()
+                var dh = $(document).height()
+
+                if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+                    // Код анимации
+                    $('.preview-module').addClass('animated')
+                }
+            })
+        }
+
+        $('.ignis-specification__toggle').click(function () {
+            $('.ignis-specification__dropdown').toggleClass(
+                'ignis-specification__dropdown_active'
             )
-        }, 50)
-    )
+        })
 
-    var ignisreadySlider = new Swiper('#ignis-ready-slider', {
-        modules: [EffectFade, Autoplay],
-        lazy: true,
-        effect: 'fade',
-        allowTouchMove: false,
-        speed: 800,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false,
-        },
-    })
+        $('.ignis-specification__option').click(function () {
+            $(this).siblings().removeClass('ignis-specification__option_active')
+            $(this).addClass('ignis-specification__option_active')
 
-    ignisreadySlider.on('slideChange', function () {
-        $('.ignis-ready__content .nav-link').removeClass('active')
-        const index = ignisreadySlider.activeIndex
-        const arr = [...$('.ignis-ready__content .nav-link')]
-        arr[index].classList.add('active')
-    })
+            $('.ignis-specification__toggle span').text($(this).text())
 
-    $('.ignis-ready__content .nav-link').click(function () {
-        var curSlide = $(this).attr('data-slide')
-        $('.ignis-ready__content .nav-link').removeClass('active')
-        $(this).addClass('active')
-        ignisreadySlider.slideTo(curSlide - 1)
-    })
+            $('.ignis-specification__content')
+                .removeClass(
+                    'ignis-specification__content_one ignis-specification__content_two ignis-specification__content_three'
+                )
+                .addClass(
+                    `ignis-specification__content_${$(this).attr('data-value')}`
+                )
 
-    var ignisspectraSlider = new Swiper('#ignis-spectra-slider', {
-        modules: [EffectFade],
-        lazy: true,
-        effect: 'fade',
-        crossFade: true,
-        allowTouchMove: false,
-        speed: 800,
-        slidesPerView: 1,
-        spaceBetween: 20,
-    })
-
-    $('.preview-spectra__content .nav-link').click(function () {
-        var curSlide = $(this).attr('data-slide')
-        $('.preview-spectra__content .nav-link').removeClass('active')
-        $(this).addClass('active')
-        ignisspectraSlider.slideTo(curSlide - 1)
-    })
-
-    var ignismountingSlider = new Swiper('#ignis-mounting-slider', {
-        modules: [EffectFade, Autoplay],
-        lazy: true,
-        effect: 'fade',
-        allowTouchMove: false,
-        speed: 800,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-    })
-
-    ignismountingSlider.on('slideChange', function () {
-        $('.preview-mounting__content .nav-link').removeClass('active')
-        const index = ignismountingSlider.activeIndex
-        const arr = [...$('.preview-mounting__content .nav-link')]
-        arr[index].classList.add('active')
-    })
-
-    $('.preview-mounting__content .nav-link').click(function () {
-        var curSlide = $(this).attr('data-slide')
-        $('.preview-mounting__content .nav-link').removeClass('active')
-        $(this).addClass('active')
-        ignismountingSlider.slideTo(curSlide - 1)
-    })
+            $('.ignis-specification__dropdown').toggleClass(
+                'ignis-specification__dropdown_active'
+            )
+        })
+    }
 
     var aquamixerSlider = new Swiper('#aquamixer-slider', {
         modules: [EffectFade],
@@ -229,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $(this).addClass('active')
         aquamixerSlider.slideTo(curSlide - 1)
     })
+
     var previewHowSlider = new Swiper('#preview-how-slider', {
         modules: [Navigation, Pagination, EffectFade],
         lazy: true,
@@ -299,22 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }),
             function () {}
-    }
-
-    /* ignis install animation */
-    if ($('.preview-module').length > 0) {
-        $(window).scroll(function () {
-            var wt = $(window).scrollTop()
-            var wh = $(window).height()
-            var et = $('.preview-module').offset().top
-            var eh = $('.preview-module').outerHeight()
-            var dh = $(document).height()
-
-            if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-                // Код анимации
-                $('.preview-module').addClass('animated')
-            }
-        })
     }
 
     if ($('.message-section__form').length > 0) {

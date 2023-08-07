@@ -719,7 +719,6 @@
         text-align: left
         color: $txt-color
         font-feature-settings: 'ss03' on, 'ss02' on, 'ss01' on
-        font-family: Work Sans
         font-size: 14px
         font-style: normal
         font-weight: 500
@@ -2554,6 +2553,10 @@
     @media (max-width: 575px)
       margin-top: 50px
 
+    .section-title
+      @media (max-width: 359px)
+        padding: 0
+
   &__images
     width: 100%
     display: grid
@@ -2566,14 +2569,19 @@
       background-color: #fff
       border-radius: 10px
 
+  &__img
+    border-radius: 10px
+
   &__subheadings 
     width: 100%
     display: flex
     justify-content: space-around
     margin-top: 30px
 
+    @media (max-width: 930px)
+      display: none
+
   &__subtitle 
-    font-family: Work Sans
     font-size: 33px
     font-style: normal
     font-weight: 600
@@ -2586,6 +2594,8 @@
     display: flex
     align-items: center
     gap: 20px
+    margin-bottom: 25px
+    box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.25)
 
   &__list
     width: 100%
@@ -2602,7 +2612,6 @@
         font-weight: 500
 
   &__item 
-    font-family: Work Sans
     font-size: 14px
     font-style: normal
     font-weight: 380
@@ -2613,23 +2622,45 @@
     display: flex
     flex-direction: column
     gap: 24px
-    padding-bottom: 50px
+
+    &:not(:last-child)
+      padding-bottom: 50px
 
   &__category
     width: 100%
     display: flex
     align-items: center
+    justify-content: center
     gap: 20px
+
+    .section-icon
+      font-size: 40px
+      line-height: 40px
+      @media (max-width: 380px)
+        font-size: 25px
+        line-height: 25px
+
+    .ignis-specification__title
+      font-size: 22px
+      font-style: normal
+      font-weight: 500
+      line-height: 29px
+      letter-spacing: -0.22px
+
+      @media (max-width: 380px)
+        font-size: 19px
 
   &__divider
     background-color: rgba(1, 33, 55, 0.70)
     height: 1px
-    width: 100%
+    width: 50%
 
   &__rubric
     display: flex
     align-items: center
     gap: 10px
+    width: max-content
+    flex-shrink: 0
     .section-icon
       margin: 0
 
@@ -2637,12 +2668,18 @@
     width: 100%
     display: flex
     align-items: flex-start
-    padding: 0 20px
     gap: 20px
 
     .ignis-specification__item
       font-weight: 400
       text-align: center
+
+    .ignis-specification__list_row
+      justify-content: space-between
+      gap: 10px
+
+      .ignis-specification__item
+        width: 80px
 
   &__wrapper
     width: 100%
@@ -2655,10 +2692,24 @@
     &_green
       border: 2px solid $accent-color
 
+    &_sky
+      border: 2px solid var(--cloud-grad, #C3DCE5)
+
     &_linear
-      background: linear-gradient(white, white) padding-box, linear-gradient(to right, $accent-color, $air-color) border-box
+      background: linear-gradient($bg-color, $bg-color) padding-box, linear-gradient(to right, $accent-color, $air-color) border-box
       border-radius: 10px
       border: 2px solid transparent
+    
+    &_small
+      padding-top: 5px
+      gap: 4px
+
+    .ignis-specification__list
+      max-width: 256px
+      margin: 0 auto
+
+    .ignis-specification__info
+      padding: 0 20px
 
   &__blocks
     width: 100%
@@ -2670,11 +2721,11 @@
     padding: 10px
     display: flex
     justify-content: center
-    font-family: Work Sans
     font-size: 11px
     font-style: normal
     font-weight: 500
     line-height: 100%
+    text-align: center
 
     &_green
       background-color: $accent-color
@@ -2682,8 +2733,85 @@
     &_blue
       background-color: $air-color
 
+    &_sky
+      background: linear-gradient(90deg, rgba(243, 245, 247, 0.00) 0%, rgba(255, 255, 255, 0.30) 14.06%, rgba(243, 245, 247, 0.00) 21.88%, rgba(255, 255, 255, 0.30) 30.73%, rgba(243, 245, 247, 0.00) 41.67%, rgba(243, 245, 247, 0.00) 53.13%, rgba(243, 245, 247, 0.00) 62.47%, rgba(255, 255, 255, 0.30) 74.85%, rgba(254, 254, 254, 0.28) 83.37%, rgba(255, 255, 255, 0.30) 88.52%, rgba(243, 245, 247, 0.00) 96.56%), var(--ignis-cloudsubscription, #C3DCE5)
+
     &:last-child
       border-radius: 0 0 7px 7px
+
+  &__select
+    position: relative
+    display: none
+    margin-top: 20px
+    
+    @media (max-width: 930px)
+      display: block
+
+  &__toggle
+    width: 266px
+    border: none
+    outline: none
+    background-color: transparent
+    font-size: 33px
+    font-style: normal
+    font-weight: 600
+    line-height: 40px
+    letter-spacing: -0.99px
+    position: relative
+    padding: 0
+    cursor: pointer
+
+    span
+      position: relative
+      padding-right: 40px
+
+      &::after
+        position: absolute
+        content: ''
+        width: 40px
+        height: 40px
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        background: url("../images/common/svg/ignis/arrow_select.svg") no-repeat
+
+  &__dropdown
+    display: none
+    position: absolute
+    width: 100%
+    top: calc(100% + 15px)
+    padding: 30px 40px
+    border-radius: 20px
+    background: var(--off-white, #F3F5F7)
+    box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.15)
+
+    &_active
+      display: block
+
+  &__options
+    display: flex
+    flex-direction: column
+    gap: 25px
+
+  &__option
+    font-size: 33px
+    font-style: normal
+    font-weight: 600
+    line-height: 40px
+    letter-spacing: -0.99px
+
+    &_active
+      position: relative
+
+      &::after
+        position: absolute
+        content: ''
+        width: 40px
+        height: 40px
+        top: 50%
+        transform: translateY(-50%)
+        right: -20px
+        background: url("../images/common/svg/ignis/option_tick.svg") no-repeat
 
 
 
@@ -4106,7 +4234,92 @@
   .preview-how__content .preview-how-slider .slider-navigation
     top: 50%
 
+@media (max-width: 930px)
+  .ignis-specification
+    .container
+      max-width: 390px
+  .ignis-specification__content_one
+    .ignis-specification__images
+      display: flex
+      justify-content: center
+      width: 286px
+      .img-wrapper
+        width: 100%
+        &:nth-child(2),
+        &:nth-child(3)
+          display: none
+        &:nth-child(1)
+          display: flex
+    .ignis-specification__sizes
+      .ignis-specification__list
+        &:nth-child(2),
+        &:nth-child(3)
+          display: none
+        &:nth-child(1)
+          display: flex
+    .ignis-specification__section
+      .ignis-specification__info
+        .ignis-specification__list
+          &:nth-child(2),
+          &:nth-child(3)
+            display: none
+          &:ntn-child(1)
+            display: flex
 
+  .ignis-specification__content_two
+    .ignis-specification__images
+      display: flex
+      justify-content: center
+      width: 286px
+      .img-wrapper
+        width: 100%
+        &:nth-child(1),
+        &:nth-child(3)
+          display: none
+        &:nth-child(2)
+          display: flex
+    .ignis-specification__sizes
+      .ignis-specification__list
+        &:nth-child(1),
+        &:nth-child(3)
+          display: none
+        &:nth-child(2)
+          display: flex
+    .ignis-specification__section
+      .ignis-specification__info
+        .ignis-specification__list
+          &:nth-child(1),
+          &:nth-child(3)
+            display: none
+          &:nth-child(2)
+            display: flex
+  .ignis-specification__content_three
+    .ignis-specification__images
+      display: flex
+      justify-content: center
+      width: 286px
+      .img-wrapper
+        width: 100%
+        &:nth-child(1),
+        &:nth-child(2)
+          display: none
+        &:nth-child(3)
+          display: flex
+    .ignis-specification__sizes
+      .ignis-specification__list
+        &:nth-child(1),
+        &:nth-child(2)
+          display: none
+        &:nth-child(3)
+          display: flex
+    .ignis-specification__section
+      .ignis-specification__info
+        .ignis-specification__list
+          &:nth-child(1),
+          &:nth-child(2)
+            display: none
+          &:nth-child(3)
+            display: flex
 
 @import "node_modules/swiper/swiper-bundle"
 @import "_components/footer"
