@@ -226,13 +226,37 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
-        $('.ignis-specification__toggle').click(function () {
+        var swiper = new Swiper('.mySwiper', {
+            spaceBetween: 20,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+        })
+        var swiper2 = new Swiper('.mySwiper2', {
+            spaceBetween: 0,
+            thumbs: {
+                swiper: swiper,
+            },
+        })
+
+        $('.ignis-specification__toggle').click(function (e) {
+            e.stopPropagation()
             $('.ignis-specification__dropdown').toggleClass(
                 'ignis-specification__dropdown_active'
             )
         })
 
-        $('.ignis-specification__option').click(function () {
+        $(document).click(function () {
+            $('.ignis-specification__dropdown').removeClass(
+                'ignis-specification__dropdown_active'
+            )
+        })
+
+        $('.ignis-specification__dropdown').click(function (e) {
+            e.stopPropagation()
+        })
+
+        $('.ignis-specification__option').click(function (e) {
             $(this).siblings().removeClass('ignis-specification__option_active')
             $(this).addClass('ignis-specification__option_active')
 
