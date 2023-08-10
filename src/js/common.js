@@ -250,36 +250,51 @@ document.addEventListener('DOMContentLoaded', () => {
             controls: 3,
         }
 
+        // $('.ignis-summary__text').text(
+        //     'Ignis 600mm, 15W, 50 PPF, hang mounting, Universal spectrum'
+        // )
         function updateSlide() {
             if (condition['config'] === 1) {
                 if (condition['mounting'] === 1) {
                     if (condition['controls'] === 1) {
                         ignisConfiguratorSlider.slideTo(6)
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis 600mm, 15W, 50 PPF, hang mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis 900mm, 22W, 73 PPF, hang mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis 1200mm, 28W, 92 PPF, hang mounting, Universal spectrum'
+                            )
                         }
                     }
 
                     if (condition['controls'] === 2) {
                         ignisConfiguratorSlider.slideTo(12)
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 600mm, 15W, 50 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 900mm, 22W, 73 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 1200mm, 28W, 92 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
                     }
 
@@ -287,15 +302,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         ignisConfiguratorSlider.slideTo(0)
 
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 600mm, 15W, 50 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 900mm, 22W, 73 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 1200mm, 28W, 92 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
                     }
                 }
@@ -304,42 +325,69 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (condition['controls'] === 1) {
                         if (condition['length'] === 1) {
                             ignisConfiguratorSlider.slideTo(7)
+                            $('.ignis-summary__text').text(
+                                'Ignis 600mm, 15W, 50 PPF, stand mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 2) {
                             ignisConfiguratorSlider.slideTo(8)
+                            $('.ignis-summary__text').text(
+                                'Ignis 900mm, 22W, 73 PPF, stand mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 3) {
                             ignisConfiguratorSlider.slideTo(9)
+                            $('.ignis-summary__text').text(
+                                'Ignis 1200mm, 28W, 92 PPF, stand mounting, Universal spectrum'
+                            )
                         }
                     }
 
                     if (condition['controls'] === 2) {
                         if (condition['length'] === 1) {
                             ignisConfiguratorSlider.slideTo(13)
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 600mm, 15W, 50 PPF, stand mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
                             ignisConfiguratorSlider.slideTo(14)
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 900mm, 22W, 73 PPF, stand mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
                             ignisConfiguratorSlider.slideTo(15)
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 1200mm, 28W, 92 PPF, stand mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
                     }
 
                     if (condition['controls'] === 3) {
                         if (condition['length'] === 1) {
                             ignisConfiguratorSlider.slideTo(1)
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 600mm, 15W, 50 PPF, stand mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
                             ignisConfiguratorSlider.slideTo(2)
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 900mm, 22W, 73 PPF, stand mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
                             ignisConfiguratorSlider.slideTo(3)
+                            $('.ignis-summary__text').text(
+                                'Ignis Control 1200mm, 28W, 92 PPF, stand mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
                     }
                 }
@@ -350,30 +398,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (condition['controls'] === 1) {
                         ignisConfiguratorSlider.slideTo(10)
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis 600mm (2-luminaire holder system), 15Wx2, 100 PPF, hang mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis 900mm (2-luminaire holder system), 22Wx2, 146 PPF, hang mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis 1200mm (2-luminaire holder system), 28Wx2, 184 PPF, hang mounting, Universal spectrum'
+                            )
                         }
                     }
 
                     if (condition['controls'] === 2) {
                         ignisConfiguratorSlider.slideTo(16)
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis Control 600mm (2-luminaire holder system), 15Wx2, 100 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis Control 900mm (2-luminaire holder system), 22Wx2, 146 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis Control 1200mm (2-luminaire holder system), 28Wx2, 184 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
                     }
 
@@ -381,15 +441,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         ignisConfiguratorSlider.slideTo(4)
 
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis Control 600mm (2-luminaire holder system), 15Wx2, 100 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis Control 900mm (2-luminaire holder system), 22Wx2, 146 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '2-Ignis Control 1200mm (2-luminaire holder system), 28Wx2, 184 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
                     }
                 }
@@ -405,30 +471,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (condition['controls'] === 1) {
                         ignisConfiguratorSlider.slideTo(11)
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis 600mm (3-luminaire holder system), 15Wx3, 150 PPF, hang mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis 900mm (3-luminaire holder system), 22Wx3, 219 PPF, hang mounting, Universal spectrum'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis 1200mm (3-luminaire holder system), 28Wx3, 276 PPF, hang mounting, Universal spectrum'
+                            )
                         }
                     }
 
                     if (condition['controls'] === 2) {
                         ignisConfiguratorSlider.slideTo(17)
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis Control 600mm (3-luminaire holder system), 15Wx3, 150 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis Control 900mm (3-luminaire holder system), 22Wx3, 219 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis Control 1200mm (3-luminaire holder system), 28Wx3, 276 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion disabled'
+                            )
                         }
                     }
 
@@ -436,15 +514,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         ignisConfiguratorSlider.slideTo(5)
 
                         if (condition['length'] === 1) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis Control 600mm (3-luminaire holder system), 15Wx3, 150 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 2) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis Control 900mm (3-luminaire holder system), 22Wx3, 219 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
 
                         if (condition['length'] === 3) {
-                            // update result Text
+                            $('.ignis-summary__text').text(
+                                '3-Ignis Control 1200mm (3-luminaire holder system), 28Wx3, 276 PPF, hang mounting, 3-channel adjustable spectrum. Cloud subscriprion enabled'
+                            )
                         }
                     }
                 }
@@ -528,6 +612,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
         }
+
+        // ! Summary Fixed END
 
         $('.ignis-specification__toggle').click(function (e) {
             e.stopPropagation()
