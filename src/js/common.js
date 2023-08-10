@@ -168,7 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modules: [EffectFade],
             lazy: true,
             effect: 'fade',
-            crossFade: true,
+            fadeEffect: {
+                crossFade: true,
+            },
             allowTouchMove: false,
             speed: 800,
             slidesPerView: 1,
@@ -226,18 +228,306 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
-        var swiper = new Swiper('.mySwiper', {
-            spaceBetween: 20,
-            slidesPerView: 3,
-            freeMode: true,
-            watchSlidesProgress: true,
-        })
-        var swiper2 = new Swiper('.mySwiper2', {
-            spaceBetween: 0,
-            thumbs: {
-                swiper: swiper,
+        // ! Ignis Configurator
+
+        var ignisConfiguratorSlider = new Swiper('#ignis-configurator-slider', {
+            modules: [EffectFade, Autoplay],
+            lazy: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
             },
+            allowTouchMove: false,
+            speed: 800,
+            slidesPerView: 1,
+            spaceBetween: 0,
         })
+
+        const condition = {
+            length: 1,
+            config: 1,
+            mounting: 1,
+            controls: 3,
+        }
+
+        function updateSlide() {
+            if (condition['config'] === 1) {
+                if (condition['mounting'] === 1) {
+                    if (condition['controls'] === 1) {
+                        ignisConfiguratorSlider.slideTo(6)
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+
+                    if (condition['controls'] === 2) {
+                        ignisConfiguratorSlider.slideTo(12)
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+
+                    if (condition['controls'] === 3) {
+                        ignisConfiguratorSlider.slideTo(0)
+
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+                }
+
+                if (condition['mounting'] === 2) {
+                    if (condition['controls'] === 1) {
+                        if (condition['length'] === 1) {
+                            ignisConfiguratorSlider.slideTo(7)
+                        }
+
+                        if (condition['length'] === 2) {
+                            ignisConfiguratorSlider.slideTo(8)
+                        }
+
+                        if (condition['length'] === 3) {
+                            ignisConfiguratorSlider.slideTo(9)
+                        }
+                    }
+
+                    if (condition['controls'] === 2) {
+                        if (condition['length'] === 1) {
+                            ignisConfiguratorSlider.slideTo(13)
+                        }
+
+                        if (condition['length'] === 2) {
+                            ignisConfiguratorSlider.slideTo(14)
+                        }
+
+                        if (condition['length'] === 3) {
+                            ignisConfiguratorSlider.slideTo(15)
+                        }
+                    }
+
+                    if (condition['controls'] === 3) {
+                        if (condition['length'] === 1) {
+                            ignisConfiguratorSlider.slideTo(1)
+                        }
+
+                        if (condition['length'] === 2) {
+                            ignisConfiguratorSlider.slideTo(2)
+                        }
+
+                        if (condition['length'] === 3) {
+                            ignisConfiguratorSlider.slideTo(3)
+                        }
+                    }
+                }
+            }
+
+            if (condition['config'] === 2) {
+                if (condition['mounting'] === 1) {
+                    if (condition['controls'] === 1) {
+                        ignisConfiguratorSlider.slideTo(10)
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+
+                    if (condition['controls'] === 2) {
+                        ignisConfiguratorSlider.slideTo(16)
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+
+                    if (condition['controls'] === 3) {
+                        ignisConfiguratorSlider.slideTo(4)
+
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+                }
+
+                if (condition['mounting'] === 2) {
+                    condition['mounting'] = 1
+                    updateSlide()
+                }
+            }
+
+            if (condition['config'] === 3) {
+                if (condition['mounting'] === 1) {
+                    if (condition['controls'] === 1) {
+                        ignisConfiguratorSlider.slideTo(11)
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+
+                    if (condition['controls'] === 2) {
+                        ignisConfiguratorSlider.slideTo(17)
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+
+                    if (condition['controls'] === 3) {
+                        ignisConfiguratorSlider.slideTo(5)
+
+                        if (condition['length'] === 1) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 2) {
+                            // update result Text
+                        }
+
+                        if (condition['length'] === 3) {
+                            // update result Text
+                        }
+                    }
+                }
+
+                if (condition['mounting'] === 2) {
+                    condition['mounting'] = 1
+                    updateSlide()
+                }
+            }
+        }
+
+        $('.ignis-configurator__button').click(function () {
+            const length = $(this).data('length')
+            const config = $(this).data('config')
+
+            if (length) {
+                condition['length'] = length
+            }
+
+            if (config) {
+                condition['config'] = config
+            }
+
+            $(this).siblings().removeClass('ignis-configurator__button_active')
+            $(this).addClass('ignis-configurator__button_active')
+
+            if (condition['config'] > 1) {
+                $('.ignis-configurator__btn')[1].disabled = true
+                $('.ignis-configurator__btn')[1].classList.remove(
+                    'ignis-configurator__btn_active'
+                )
+                $('.ignis-configurator__btn')[0].classList.add(
+                    'ignis-configurator__btn_active'
+                )
+            } else {
+                $('.ignis-configurator__btn')[1].disabled = false
+            }
+
+            updateSlide()
+        })
+
+        $('.ignis-configurator__btn').click(function () {
+            const mounting = $(this).data('mounting')
+
+            condition['mounting'] = mounting
+
+            $(this).siblings().removeClass('ignis-configurator__btn_active')
+            $(this).addClass('ignis-configurator__btn_active')
+
+            updateSlide()
+        })
+
+        $('.ignis-configurator__tab').click(function () {
+            const controls = $(this).data('controls')
+
+            condition['controls'] = controls
+
+            $(this).siblings().removeClass('ignis-configurator__tab_active')
+            $(this).addClass('ignis-configurator__tab_active')
+
+            updateSlide()
+        })
+
+        // !Ignis Configurator End
+
+        // ! Summary Fixed
+
+        /* ignis install animation */
+        if ($('.ignis-summary').length > 0) {
+            $(window).scroll(function () {
+                var wt = $(window).scrollTop()
+
+                var et = $('.ignis-configurator').offset().top
+                var eh = $('.ignis-configurator').outerHeight()
+
+                if (wt > et + eh / 2) {
+                    // Код анимации
+                    $('.ignis-summary').addClass('ignis-summary_fixed')
+                } else {
+                    $('.ignis-summary').removeClass('ignis-summary_fixed')
+                }
+            })
+        }
 
         $('.ignis-specification__toggle').click(function (e) {
             e.stopPropagation()
