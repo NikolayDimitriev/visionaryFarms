@@ -250,9 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
             controls: 3,
         }
 
-        // $('.ignis-summary__text').text(
-        //     'Ignis 600mm, 15W, 50 PPF, hang mounting, Universal spectrum'
-        // )
         function updateSlide() {
             if (condition['config'] === 1) {
                 if (condition['mounting'] === 1) {
@@ -590,6 +587,16 @@ document.addEventListener('DOMContentLoaded', () => {
             $(this).addClass('ignis-configurator__tab_active')
 
             updateSlide()
+        })
+
+        $('.ignis-configurator__bottom .img-wrapper img').click(function () {
+            const src = $('.ignis-configurator__top .img-wrapper img').attr(
+                'src'
+            )
+            const addSrc = $(this).attr('src')
+
+            $('.ignis-configurator__top .img-wrapper img').attr('src', addSrc)
+            $(this).attr('src', src)
         })
 
         // !Ignis Configurator End
