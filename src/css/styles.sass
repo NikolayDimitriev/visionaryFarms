@@ -344,7 +344,7 @@
       @media (max-width: 450px)
         left: 10%
     &:before
-      content: url(../images/common/svg/ignis/ignis_logo.svg)
+      content: url(../images/common/ignis/ignis_logo.png)
       display: block
       position: absolute
       top: 255px
@@ -672,14 +672,20 @@
       justify-content: space-between
     .img-wrapper .img-cover
       width: 60%
-      right: 0
       left: auto
-      @media (max-width: 1024px)
+      top: 0
+      bottom: 0
+      right: 0
+      @media (max-width: 1450px)
+        width: 70%
+      @media (max-width: 1200px)
         width: 100%
-        height: auto
+      @media (max-width: 575px)
         top: 21%
       @media (max-width: 390px)
         top: 24%
+      @media (max-width: 360px)
+        top: 28%
     .preview-descr
       &__wrapper 
         width: 100%
@@ -688,6 +694,8 @@
           max-width: 280px
           margin: 0 auto
       &__info 
+        display: flex
+        flex-direction: column
         max-width: 455px
         align-self: flex-start
         background-color: #fff
@@ -725,9 +733,8 @@
         line-height: 21px
 
     .learn-link
-      width: 100%
-      padding-left: 60px
-      margin-left: 0
+      align-self: flex-start
+      margin-left: 60px
       margin-bottom: 6px
     .preview-descr__descr
       max-width: 557px
@@ -1172,27 +1179,27 @@
     @media (max-width: 1023px)
       padding: 40px 0 80px
 
-@keyframes slidein
+@keyframes slideInStepOne
   0%
-    top: -200px
-    right: 1000px
-  50%
-    top: 0
-    right: 700px
+    transform: translate(-400px, -250px)
+    // top: -350px
+    // right: 1150px
   100%
-    top: 96px
-    right: 557px
+    transform: translate(0, 0)
+    // top: 0
+    // right: 700px
 
-@keyframes slideintwo
+@keyframes slideInStepTwo
   0%
-    top: -200px
-    right: 800px
-  50%
-    top: 0
-    right: 500px
+    transform: translate(0, 0)
   100%
-    top: 287px
-    right: 150px
+    transform: translate(143px, 96px)
+
+@keyframes slideOut
+  0%
+    transform: translate(143px, 96px)
+  100%
+    transform: translate(-400px, -250px)
   
 
 .preview-module 
@@ -1203,10 +1210,7 @@
 
   &.animated
     .module-part_2
-      opacity: 1
-      animation: slidein 3s ease
-      @media (max-width: 1300px)
-        animation-name: slideintwo
+      animation-play-state: running
 
   @media (max-width: 575px)
     padding: 50px 0 310px
@@ -1233,15 +1237,18 @@
       @media (max-width: 1300px)
         top: 350px
     &_2
-      opacity: 0
-      top: 96px
-      right: 557px
+      top: 0
+      right: 700px
       left: auto
       bottom: auto
       height: auto
       z-index: 1
       transform: none
       width: 324px
+      animation: 1s linear 0s slideInStepOne, 2s linear 4s slideInStepTwo, 1.5s linear 6s slideOut
+      animation-play-state: paused
+      @media (max-width: 1300px)
+        animation-name: slideintwo
       @media (max-width: 1300px)
         top: 287px
         right: 150px
@@ -1424,7 +1431,7 @@
       width: 100%
       max-width: 870px
       min-width: auto
-    .icon
+    .icon-absol
       position: absolute
       font-size: 40px
       line-height: 40px
@@ -1456,27 +1463,8 @@
     letter-spacing: -0.22px
 
   &__link
-    display: inline-block
     align-self: flex-start
-    font-size: 15.6px
-    font-style: normal
-    font-weight: 600
-    line-height: 18px
-    text-transform: uppercase
-    color: inherit
-    position: relative
-    &::before
-      content: ''
-      position: absolute
-      width: 17px
-      height: 23px
-      background-image: url(../images/common/svg/ignis/arrow_link.svg)
-      background-repeat: no-repeat
-      background-position: bottom center
-      background-size: contain
-      top: 50%
-      transform: translateY(-50%)  
-      right: -20px
+    margin: 0
 
   &__graph
     flex-shrink: 0
@@ -1521,7 +1509,7 @@
   &__spline
     height: 100%
     transition: filter .2s ease
-    filter: drop-shadow(15px 15px 15px #a0a0a0)
+    filter: drop-shadow(15px 15px 15px #4e4e4e)
 
 
 
@@ -1615,7 +1603,6 @@
       height: 160px
     @media (max-width: 350px)
       height: 130px
-
 
 
 .preview-cloud
@@ -2472,6 +2459,28 @@
             &:after
               display: none
 
+.ignis-cloud
+  .preview-cloud
+    &__content
+      &__item
+        &:nth-child(5)
+          .image-block
+            border-radius: 10px
+            overflow: hidden
+            margin: 0 0 10px auto
+            @media (max-width: 575px)
+              margin: 0 0 0 auto
+              border-radius: 0
+              overflow: visible
+              flex-direction: row
+              align-items: stretch
+              .img-block
+                height: 100% !important
+              .img-cover
+                min-height: 100%
+                width: auto
+                max-width: unset
+
 .ignis-ready
   .container
     max-width: 1564px
@@ -2491,7 +2500,7 @@
     position: absolute
     top: 20px
     left: calc(455px + 20px + 20px)
-    z-index: 1000
+    z-index: 10
     @media (max-width: 1024px)
       left: 20px
     .nav-list
@@ -2559,8 +2568,6 @@
 .ignis-configurator
   padding: 80px 0 127px
   background-color: #fff
-
-
 
   @media (max-width: 575px) 
     padding: 50px 0 100px
@@ -2751,6 +2758,7 @@
       margin: 0
 
   &__learn
+    align-self: flex-start
     display: flex
     align-items: center
     gap: 5px
@@ -2760,6 +2768,8 @@
     line-height: 21px
     margin-top: -10px
     margin-bottom: 10px
+    margin-left: 0
+    text-transform: none
     .section-icon
       margin: 0
       font-size: 20px
@@ -2790,10 +2800,15 @@
       background-color: $bg-color
       border-radius: 10px
 
+      .config-img-contain
+        object-fit: contain
+
+      .config-img-cover
+        object-fit: cover
+
       img 
         width: 100%
         height: 100%
-        object-fit: contain
         border-radius: 10px
 
   &__bottom
@@ -2805,14 +2820,20 @@
       height: 150px
       background-color: $bg-color
       border-radius: 10px
+      cursor: pointer
 
       @media (max-width: 575px)
         height: 100px
 
+      .config-img-contain
+        object-fit: contain
+
+      .config-img-cover
+        object-fit: cover
+
       img 
         width: 100%
         height: 100%
-        object-fit: contain
         border-radius: 10px
 
 .ignis-summary

@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 $(this).css(
                     'filter',
-                    `drop-shadow(${percentOfCenter * 0.15}px 15px 15px #a0a0a0)`
+                    `drop-shadow(${percentOfCenter * 0.15}px 15px 15px #4e4e4e)`
                 )
             }, 50)
         )
@@ -191,10 +191,16 @@ document.addEventListener('DOMContentLoaded', () => {
             allowTouchMove: false,
             speed: 800,
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 0,
             autoplay: {
-                delay: 3000,
+                delay: 6000,
                 disableOnInteraction: false,
+            },
+            on: {
+                init: function () {
+                    this.slideTo(1)
+                    this.autoplay.stop()
+                },
             },
         })
 
@@ -205,7 +211,25 @@ document.addEventListener('DOMContentLoaded', () => {
             arr[index].classList.add('active')
         })
 
+        if ($('.preview-mounting').length > 0) {
+            $(window).scroll(function () {
+                var wt = $(window).scrollTop()
+
+                var et = $('.preview-mounting').offset().top
+                var eh = $('.preview-mounting').outerHeight()
+
+                if (wt <= et + eh && wt >= et) {
+                    ignismountingSlider.slideTo(0)
+                    ignismountingSlider.autoplay.start()
+                } else {
+                    ignismountingSlider.autoplay.stop()
+                }
+            })
+        }
+
         $('.preview-mounting__content .nav-link').click(function () {
+            ignismountingSlider.autoplay.stop()
+            ignismountingSlider.autoplay.start()
             var curSlide = $(this).attr('data-slide')
             $('.preview-mounting__content .nav-link').removeClass('active')
             $(this).addClass('active')
@@ -216,14 +240,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if ($('.preview-module').length > 0) {
             $(window).scroll(function () {
                 var wt = $(window).scrollTop()
-                var wh = $(window).height()
+
                 var et = $('.preview-module').offset().top
                 var eh = $('.preview-module').outerHeight()
-                var dh = $(document).height()
 
-                if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+                console.log(wt <= et + eh && wt >= et - eh / 2)
+                if (wt <= et + eh && wt >= et - eh / 2) {
                     // Код анимации
                     $('.preview-module').addClass('animated')
+                } else {
+                    $('.preview-module').removeClass('animated')
                 }
             })
         }
@@ -590,13 +616,11 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         $('.ignis-configurator__bottom .img-wrapper img').click(function () {
-            const src = $('.ignis-configurator__top .img-wrapper img').attr(
-                'src'
-            )
-            const addSrc = $(this).attr('src')
+            const image = $(this).clone()
 
-            $('.ignis-configurator__top .img-wrapper img').attr('src', addSrc)
-            $(this).attr('src', src)
+            $(
+                '.swiper-slide-active .ignis-configurator__top .img-wrapper img'
+            ).replaceWith(image)
         })
 
         // !Ignis Configurator End
@@ -795,15 +819,9 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTo('.js-scroll-link', 100)
     topScroll('#toTop')
     $(window).scroll(function () {
-        var scroll = $(this).scrollTop(),
-            viewportHeight = $(window).height(),
-            footerTop = $('.footer').offset().top
+        var scroll = $(this).scrollTop()
         if (scroll > scrollPos) {
-            if (scroll + viewportHeight > footerTop) {
-                $('#toTop').fadeOut(300)
-            } else {
-                $('#toTop').fadeIn(300)
-            }
+            $('#toTop').fadeIn(300)
         } else {
             $('#toTop').fadeOut(300)
         }
