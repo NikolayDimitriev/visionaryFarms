@@ -1569,6 +1569,7 @@
       &_graph
         position: absolute
         bottom: -70px
+        left: -2px
         height: calc(100% + 70px)
         @media (max-width: 900px)
           bottom: 0
@@ -1584,6 +1585,9 @@
       background-position: center
     @media (max-width: 476px)
       background-size: cover
+
+  &__gif
+    height: 100%
 
   &__spline
     height: 100%
@@ -2660,8 +2664,11 @@
 
   &__content
     display: flex
-    gap: 20px
+    gap: 100px
     margin-top: 80px
+
+    @media (max-width: 1500px)
+      gap: 40px
 
     @media (max-width: 1270px)
       flex-direction: column
@@ -2846,6 +2853,19 @@
         img
           @media (max-width: 400px)
             width: 102%
+
+        &_gif
+          position: absolute
+          bottom: -7px
+          left: -3px
+          
+          img
+            @media (max-width: 500px)
+              width: 110%
+
+            @media (max-width: 440px)
+              width: 100%
+        
         
 
   &__list
@@ -2889,6 +2909,9 @@
     margin-left: auto
     width: 100%
     max-width: 769px
+
+    @media (max-width: 1500px)
+      padding-left: 15px
 
     @media (max-width: 1270px)
       margin-left: 0
