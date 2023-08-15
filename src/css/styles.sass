@@ -1208,6 +1208,64 @@
     top: -350px
     right: 1150px
 
+@keyframes slideTwo
+  0%
+    top: -200px
+    right: 800px
+  15%
+    top: 0
+    right: 500px
+  35%
+    top: 0
+    right: 500px
+  45%
+    top: 287px
+    right: 150px
+  55%
+    top: 287px
+    right: 150px
+  65%
+    top: 287px
+    right: 150px
+  70%
+    top: 287px
+    right: 150px
+  75%
+    top: 281px
+    right: 156px
+  100%
+    top: -200px
+    right: 800px
+
+@keyframes slideThree
+  0%
+    top: 100px
+    right: 500px
+  15%
+    top: 280px
+    right: 230px
+  35%
+    top: 280px
+    right: 230px
+  45%
+    top: 337px
+    right: 150px
+  55%
+    top: 337px
+    right: 150px
+  65%
+    top: 337px
+    right: 150px
+  70%
+    top: 337px
+    right: 150px
+  75%
+    top: 331px
+    right: 156px
+  100%
+    top: 100px
+    right: 500px
+
 
 .preview-module 
   background-color: $bg-color
@@ -1243,6 +1301,8 @@
       transform: none
       @media (max-width: 1300px)
         top: 350px
+      @media (max-width: 575px)
+        top: 400px
     &_2
       top: -350px
       right: 1150px
@@ -1260,11 +1320,15 @@
       animation-iteration-count: infinite
       animation-delay: 2s
       @media (max-width: 1300px)
-        animation-name: slideintwo
+        animation-name: slideTwo
       @media (max-width: 1300px)
         top: 287px
         right: 150px
         width: 200px
+      @media (max-width: 575px)
+        top: 337px
+      @media (max-width: 575px)
+        animation-name: slideThree
 
   .container
     max-width: 1245px
@@ -1294,6 +1358,9 @@
     @media (max-width: 575px)
       text-align: center
       padding: 0 20px
+      margin: 0 auto
+      z-index: 2
+      position: relative
 
   &__content 
     width: 100%
@@ -2581,15 +2648,18 @@
   padding: 80px 0 127px
   background-color: #fff
 
-  @media (max-width: 575px) 
-    padding: 50px 0 100px
+  @media (max-width: 1270px)
+    position: relative
+    padding-bottom: 173px
 
-  .container
-    max-width: 1400px
+  @media (max-width: 1024px)
+    padding-bottom: 282px
+
+  @media (max-width: 575px) 
+    padding: 50px 0 320px
 
   &__content
     display: flex
-    justify-content: space-between
     gap: 20px
     margin-top: 80px
 
@@ -2601,16 +2671,38 @@
     @media (max-width: 575px)
       margin-top: 50px
 
+  &__left
+    height: max-content
+    position: sticky
+    top: 150px
+    width: 53%
+    z-index: 10
+
+    @media (max-width: 1270px)
+      width: 100%
+      position: static
+      top: 0
+      display: flex
+      justify-content: center
+      flex-direction: column
+
   &__right
     display: flex
     flex-direction: column
+    margin-right: auto
     gap: 35px
     width: 450px
     flex-shrink: 0
+    padding-bottom: 180px
+
+    @media (max-width: 1270px)
+      margin-right: 0
+      padding-bottom: 0
+      padding: 0 15px
 
     @media (max-width: 575px)
       width: 100%
-      max-width: 450px
+      max-width: 480px
 
   &__block
     width: 100%
@@ -2790,8 +2882,15 @@
 
 
   &__slider
+    margin-left: auto
     width: 100%
     max-width: 769px
+
+    @media (max-width: 1270px)
+      margin-left: 0
+      align-self: center
+      padding: 0 15px
+      max-width: 799px
 
     .slide-item
       width: 100%
@@ -2848,19 +2947,22 @@
         height: 100%
         border-radius: 10px
 
-.ignis-summary
+.ignis-summary  
+  position: relative
+  margin-top: 30px
+  width: 100vw
   padding: 40px 0
   background-color: $bg-color
 
-  &_fixed
-    position: fixed
-    bottom: 0
-    left: 0
-    width: 100%
-    z-index: 10
+  @media (max-width: 1270px)
+    position: absolute
+    top: calc(100% - 173px)
+  @media (max-width: 1024px)
+    top: calc(100% - 282px)
 
   @media (max-width: 575px)
     padding: 30px 0
+    top: calc(100% - 320px)
 
   &__container
     display: flex

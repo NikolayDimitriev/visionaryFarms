@@ -1055,11 +1055,11 @@
 </section>
 
 <section id="ignis-config" class="ignis-configurator">
-    <div class="container">
-        <i class="icon icon-ignis section-icon"></i>
-        <h2 class="ignis-configurator__title section-title">Customise Ignis</h2>
+    <i class="icon icon-ignis section-icon"></i>
+    <h2 class="ignis-configurator__title section-title">Customise Ignis</h2>
 
-        <div class="ignis-configurator__content">
+    <div class="ignis-configurator__content">
+        <div class="ignis-configurator__left">
             <div
                 id="ignis-configurator-slider"
                 class="ignis-configurator__slider swapper">
@@ -1867,264 +1867,256 @@
                     </div>
                 </div>
             </div>
-
-            <div class="ignis-configurator__right">
-                <div class="ignis-configurator__block">
-                    <h3 class="ignis-configurator__subtitle">Length & Power</h3>
-                    <button
-                        class="ignis-configurator__button ignis-configurator__button_active"
-                        data-length="1">
-                        600mm, 15W, 50 PPF
-                    </button>
-                    <button class="ignis-configurator__button" data-length="2">
-                        900mm, 22W, 73 PPF
-                    </button>
-                    <button class="ignis-configurator__button" data-length="3">
-                        1200mm, 28W, 92 PPF
-                    </button>
-                </div>
-
-                <div class="ignis-configurator__block">
-                    <h3 class="ignis-configurator__subtitle">Configuration</h3>
-                    <button
-                        class="ignis-configurator__button ignis-configurator__button_active"
-                        data-config="1">
-                        One Ignis
-                    </button>
-                    <button class="ignis-configurator__button" data-config="2">
-                        Two Ignis Holder System
-                    </button>
-                    <button class="ignis-configurator__button" data-config="3">
-                        Three Ignis Holder System
-                    </button>
-                </div>
-
-                <div class="ignis-configurator__block">
-                    <h3 class="ignis-configurator__subtitle">Mounting</h3>
-                    <div class="ignis-configurator__mounting">
-                        <button
-                            class="ignis-configurator__btn ignis-configurator__btn_active"
-                            data-mounting="1">
-                            Hang
-                        </button>
-                        <button
-                            class="ignis-configurator__btn"
-                            data-mounting="2">
-                            Stand
-                        </button>
-                    </div>
-                    <p class="ignis-configurator__descr">
-                        Stand option only available with one Ignis
+            <div class="ignis-summary">
+                <div class="container ignis-summary__container">
+                    <h2 class="ignis-summary__title">Summary</h2>
+                    <p class="ignis-summary__text">
+                        Ignis Control 600mm, 15W, 50 PPF, hang mounting,
+                        3-channel adjustable spectrum. Cloud subscriprion
+                        enabled
                     </p>
-                </div>
-
-                <div class="ignis-configurator__block">
-                    <h3 class="ignis-configurator__subtitle">
-                        Controls & Services
-                    </h3>
-                    <button class="ignis-configurator__tab" data-controls="1">
-                        <span class="ignis-configurator__span">Ignis Only</span>
-
-                        <div class="ignis-configurator__info">
-                            <div class="ignis-configurator__wrapper">
-                                <ul class="ignis-configurator__list">
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-power section-icon"></i>
-                                        On-off, 0-100% dimming button
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ignis-configurator__wrapper">
-                                <ul class="ignis-configurator__list">
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-sun section-icon"></i>
-                                        Static Universal Spectrum
-                                    </li>
-                                </ul>
-                                <div class="img-wrapper">
-                                    <picture>
-                                        <source
-                                            srcset="
-                                                images/common/ignis/configurator/tab_1_mobile.png
-                                            "
-                                            media="(max-width: 500px)" />
-                                        <img
-                                            src="images/common/ignis/configurator/tab_1.png"
-                                            alt="ignis" />
-                                    </picture>
-                                </div>
-                            </div>
-                            <div class="ignis-configurator__learn">
-                                <i class="icon icon-question section-icon"></i>
-                                Learn more about spectrums available
-                            </div>
-                        </div>
-                    </button>
-                    <button class="ignis-configurator__tab" data-controls="2">
-                        <span class="ignis-configurator__span"
-                            >Ignis + Control Module</span
-                        >
-
-                        <div class="ignis-configurator__info">
-                            <div class="ignis-configurator__wrapper">
-                                <ul class="ignis-configurator__list">
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-devices section-icon"></i>
-                                        Mobile app connected
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-cloudlocal section-icon"></i>
-                                        Control on same Wi-Fi network
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-config section-icon"></i>
-                                        Manual parameter setting
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-sunrise section-icon"></i>
-                                        Sunset/sunrise mode
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-graph section-icon"></i>
-                                        Sensors: illumination, ambient
-                                        temperature, relative humidity
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ignis-configurator__wrapper">
-                                <ul class="ignis-configurator__list">
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-sun section-icon"></i>
-                                        Variable spectral composition
-                                    </li>
-                                </ul>
-                                <div class="img-wrapper">
-                                    <picture>
-                                        <source
-                                            srcset="
-                                                images/common/ignis/configurator/tab_2_mobile.png
-                                            "
-                                            media="(max-width: 500px)" />
-                                        <img
-                                            src="images/common/ignis/configurator/tab_2.png"
-                                            alt="ignis" />
-                                    </picture>
-                                </div>
-                            </div>
-                            <a
-                                href="javascript:void(0);"
-                                data-section="ignis-spectra"
-                                class="js-scroll-link link-style ignis-configurator__learn">
-                                <i class="icon icon-question section-icon"></i>
-                                Learn more about spectra available
-                            </a>
-                        </div>
-                    </button>
-                    <button
-                        class="ignis-configurator__tab ignis-configurator__tab_active"
-                        data-controls="3">
-                        <span class="ignis-configurator__span"
-                            >Ignis + Control Module + Cloud Subscription</span
-                        >
-
-                        <div class="ignis-configurator__info">
-                            <div class="ignis-configurator__wrapper">
-                                <ul class="ignis-configurator__list">
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-devices section-icon"></i>
-                                        Mobile app connected
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-cloud section-icon"></i>
-                                        Control through the Cloud
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-config section-icon"></i>
-                                        Automated parameter setting to maximise
-                                        yields and reduce energy use
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-sunrise section-icon"></i>
-                                        Sunset/sunrise mode
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-humidity section-icon"></i>
-                                        Full analytics based on sensor data
-                                    </li>
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-sun section-icon"></i>
-                                        Light recipes for 60+ crop varieties
-                                        refined using Big Data
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ignis-configurator__wrapper">
-                                <ul class="ignis-configurator__list">
-                                    <li class="ignis-configurator__item">
-                                        <i
-                                            class="icon icon-sun section-icon"></i>
-                                        Variable spectral composition
-                                    </li>
-                                </ul>
-                                <div class="img-wrapper">
-                                    <picture>
-                                        <source
-                                            srcset="
-                                                images/common/ignis/configurator/tab_2_mobile.png
-                                            "
-                                            media="(max-width: 500px)" />
-                                        <img
-                                            src="images/common/ignis/configurator/tab_2.png"
-                                            alt="ignis" />
-                                    </picture>
-                                </div>
-                            </div>
-                            <a
-                                href="javascript:void(0);"
-                                data-section="ignis-spectra"
-                                class="js-scroll-link link-style ignis-configurator__learn">
-                                <i class="icon icon-question section-icon"></i>
-                                Learn more about spectra available
-                            </a>
-                        </div>
-                    </button>
+                    <div class="ignis-summary__wrapper">
+                        <button class="ignis-summary__button">
+                            Download Specification
+                            <i class="icon icon-input"></i>
+                        </button>
+                        <a
+                            href="javascript:void(0);"
+                            data-section="contacts"
+                            class="js-scroll-link ignis-summary__link"
+                            >Contact us <i class="icon icon-notifications"></i
+                        ></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<section class="ignis-summary">
-    <div class="container ignis-summary__container">
-        <h2 class="ignis-summary__title">Summary</h2>
-        <p class="ignis-summary__text">
-            Ignis Control 600mm, 15W, 50 PPF, hang mounting, 3-channel
-            adjustable spectrum. Cloud subscriprion enabled
-        </p>
-        <div class="ignis-summary__wrapper">
-            <button class="ignis-summary__button">
-                Download Specification <i class="icon icon-input"></i>
-            </button>
-            <a
-                href="javascript:void(0);"
-                data-section="contacts"
-                class="js-scroll-link ignis-summary__link"
-                >Contact us <i class="icon icon-notifications"></i
-            ></a>
+        <div class="ignis-configurator__right">
+            <div class="ignis-configurator__block">
+                <h3 class="ignis-configurator__subtitle">Length & Power</h3>
+                <button
+                    class="ignis-configurator__button ignis-configurator__button_active"
+                    data-length="1">
+                    600mm, 15W, 50 PPF
+                </button>
+                <button class="ignis-configurator__button" data-length="2">
+                    900mm, 22W, 73 PPF
+                </button>
+                <button class="ignis-configurator__button" data-length="3">
+                    1200mm, 28W, 92 PPF
+                </button>
+            </div>
+
+            <div class="ignis-configurator__block">
+                <h3 class="ignis-configurator__subtitle">Configuration</h3>
+                <button
+                    class="ignis-configurator__button ignis-configurator__button_active"
+                    data-config="1">
+                    One Ignis
+                </button>
+                <button class="ignis-configurator__button" data-config="2">
+                    Two Ignis Holder System
+                </button>
+                <button class="ignis-configurator__button" data-config="3">
+                    Three Ignis Holder System
+                </button>
+            </div>
+
+            <div class="ignis-configurator__block">
+                <h3 class="ignis-configurator__subtitle">Mounting</h3>
+                <div class="ignis-configurator__mounting">
+                    <button
+                        class="ignis-configurator__btn ignis-configurator__btn_active"
+                        data-mounting="1">
+                        Hang
+                    </button>
+                    <button class="ignis-configurator__btn" data-mounting="2">
+                        Stand
+                    </button>
+                </div>
+                <p class="ignis-configurator__descr">
+                    Stand option only available with one Ignis
+                </p>
+            </div>
+
+            <div class="ignis-configurator__block">
+                <h3 class="ignis-configurator__subtitle">
+                    Controls & Services
+                </h3>
+                <button class="ignis-configurator__tab" data-controls="1">
+                    <span class="ignis-configurator__span">Ignis Only</span>
+
+                    <div class="ignis-configurator__info">
+                        <div class="ignis-configurator__wrapper">
+                            <ul class="ignis-configurator__list">
+                                <li class="ignis-configurator__item">
+                                    <i class="icon icon-power section-icon"></i>
+                                    On-off, 0-100% dimming button
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ignis-configurator__wrapper">
+                            <ul class="ignis-configurator__list">
+                                <li class="ignis-configurator__item">
+                                    <i class="icon icon-sun section-icon"></i>
+                                    Static Universal Spectrum
+                                </li>
+                            </ul>
+                            <div class="img-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/common/ignis/configurator/tab_1_mobile.png
+                                        "
+                                        media="(max-width: 500px)" />
+                                    <img
+                                        src="images/common/ignis/configurator/tab_1.png"
+                                        alt="ignis" />
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="ignis-configurator__learn">
+                            <i class="icon icon-question section-icon"></i>
+                            Learn more about spectrums available
+                        </div>
+                    </div>
+                </button>
+                <button class="ignis-configurator__tab" data-controls="2">
+                    <span class="ignis-configurator__span"
+                        >Ignis + Control Module</span
+                    >
+
+                    <div class="ignis-configurator__info">
+                        <div class="ignis-configurator__wrapper">
+                            <ul class="ignis-configurator__list">
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-devices section-icon"></i>
+                                    Mobile app connected
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-cloudlocal section-icon"></i>
+                                    Control on same Wi-Fi network
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-config section-icon"></i>
+                                    Manual parameter setting
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-sunrise section-icon"></i>
+                                    Sunset/sunrise mode
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i class="icon icon-graph section-icon"></i>
+                                    Sensors: illumination, ambient temperature,
+                                    relative humidity
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ignis-configurator__wrapper">
+                            <ul class="ignis-configurator__list">
+                                <li class="ignis-configurator__item">
+                                    <i class="icon icon-sun section-icon"></i>
+                                    Variable spectral composition
+                                </li>
+                            </ul>
+                            <div class="img-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/common/ignis/configurator/tab_2_mobile.png
+                                        "
+                                        media="(max-width: 500px)" />
+                                    <img
+                                        src="images/common/ignis/configurator/tab_2.png"
+                                        alt="ignis" />
+                                </picture>
+                            </div>
+                        </div>
+                        <a
+                            href="javascript:void(0);"
+                            data-section="ignis-spectra"
+                            class="js-scroll-link link-style ignis-configurator__learn">
+                            <i class="icon icon-question section-icon"></i>
+                            Learn more about spectra available
+                        </a>
+                    </div>
+                </button>
+                <button
+                    class="ignis-configurator__tab ignis-configurator__tab_active"
+                    data-controls="3">
+                    <span class="ignis-configurator__span"
+                        >Ignis + Control Module + Cloud Subscription</span
+                    >
+
+                    <div class="ignis-configurator__info">
+                        <div class="ignis-configurator__wrapper">
+                            <ul class="ignis-configurator__list">
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-devices section-icon"></i>
+                                    Mobile app connected
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i class="icon icon-cloud section-icon"></i>
+                                    Control through the Cloud
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-config section-icon"></i>
+                                    Automated parameter setting to maximise
+                                    yields and reduce energy use
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-sunrise section-icon"></i>
+                                    Sunset/sunrise mode
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i
+                                        class="icon icon-humidity section-icon"></i>
+                                    Full analytics based on sensor data
+                                </li>
+                                <li class="ignis-configurator__item">
+                                    <i class="icon icon-sun section-icon"></i>
+                                    Light recipes for 60+ crop varieties refined
+                                    using Big Data
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ignis-configurator__wrapper">
+                            <ul class="ignis-configurator__list">
+                                <li class="ignis-configurator__item">
+                                    <i class="icon icon-sun section-icon"></i>
+                                    Variable spectral composition
+                                </li>
+                            </ul>
+                            <div class="img-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            images/common/ignis/configurator/tab_2_mobile.png
+                                        "
+                                        media="(max-width: 500px)" />
+                                    <img
+                                        src="images/common/ignis/configurator/tab_2.png"
+                                        alt="ignis" />
+                                </picture>
+                            </div>
+                        </div>
+                        <a
+                            href="javascript:void(0);"
+                            data-section="ignis-spectra"
+                            class="js-scroll-link link-style ignis-configurator__learn">
+                            <i class="icon icon-question section-icon"></i>
+                            Learn more about spectra available
+                        </a>
+                    </div>
+                </button>
+            </div>
         </div>
     </div>
 </section>

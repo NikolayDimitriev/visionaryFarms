@@ -634,27 +634,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // !Ignis Configurator End
 
-        // ! Summary Fixed
-
-        /* ignis install animation */
-        if ($('.ignis-summary').length > 0) {
-            $(window).scroll(function () {
-                var wt = $(window).scrollTop()
-
-                var et = $('.ignis-configurator').offset().top
-                var eh = $('.ignis-configurator').outerHeight()
-
-                if (wt > et + eh / 2) {
-                    // Код анимации
-                    $('.ignis-summary').addClass('ignis-summary_fixed')
-                } else {
-                    $('.ignis-summary').removeClass('ignis-summary_fixed')
-                }
-            })
-        }
-
-        // ! Summary Fixed END
-
         $('.ignis-specification__toggle').click(function (e) {
             e.stopPropagation()
             $('.ignis-specification__dropdown').toggleClass(
