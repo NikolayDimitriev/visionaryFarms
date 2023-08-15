@@ -1179,28 +1179,35 @@
     @media (max-width: 1023px)
       padding: 40px 0 80px
 
-@keyframes slideInStepOne
+@keyframes slide
   0%
-    transform: translate(-400px, -250px)
-    // top: -350px
-    // right: 1150px
+    top: -350px
+    right: 1150px
+  15%
+    top: 0
+    right: 700px
+  35%
+    top: 0
+    right: 700px
+  45%
+    top: 96px
+    right: 557px
+  55%
+    top: 96px
+    right: 557px
+  65%
+    top: 96px
+    right: 557px
+  70%
+    top: 96px
+    right: 557px
+  75%
+    top: 90px
+    right: 563px
   100%
-    transform: translate(0, 0)
-    // top: 0
-    // right: 700px
+    top: -350px
+    right: 1150px
 
-@keyframes slideInStepTwo
-  0%
-    transform: translate(0, 0)
-  100%
-    transform: translate(143px, 96px)
-
-@keyframes slideOut
-  0%
-    transform: translate(143px, 96px)
-  100%
-    transform: translate(-400px, -250px)
-  
 
 .preview-module 
   background-color: $bg-color
@@ -1237,16 +1244,21 @@
       @media (max-width: 1300px)
         top: 350px
     &_2
-      top: 0
-      right: 700px
+      top: -350px
+      right: 1150px
       left: auto
       bottom: auto
       height: auto
       z-index: 1
       transform: none
       width: 324px
-      animation: 1s linear 0s slideInStepOne, 2s linear 4s slideInStepTwo, 1.5s linear 6s slideOut
+
       animation-play-state: paused
+
+      animation-name: slide
+      animation-duration: 20s
+      animation-iteration-count: infinite
+      animation-delay: 2s
       @media (max-width: 1300px)
         animation-name: slideintwo
       @media (max-width: 1300px)

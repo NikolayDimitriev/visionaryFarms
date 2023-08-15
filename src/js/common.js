@@ -244,14 +244,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 var et = $('.preview-module').offset().top
                 var eh = $('.preview-module').outerHeight()
 
-                console.log(wt <= et + eh && wt >= et - eh / 2)
-                if (wt <= et + eh && wt >= et - eh / 2) {
+                if (wt <= et + eh && wt >= et - eh / 3) {
                     // Код анимации
                     $('.preview-module').addClass('animated')
                 } else {
                     $('.preview-module').removeClass('animated')
                 }
             })
+        }
+
+        $('.preview-module').hover(onIn, onOut)
+
+        function onIn() {
+            $('.preview-module').addClass('animated')
+        }
+
+        function onOut() {
+            $('.preview-module').removeClass('animated')
         }
 
         // ! Ignis Configurator
