@@ -1172,9 +1172,30 @@
         .item-link
           margin-top: 10px
   &.ignis-page
+    @media (max-width: 575px)
+      padding: 40px 0
+    .container
+      max-width: 955px
+      margin: 0 auto
     .preview-control__title
       @media (max-width: 575px)
         padding: 0 40px
+    .preview-control__content
+      width: 100%
+      gap: 20px
+      justify-content: center
+    .preview-control__content__item
+      width: 295px
+      margin: 0
+      max-width: none
+      flex: none
+    .image-block
+      width: 100%
+      height: 295px
+      .item-image
+        width: 100%
+        height: 100%
+        object-fit: cover
     .descr-block
       max-width: 260px
       margin: 0 auto
@@ -1821,6 +1842,17 @@
       overflow: hidden
       padding: 10px 10px 0
       position: relative
+      .img-cover
+        max-width: 100%
+      &:nth-of-type(1)
+        .img-cover
+          max-width: 167px
+      &:nth-of-type(3)
+        .img-cover
+          max-width: 160px
+      &:nth-of-type(2)
+        .img-cover
+          max-width: 167px
       @media (max-width: 1199px)
         flex: 0 0 100%
         max-width: 900px
@@ -1880,7 +1912,6 @@
         .img-cover
           display: block
           width: auto
-          max-width: 100%
           min-height: 100%
           margin: 0 0 0 auto
           @media (max-width: 575px)
@@ -2668,7 +2699,6 @@
               .img-cover
                 min-height: 100%
                 width: auto
-                max-width: unset
 
 .ignis-ready
   .container
@@ -2729,9 +2759,25 @@
         flex-direction: column
       &__column
         min-width: 455px
+        max-width: 455px
         display: flex
         flex-direction: column
         gap: 20px
+        @media (max-width: 1024px)
+          max-width: none
+        .img-wrapper
+          width: 100%
+          height: 100%
+          background-color: var(--off-white, #F3F5F7)
+          border-radius: 10px
+          @media (max-width: 1024px)
+            height: auto
+          &:first-child
+            max-height: 315px
+          &:last-child
+            max-height: 265px
+            @media (max-width: 1024px)
+              max-height: 315px
         @media (max-width: 1024px)
           min-width: auto
           width: 100%
@@ -2739,13 +2785,13 @@
           justify-content: space-between
       &__row
         flex-grow: 1
+        .img-wrapper
+          width: 100%
+          height: 100%
+          background-color: var(--off-white, #F3F5F7)
+          border-radius: 10px
         @media (max-width: 1024px)
           order: -1
-      .img-wrapper
-        width: 100%
-        height: 100%
-        @media (max-width: 1024px)
-          height: auto
       .slide-image
         display: block
         border-radius: 10px
@@ -3214,14 +3260,19 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 20px
+    height: 150px
 
     .img-wrapper
+      height: 100%
       display: flex
       justify-content: flex-end
       background-color: #fff
       border-radius: 10px
 
   &__img
+    height: 150px
+    max-width: 100%
+    object-fit: contain
     border-radius: 10px
 
   &__subheadings 

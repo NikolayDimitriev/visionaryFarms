@@ -146,6 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modules: [EffectFade, Autoplay],
             lazy: true,
             effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
             allowTouchMove: false,
             speed: 800,
             slidesPerView: 1,
@@ -310,6 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: 800,
             slidesPerView: 1,
             spaceBetween: 0,
+            autoHeight: true,
         })
 
         const condition = {
