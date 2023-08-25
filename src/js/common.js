@@ -1,5 +1,11 @@
 // slider
-import Swiper, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper'
+import Swiper, {
+    Navigation,
+    Pagination,
+    EffectFade,
+    Autoplay,
+    EffectCreative,
+} from 'swiper'
 // functions
 import { headerScrollChange } from './_func/_jq/headerScrollChange'
 import { getAppHeight } from './_func/_jq/getAppHeight'
@@ -173,8 +179,19 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             allowTouchMove: false,
             speed: 800,
+
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 0,
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    autoHeight: true,
+                },
+                1580: {
+                    autoHeight: false,
+                },
+            },
         })
 
         $('.preview-spectra__content .nav-link').click(function () {
@@ -185,13 +202,21 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         var ignismountingSlider = new Swiper('#ignis-mounting-slider', {
-            modules: [EffectFade, Autoplay],
+            modules: [EffectCreative, Autoplay],
             lazy: true,
-            effect: 'fade',
+            effect: 'creative',
             allowTouchMove: false,
-            speed: 800,
+            speed: 300,
             slidesPerView: 1,
             spaceBetween: 0,
+            creativeEffect: {
+                prev: {
+                    rotate: [180, 0, 0],
+                },
+                next: {
+                    rotate: [-180, 0, 0],
+                },
+            },
             autoplay: {
                 delay: 6000,
                 disableOnInteraction: false,
@@ -200,6 +225,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 init: function () {
                     this.slideTo(1)
                     this.autoplay.stop()
+                    $('.preview-mounting__wrapper').removeClass(
+                        'preview-mounting__wrapper_hang'
+                    )
                 },
             },
         })
@@ -209,6 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const index = ignismountingSlider.activeIndex
             const arr = [...$('.preview-mounting__content .nav-link')]
             arr[index].classList.add('active')
+            $('.preview-mounting__wrapper').toggleClass(
+                'preview-mounting__wrapper_hang'
+            )
         })
 
         if ($('.preview-mounting').length > 0) {
@@ -220,6 +251,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (wt <= et + eh && wt >= et) {
                     ignismountingSlider.slideTo(0)
+                    $('.preview-mounting__wrapper').addClass(
+                        'preview-mounting__wrapper_hang'
+                    )
                     ignismountingSlider.autoplay.start()
                 } else {
                     ignismountingSlider.autoplay.stop()
@@ -689,6 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var previewHowSlider = new Swiper('#preview-how-slider', {
         modules: [Navigation, Pagination, EffectFade],
+        loop: true,
         lazy: true,
         effect: 'fade',
         speed: 800,
