@@ -1921,6 +1921,8 @@
           margin: 0 0 0 auto
           @media (max-width: 575px)
             min-height: unset
+          @media (max-width: 400px)
+            max-width: 100%
         .download-link
           display: flex
           align-items: center
@@ -2015,6 +2017,7 @@
         width: 150%
         margin: 0 -25%
       @media (max-width: 575px)
+        height: 62%
         width: auto
         margin: 0
         min-width: 100%
@@ -2080,7 +2083,7 @@
   @media (max-width: 1335px)
     height: 580px
   @media (max-width: 575px)
-    height: 700px
+    height: 750px
     padding: 50px 0
 
 .preview-how
@@ -2817,7 +2820,7 @@
     padding-bottom: 282px
 
   @media (max-width: 575px) 
-    padding: 50px 0 320px
+    padding: 50px 0 350px
 
   &__content
     display: flex
@@ -2841,6 +2844,7 @@
     top: 150px
     width: 53%
     z-index: 10
+    padding-bottom: 30px
 
     @media (max-width: 1500px)
       width: 60%
@@ -2860,7 +2864,7 @@
     gap: 35px
     width: 450px
     flex-shrink: 0
-    padding-bottom: 180px
+    padding-bottom: 210px
 
     @media (max-width: 1270px)
       width: 480px
@@ -3089,6 +3093,9 @@
     @media (max-width: 575px)
       height: 300px
 
+    @media (max-width: 400px)
+      height: 250px
+
     .img-wrapper
       width: 100%
       height: 100%
@@ -3135,8 +3142,6 @@
   position: relative
   margin-top: 30px
   width: 100vw
-  padding: 40px 0
-  background-color: $bg-color
 
   @media (max-width: 1270px)
     position: absolute
@@ -3145,17 +3150,27 @@
     top: calc(100% - 282px)
 
   @media (max-width: 575px)
-    padding: 30px 0
+    height: 320px
+    margin-top: 0
     top: calc(100% - 320px)
+    bottom: 0
 
   &__container
     display: flex
     align-items: center
     justify-content: space-between
     gap: 20px
+    padding: 40px
+    background-color: $bg-color
+    border-radius: 10px
+    border: 2px solid $txt-color
+
 
     @media (max-width: 1024px)
       flex-direction: column
+
+    @media (max-width: 575px)
+      height: 100%
 
   &__title 
     font-size: 22px
@@ -3170,14 +3185,12 @@
     font-weight: 400
     line-height: 21px
     max-width: 390px
-    margin-left: auto
 
     @media (max-width: 1024px)
       margin-left: 0
       text-align: center
 
   &__wrapper
-    margin-right: auto
     display: flex
     align-items: center
     gap: 18px
